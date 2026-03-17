@@ -1,0 +1,14 @@
+/Users/marco/Desktop/demo_claude/TodoCli/bin/Debug/net9.0/TodoCli
+/Users/marco/Desktop/demo_claude/TodoCli/bin/Debug/net9.0/TodoCli.deps.json
+/Users/marco/Desktop/demo_claude/TodoCli/bin/Debug/net9.0/TodoCli.runtimeconfig.json
+/Users/marco/Desktop/demo_claude/TodoCli/bin/Debug/net9.0/TodoCli.dll
+/Users/marco/Desktop/demo_claude/TodoCli/bin/Debug/net9.0/TodoCli.pdb
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/TodoCli.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/TodoCli.AssemblyInfoInputs.cache
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/TodoCli.AssemblyInfo.cs
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/TodoCli.csproj.CoreCompileInputs.cache
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/TodoCli.dll
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/refint/TodoCli.dll
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/TodoCli.pdb
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/TodoCli.genruntimeconfig.cache
+/Users/marco/Desktop/demo_claude/TodoCli/obj/Debug/net9.0/ref/TodoCli.dll
