@@ -30,7 +30,7 @@ L'Intelligenza Artificiale generativa ha raggiunto un livello di maturita tale d
 
 **L'opportunita.** I dati di mercato sono inequivocabili: l'82% delle aziende prevede di integrare soluzioni IA entro il 2025, il 92% degli sviluppatori che le utilizzano riporta un aumento significativo della produttivita, e il 74% delle organizzazioni sta gia investendo in IA agentica. Chi non agisce ora rischia di accumulare un divario competitivo difficile da colmare.
 
-**La raccomandazione.** Dopo un'analisi approfondita delle soluzioni disponibili — inclusi 7 test comparativi su scenari reali — raccomandiamo l'adozione di **Claude Enterprise** (Anthropic) come piattaforma IA primaria. Claude si distingue per qualita del ragionamento, sicurezza enterprise-grade (Zero Data Retention, SOC2 Type II, HIPAA), e un ecosistema completo che copre sia lo sviluppo software (Claude Code) sia le attivita di ufficio (Claude for Work).
+**La raccomandazione.** Dopo un'analisi approfondita delle soluzioni disponibili — inclusi 7 test comparativi su scenari reali — raccomandiamo l'adozione di **Claude Enterprise** (Anthropic) come piattaforma IA primaria. Claude si distingue per qualita del ragionamento, sicurezza enterprise-grade (Zero Data Retention, SOC2 Type II, HIPAA), e un ecosistema completo che copre sia lo sviluppo software (Claude Code) sia le attivita di ufficio (Claude Cowork).
 
 **I benefici chiave:**
 
@@ -298,12 +298,12 @@ Claude offre una gamma di modelli che consente di **ottimizzare il rapporto cost
 
 Questa flessibilita consente di gestire il budget in modo intelligente: la maggior parte delle richieste quotidiane puo essere gestita da Sonnet o Haiku, riservando Opus per le attivita che richiedono ragionamento approfondito.
 
-### 7.3 Ecosistema: Claude Code + Claude for Work
+### 7.3 Ecosistema: Claude Code + Claude Cowork
 
 Un unico abbonamento enterprise fornisce accesso a un ecosistema integrato:
 
 - **Claude Code**: agente IA per lo sviluppo software, integrato direttamente nel terminale e nell'IDE dello sviluppatore. Opera come un agente autonomo supervisionato, in grado di leggere interi progetti, pianificare modifiche e eseguirle su larga scala (vedi Appendice A)
-- **Claude for Work**: interfaccia web e integrazioni per le attivita di ufficio, con connessioni native a Slack, Google Drive, Microsoft Teams e GitHub
+- **Claude Cowork**: interfaccia web e integrazioni per le attivita di ufficio, con connessioni native a Slack, Google Drive, Microsoft Teams e GitHub
 
 > **Per il CTO**: Instradamento diretto dei task di programmazione da Slack a Claude Code tramite menzioni @Claude. Democratizzazione della conoscenza: navigazione istantanea di codebase non documentate tramite CLAUDE.md.
 
@@ -379,7 +379,7 @@ Proponiamo un approccio progressivo e sicuro, articolato in tre fasi, che minimi
 | Elemento | Dettaglio |
 |---|---|
 | **Partecipanti** | 3-5 sviluppatori high-performer selezionati |
-| **Strumenti** | Claude Code + Claude for Work (licenze Team) |
+| **Strumenti** | Claude Code + Claude Cowork (licenze Team) |
 | **Attivita** | Coding quotidiano, testing, documentazione, code review |
 | **Metriche** | Tempo di completamento task, qualita output, feedback qualitativo |
 | **Output** | Report di valutazione con dati quantitativi |
