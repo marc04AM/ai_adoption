@@ -443,18 +443,242 @@
             <iframe src="assets/pdf/Claude_Enterprise_Strategic_Case.pdf" title="Claude Enterprise Strategic Case" loading="lazy"></iframe>
         </div>
 
-        <h3>7.1 Perché Claude: 7 test reali</h3>
-        <p>Abbiamo condotto 7 test comparativi su scenari reali di lavoro quotidiano, confrontando Claude con le principali alternative (ChatGPT/GPT-4, GitHub Copilot, Gemini). Claude ha dimostrato risultati superiori nelle aree critiche:</p>
-        <ul>
-            <li><strong>Ragionamento complesso:</strong> comprensione profonda di codebase articolate e generazione di soluzioni architetturalmente coerenti</li>
-            <li><strong>Qualità del codice:</strong> output più pulito, meglio strutturato e con meno errori</li>
-            <li><strong>Analisi e sintesi:</strong> capacità superiore nell'elaborazione di documenti lunghi e nella generazione di contenuti strutturati</li>
-            <li><strong>Affidabilità:</strong> minore tendenza a "inventare" informazioni (hallucination) rispetto ai competitor</li>
-            <li><strong>Testing:</strong> generazione di test più completi e significativi</li>
-        </ul>
+        <h3>7.1 Il panorama degli strumenti IA per lo sviluppo</h3>
+        <p>Il mercato degli strumenti IA per lo sviluppo software vale <strong>$7.37 miliardi</strong> nel 2025 e cresce a un tasso annuo del 35-40%. Cinque strumenti dominano il panorama. Li abbiamo analizzati tutti — inclusi <strong>7 test comparativi su scenari reali</strong> — per identificare la soluzione più adatta alle nostre esigenze.</p>
+
+        <h4>Confronto strutturale</h4>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Dimensione</th>
+                    <th>Claude Code</th>
+                    <th>GitHub Copilot</th>
+                    <th>OpenAI Codex CLI</th>
+                    <th>Gemini CLI</th>
+                    <th>Cursor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Architettura</strong></td>
+                    <td>CLI terminale, agentico</td>
+                    <td>Plugin IDE + web + coding agent</td>
+                    <td>CLI terminale, open source</td>
+                    <td>CLI open source + plugin IDE</td>
+                    <td>IDE dedicato (fork VS Code)</td>
+                </tr>
+                <tr>
+                    <td><strong>Approccio</strong></td>
+                    <td>Agente autonomo supervisionato</td>
+                    <td>Autocomplete + agent mode</td>
+                    <td>Agente autonomo locale</td>
+                    <td>Agente con ciclo ReAct</td>
+                    <td>IDE-first con agent mode</td>
+                </tr>
+                <tr>
+                    <td><strong>Contesto</strong></td>
+                    <td><strong>1M token</strong></td>
+                    <td>Variabile (multi-modello)</td>
+                    <td>Variabile (multi-modello)</td>
+                    <td><strong>1M token</strong></td>
+                    <td>Variabile (multi-modello)</td>
+                </tr>
+                <tr>
+                    <td><strong>SWE-bench Verified</strong></td>
+                    <td><strong>80.9%</strong> (Opus 4.5)</td>
+                    <td>Dipende dal modello</td>
+                    <td>~80% (Codex 5.3)</td>
+                    <td>76.2% (Gemini 3 Flash)</td>
+                    <td>N/A (usa modelli terzi)</td>
+                </tr>
+                <tr>
+                    <td><strong>Open source</strong></td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Sì (Apache 2.0)</td>
+                    <td>Sì (Apache 2.0)</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td><strong>Multi-file</strong></td>
+                    <td>Sì, nativo</td>
+                    <td>Sì (agent mode)</td>
+                    <td>Sì</td>
+                    <td>Sì</td>
+                    <td>Sì (auto mode)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="sources"><strong>Fonti:</strong>
+            <a href="https://www.vals.ai/benchmarks/swebench" target="_blank">SWE-bench Leaderboard</a> ·
+            <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank">Scale Labs SWE-bench Pro</a>
+        </p>
+
+        <h4>Confronto pricing</h4>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Piano</th>
+                    <th>Claude Code</th>
+                    <th>GitHub Copilot</th>
+                    <th>OpenAI Codex CLI</th>
+                    <th>Gemini Code Assist</th>
+                    <th>Cursor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Free</strong></td>
+                    <td>—</td>
+                    <td>Sì (limitato)</td>
+                    <td>—</td>
+                    <td>Sì (6.000 req/giorno)</td>
+                    <td>Sì (2.000 completamenti/mese)</td>
+                </tr>
+                <tr>
+                    <td><strong>Individuale</strong></td>
+                    <td>$20/mese (Pro)</td>
+                    <td>$10/mese (Pro)</td>
+                    <td>$20/mese (ChatGPT Plus)</td>
+                    <td>—</td>
+                    <td>$20/mese (Pro)</td>
+                </tr>
+                <tr>
+                    <td><strong>Team</strong></td>
+                    <td>$30/utente/mese</td>
+                    <td>$19/utente/mese</td>
+                    <td>$30/utente/mese</td>
+                    <td>$19/utente/mese</td>
+                    <td>$40/utente/mese</td>
+                </tr>
+                <tr>
+                    <td><strong>Enterprise</strong></td>
+                    <td>Personalizzato</td>
+                    <td>$39/utente/mese</td>
+                    <td>Personalizzato</td>
+                    <td>$45/utente/mese</td>
+                    <td>Personalizzato</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="sources"><strong>Fonti:</strong>
+            <a href="https://claude.com/pricing" target="_blank">Claude Pricing</a> ·
+            <a href="https://github.com/features/copilot/plans" target="_blank">GitHub Copilot Plans</a> ·
+            <a href="https://developers.openai.com/codex/pricing" target="_blank">OpenAI Codex Pricing</a> ·
+            <a href="https://codeassist.google/" target="_blank">Gemini Code Assist</a> ·
+            <a href="https://cursor.com/pricing" target="_blank">Cursor Pricing</a>
+        </p>
+
+        <h4>Sicurezza e compliance</h4>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Certificazione</th>
+                    <th>Claude</th>
+                    <th>GitHub Copilot</th>
+                    <th>OpenAI</th>
+                    <th>Google (Gemini)</th>
+                    <th>Cursor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>SOC 2 Type II</strong></td><td>✓</td><td>✓</td><td>✓</td><td>✓ (SOC 1/2/3)</td><td>✓</td></tr>
+                <tr><td><strong>ISO 27001</strong></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr>
+                <tr><td><strong>ISO 42001</strong> (AI)</td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
+                <tr><td><strong>HIPAA</strong></td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
+                <tr><td><strong>Zero Data Retention</strong></td><td><strong>✓</strong></td><td>—</td><td>Solo API</td><td>—</td><td>Privacy mode</td></tr>
+                <tr><td><strong>GDPR</strong></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td><strong>FedRAMP</strong></td><td>—</td><td>—</td><td>—</td><td>✓ (High)</td><td>—</td></tr>
+            </tbody>
+        </table>
+        <p class="sources"><strong>Fonti:</strong>
+            <a href="https://privacy.claude.com/en/articles/10015870-what-certifications-has-anthropic-obtained" target="_blank">Anthropic Privacy Center</a> ·
+            <a href="https://openai.com/security-and-privacy/" target="_blank">OpenAI Security</a> ·
+            <a href="https://docs.google.com/gemini/docs/codeassist/security-privacy-compliance" target="_blank">Google Gemini Compliance</a>
+        </p>
+
+        <h4>Adozione e posizionamento di mercato</h4>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Indicatore</th>
+                    <th>Claude Code</th>
+                    <th>GitHub Copilot</th>
+                    <th>OpenAI Codex</th>
+                    <th>Gemini</th>
+                    <th>Cursor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Utenti</strong></td>
+                    <td>In forte crescita</td>
+                    <td><strong>20M+</strong> totali</td>
+                    <td>N/D (400M+ ChatGPT)</td>
+                    <td>N/D</td>
+                    <td>1M+ (360K paganti)</td>
+                </tr>
+                <tr>
+                    <td><strong>Quota mercato</strong></td>
+                    <td>In crescita rapida</td>
+                    <td><strong>~42-45%</strong></td>
+                    <td>Parte ecosistema OpenAI</td>
+                    <td>In crescita (base GCP)</td>
+                    <td>~18-25%</td>
+                </tr>
+                <tr>
+                    <td><strong>Fortune 100</strong></td>
+                    <td>8 su 10</td>
+                    <td><strong>~90%</strong></td>
+                    <td>Sì (via ChatGPT Enterprise)</td>
+                    <td>Sì (via Google Cloud)</td>
+                    <td>50.000+ seat enterprise</td>
+                </tr>
+                <tr>
+                    <td><strong>Gartner MQ 2025</strong></td>
+                    <td>Non valutato</td>
+                    <td><strong>Leader (#1)</strong></td>
+                    <td>Non valutato</td>
+                    <td>Leader</td>
+                    <td>Non valutato</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="sources"><strong>Fonti:</strong>
+            <a href="https://techcrunch.com/2025/07/30/github-copilot-crosses-20-million-all-time-users/" target="_blank">TechCrunch</a> ·
+            <a href="https://github.blog/ai-and-ml/github-copilot/gartner-positions-github-as-a-leader-in-the-2025-magic-quadrant-for-ai-code-assistants-for-the-second-year-in-a-row/" target="_blank">GitHub Blog — Gartner MQ</a> ·
+            <a href="https://survey.stackoverflow.co/2025/ai/" target="_blank">Stack Overflow 2025</a> ·
+            <a href="https://devecosystem-2025.jetbrains.com/artificial-intelligence" target="_blank">JetBrains DevEco 2025</a>
+        </p>
+
+        <h3>7.2 Perché Claude: la nostra valutazione</h3>
+        <p>Dai 7 test comparativi condotti su scenari reali e dall'analisi di mercato, emergono i punti di forza distintivi di Claude rispetto alle alternative:</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Ragionamento superiore</h3>
+                <p><strong>80.9%</strong> su SWE-bench Verified — il benchmark di riferimento per la risoluzione autonoma di bug reali. Nei nostri test, questo si traduce in soluzioni architetturalmente più coerenti e meno errori.</p>
+            </div>
+            <div class="card">
+                <h3>Contesto da 1M token</h3>
+                <p>La finestra di contesto più ampia in produzione. Permette di analizzare <strong>interi progetti</strong> senza frammentazione — critico per codebase enterprise complesse.</p>
+            </div>
+            <div class="card">
+                <h3>Sicurezza best-in-class</h3>
+                <p>L'unico con <strong>Zero Data Retention nativo</strong> e certificazione <strong>ISO 42001</strong> (AI management). SOC 2 Type II, HIPAA, GDPR. I dati aziendali non vengono mai utilizzati per l'addestramento.</p>
+            </div>
+            <div class="card">
+                <h3>Ecosistema completo</h3>
+                <p>Un unico abbonamento copre <strong>sviluppo</strong> (Claude Code) e <strong>ufficio</strong> (Claude Cowork). Nessun competitor offre questa copertura integrata con un singolo contratto.</p>
+            </div>
+        </div>
+
+        <div class="callout">
+            <strong>Nota di trasparenza:</strong> GitHub Copilot è il leader di mercato per adozione (20M+ utenti, Leader Gartner 2025) e offre un tier gratuito competitivo. OpenAI Codex CLI e Gemini CLI sono open source. Cursor offre l'esperienza IDE più integrata. La nostra raccomandazione per Claude si basa sulla combinazione di <strong>qualità del ragionamento, sicurezza enterprise e copertura funzionale</strong> — i tre criteri più rilevanti per il nostro contesto specifico.
+        </div>
 
         <h4>Demo pratica: Claude Code vs GitHub Copilot</h4>
-        <p>Lo stesso task — la creazione di un'app Todo CLI in .NET 9 — completato con Claude Code e con GitHub Copilot.</p>
+        <p>Per illustrare la differenza concreta tra l'approccio agentico (Claude Code) e l'autocomplete tradizionale (Copilot), abbiamo completato lo stesso task — la creazione di un'app Todo CLI in .NET 9 — con entrambi gli strumenti:</p>
 
         <div class="demo-grid">
             <div class="demo-card">
