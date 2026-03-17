@@ -1,0 +1,3 @@
+https://anthropic.skilljar.com/claude-code-in-action
+
+https://anthropic.skilljar.com/introduction-to-agent-skills

@@ -18,6 +18,7 @@
 10. [Metriche di successo (KPI)](#10-metriche-di-successo-kpi)
 11. [Analisi costi e ROI](#11-analisi-costi-e-roi)
 12. [Prossimi passi](#12-prossimi-passi)
+
 - [Appendice A — Claude Code: architettura e funzionamento](#appendice-a--claude-code-architettura-e-funzionamento)
 - [Appendice B — Architettura di deployment enterprise](#appendice-b--architettura-di-deployment-enterprise)
 
@@ -266,6 +267,24 @@ Abbiamo condotto 7 test comparativi su scenari reali di lavoro quotidiano, confr
 - **Analisi e sintesi**: capacita superiore nell'elaborazione di documenti lunghi e nella generazione di contenuti strutturati
 - **Affidabilita**: minore tendenza a "inventare" informazioni (hallucination) rispetto ai competitor
 - **Testing**: generazione di test piu completi e significativi
+
+#### Demo pratica: Claude Code vs GitHub Copilot
+
+Per rendere tangibile la differenza, abbiamo realizzato una **demo comparativa video** in cui lo stesso task — la creazione di un'app Todo CLI in .NET 9 — viene completato con Claude Code e con GitHub Copilot.
+
+| | Claude Code | GitHub Copilot |
+|---|---|---|
+| **Video demo** | [demo_claude.mov](demo_claude/demo_claude.mov) | [demo_copilot.mov](demo_copilot/demo_copilot.mov) |
+| **Progetto** | [TodoCli](demo_claude/TodoCli/Program.cs) | [ConsoleApp1](demo_copilot/ConsoleApp1/Program.cs) |
+| **Approccio** | Agentico: analisi del task, pianificazione, esecuzione autonoma multi-file | Autocomplete: suggerimenti inline riga per riga |
+| **ID dei todo** | `int` sequenziali (user-friendly: `done 1`) | `Guid` (poco pratico: `done 3f2a...b7c4`) |
+| **Lingua UI** | Italiano (contestualizzato) | Inglese (generico) |
+| **Struttura codice** | Costruttore esplicito, `record`-style, idiomatico | Prompt originale lasciato come commento, `class` pubblica in top-level |
+| **Naming** | Nomi concisi e coerenti (`Add`, `Delete`, `SetDone`) | Nomi verbose (`AddTodo`, `DeleteTodo`, `MarkDone`) |
+
+La differenza fondamentale non e solo nella qualita del codice prodotto, ma nel **flusso di lavoro**: Claude Code comprende l'intero contesto del progetto e produce una soluzione coerente end-to-end, mentre Copilot assiste riga per riga lasciando allo sviluppatore l'onere della coerenza globale.
+
+> I video e il codice sorgente delle demo sono disponibili nelle cartelle `demo_claude/` e `demo_copilot/` allegate a questo documento.
 
 ### 7.2 Flessibilita dei modelli
 
