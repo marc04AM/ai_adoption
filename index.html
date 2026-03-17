@@ -447,7 +447,7 @@
         <p>Il mercato degli strumenti IA per lo sviluppo software vale <strong>$7.37 miliardi</strong> nel 2025 e cresce a un tasso annuo del 35-40%. Cinque strumenti dominano il panorama. Li abbiamo analizzati tutti — inclusi <strong>7 test comparativi su scenari reali</strong> — per identificare la soluzione più adatta alle nostre esigenze.</p>
 
         <h4>Confronto strutturale</h4>
-        <table class="data-table">
+        <table class="data-table data-table--wide">
             <thead>
                 <tr>
                     <th>Dimensione</th>
@@ -515,7 +515,7 @@
         </p>
 
         <h4>Confronto pricing</h4>
-        <table class="data-table">
+        <table class="data-table data-table--wide">
             <thead>
                 <tr>
                     <th>Piano</th>
@@ -570,7 +570,7 @@
         </p>
 
         <h4>Sicurezza e compliance</h4>
-        <table class="data-table">
+        <table class="data-table data-table--wide">
             <thead>
                 <tr>
                     <th>Certificazione</th>
@@ -598,7 +598,7 @@
         </p>
 
         <h4>Adozione e posizionamento di mercato</h4>
-        <table class="data-table">
+        <table class="data-table data-table--wide">
             <thead>
                 <tr>
                     <th>Indicatore</th>
@@ -1246,6 +1246,7 @@
 </footer>
 
 <script>
+/* Nav toggle */
 document.querySelector('.nav-toggle').addEventListener('click', function () {
     const nav = document.querySelector('.nav-inner');
     const open = nav.classList.toggle('nav-open');
@@ -1256,6 +1257,24 @@ document.querySelectorAll('.nav-inner a:not(.nav-brand)').forEach(function (a) {
         document.querySelector('.nav-inner').classList.remove('nav-open');
         document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
     });
+});
+
+/* Wrap tables for mobile scroll */
+document.querySelectorAll('.data-table').forEach(function (table) {
+    if (table.parentElement.classList.contains('table-wrap')) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'table-wrap';
+    table.parentNode.insertBefore(wrap, table);
+    wrap.appendChild(table);
+
+    function checkScroll() {
+        var scrollable = wrap.scrollWidth > wrap.clientWidth + 2;
+        wrap.classList.toggle('is-scrollable', scrollable);
+        wrap.classList.toggle('scrolled-end', wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2);
+    }
+    wrap.addEventListener('scroll', checkScroll, { passive: true });
+    window.addEventListener('resize', checkScroll, { passive: true });
+    checkScroll();
 });
 </script>
 </body>
