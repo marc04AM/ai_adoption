@@ -462,18 +462,18 @@
                 <tr>
                     <td><strong>Architettura</strong></td>
                     <td>CLI terminale, agentico</td>
-                    <td>Plugin IDE + web + coding agent</td>
-                    <td>CLI terminale, open source</td>
-                    <td>CLI open source + plugin IDE</td>
-                    <td>IDE dedicato (fork VS Code)</td>
+                    <td>Plugin IDE + web + CLI + coding agent</td>
+                    <td>CLI locale + cloud sandbox + app desktop</td>
+                    <td>CLI open source + plugin IDE (Conductor)</td>
+                    <td>IDE dedicato (fork VS Code) + JetBrains</td>
                 </tr>
                 <tr>
                     <td><strong>Approccio</strong></td>
-                    <td>Agente autonomo supervisionato</td>
-                    <td>Autocomplete + agent mode</td>
-                    <td>Agente autonomo locale</td>
-                    <td>Agente con ciclo ReAct</td>
-                    <td>IDE-first con agent mode</td>
+                    <td><strong>Agent-first</strong> con subagent, team e hooks</td>
+                    <td>Autocomplete + agent mode + Spaces</td>
+                    <td>Agent con 3 livelli (Suggest/Auto Edit/Full Auto)</td>
+                    <td>Agent con ciclo ReAct + Conductor review</td>
+                    <td>IDE-first con agent, background agent e automazioni</td>
                 </tr>
                 <tr>
                     <td><strong>Contesto</strong></td>
@@ -486,33 +486,60 @@
                 <tr>
                     <td><strong>SWE-bench Verified</strong></td>
                     <td><strong>80.9%</strong> (Opus 4.5)</td>
-                    <td>Dipende dal modello</td>
-                    <td>~80% (Codex 5.3)</td>
+                    <td>56.0% (agent nativo)</td>
+                    <td>~80% (GPT-5.3 Codex)</td>
                     <td>76.2% (Gemini 3 Flash)</td>
-                    <td>N/A (usa modelli terzi)</td>
+                    <td>51.7% (agent nativo)</td>
+                </tr>
+                <tr>
+                    <td><strong>Velocità task</strong></td>
+                    <td>Alta (subagent paralleli, fino a 10)</td>
+                    <td>Media</td>
+                    <td>Alta (cloud sandbox paralleli)</td>
+                    <td>Media</td>
+                    <td>Alta (63s/task, background agent)</td>
                 </tr>
                 <tr>
                     <td><strong>Open source</strong></td>
                     <td>No</td>
-                    <td>No</td>
+                    <td>No (CLI GA feb 2026)</td>
                     <td>Sì (Apache 2.0)</td>
                     <td>Sì (Apache 2.0)</td>
                     <td>No</td>
                 </tr>
                 <tr>
                     <td><strong>Multi-file</strong></td>
-                    <td>Sì, nativo</td>
-                    <td>Sì (agent mode)</td>
+                    <td>Sì, nativo + agent teams</td>
+                    <td>Sì (agent mode + subagent)</td>
+                    <td>Sì (subagent workflow)</td>
                     <td>Sì</td>
-                    <td>Sì</td>
-                    <td>Sì (auto mode)</td>
+                    <td>Sì (auto mode + background agent)</td>
+                </tr>
+                <tr>
+                    <td><strong>Personalizzazione</strong></td>
+                    <td>CLAUDE.md attivo ovunque (agent, chat, completamento)</td>
+                    <td>AGENTS.md / custom instructions solo in agent mode e chat — <strong>non influenzano l'autocomplete inline</strong></td>
+                    <td>Istruzioni nel prompt, config TOML</td>
+                    <td>Istruzioni nel prompt</td>
+                    <td>Rules personalizzabili per progetto (agent + completamento)</td>
+                </tr>
+                <tr>
+                    <td><strong>Estensibilità</strong></td>
+                    <td>MCP, hooks, skills, subagent custom</td>
+                    <td>MCP, custom agent, hooks (preview)</td>
+                    <td>MCP, image input, subagent</td>
+                    <td>MCP, Google Search grounding</td>
+                    <td>MCP, plugin, automazioni (Slack, Linear, GitHub)</td>
                 </tr>
             </tbody>
         </table>
         <p class="sources"><strong>Fonti:</strong>
             <a href="https://www.vals.ai/benchmarks/swebench" target="_blank">SWE-bench Leaderboard</a> ·
-            <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank">Scale Labs SWE-bench Pro</a>
+            <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank">Scale Labs SWE-bench Pro</a> ·
+            <a href="https://www.morphllm.com/ai-coding-agent" target="_blank">MorphLLM — AI Coding Agents Test 2026</a> ·
+            <a href="https://code.claude.com/docs/en/sub-agents" target="_blank">Claude Code Subagents Docs</a>
         </p>
+        <p class="note"><strong>Nota su SWE-bench Verified:</strong> OpenAI ha rilevato contaminazione dei dati di training in tutti i modelli frontier testati (GPT-5.2, Opus 4.5, Gemini 3 Flash) e ha smesso di riportare score Verified, raccomandando <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank">SWE-bench Pro</a> come benchmark più affidabile. I dati sopra restano indicativi delle capacità relative.</p>
 
         <h4>Confronto pricing</h4>
         <table class="data-table data-table--wide">
@@ -530,33 +557,33 @@
                 <tr>
                     <td><strong>Free</strong></td>
                     <td>—</td>
-                    <td>Sì (limitato)</td>
+                    <td>Sì (2.000 completamenti + 50 req premium/mese)</td>
                     <td>—</td>
-                    <td>Sì (6.000 req/giorno)</td>
-                    <td>Sì (2.000 completamenti/mese)</td>
+                    <td>Sì (individuale, quota limitata)</td>
+                    <td>Sì (2.000 completamenti + 50 req/mese)</td>
                 </tr>
                 <tr>
                     <td><strong>Individuale</strong></td>
-                    <td>$20/mese (Pro)</td>
-                    <td>$10/mese (Pro)</td>
-                    <td>$20/mese (ChatGPT Plus)</td>
-                    <td>—</td>
-                    <td>$20/mese (Pro)</td>
+                    <td>$20/mese (Pro) · $100/mese (Max 5x) · $200/mese (Max 20x)</td>
+                    <td>$10/mese (Pro) · $39/mese (Pro+)</td>
+                    <td>$20/mese (Plus) · $200/mese (Pro)</td>
+                    <td>$19/mese (Standard)</td>
+                    <td>$20/mese (Pro) · $60/mese (Pro+) · $200/mese (Ultra)</td>
                 </tr>
                 <tr>
                     <td><strong>Team</strong></td>
-                    <td>$30/utente/mese</td>
-                    <td>$19/utente/mese</td>
-                    <td>$30/utente/mese</td>
-                    <td>$19/utente/mese</td>
-                    <td>$40/utente/mese</td>
+                    <td>$25/ut/mese (Standard) · $150/ut/mese (Premium con Code)</td>
+                    <td>$19/utente/mese (Business)</td>
+                    <td>$30/utente/mese (Business)</td>
+                    <td>$19/utente/mese (Standard)</td>
+                    <td>$40/utente/mese (Teams, min 3)</td>
                 </tr>
                 <tr>
                     <td><strong>Enterprise</strong></td>
+                    <td>Personalizzato (per utente/anno)</td>
+                    <td>$39/utente/mese (GH Enterprise Cloud)</td>
                     <td>Personalizzato</td>
-                    <td>$39/utente/mese</td>
-                    <td>Personalizzato</td>
-                    <td>$45/utente/mese</td>
+                    <td>$75/utente/mese</td>
                     <td>Personalizzato</td>
                 </tr>
             </tbody>
@@ -667,7 +694,7 @@
         <div class="card-grid">
             <div class="card">
                 <h3>Ragionamento superiore</h3>
-                <p><strong>80.9%</strong> su SWE-bench Verified — il benchmark di riferimento per la risoluzione autonoma di bug reali. Nei nostri test, questo si traduce in soluzioni architetturalmente più coerenti e meno errori.</p>
+                <p><strong>80.9%</strong> su SWE-bench Verified e <strong>#1</strong> tra gli strumenti di coding agentico (71% degli utenti agent). Nei nostri test questo si traduce in soluzioni architetturalmente più coerenti, meno errori e capacità di gestire task complessi multi-file in autonomia.</p>
             </div>
             <div class="card">
                 <h3>Contesto da 1M token</h3>
