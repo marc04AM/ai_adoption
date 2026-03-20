@@ -183,6 +183,65 @@ footer strong { color: rgba(255,255,255,0.85); }
     .data-table--wide th, .data-table--wide td { white-space: normal; min-width: 90px; }
 }
 
+/* ── Dark Mode (auto) ── */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --blue-dark: #f0a050;
+        --blue-mid: #F07D00;
+        --blue-light: #2a1a08;
+        --blue-accent: #f0a050;
+        --gray-50: #1a1a2e;
+        --gray-100: #222236;
+        --gray-200: #2d2d44;
+        --gray-300: #3d3d56;
+        --gray-500: #9a9ab0;
+        --gray-600: #b0b0c4;
+        --gray-700: #d4d4e0;
+        --gray-800: #eeeef4;
+        --white: #12121e;
+        --green: #48d080;
+        --orange: #f0a050;
+        --red: #f06060;
+    }
+
+    body { color-scheme: dark; }
+
+    nav { background: #1a1008; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+
+    .hero { background: linear-gradient(135deg, #4a2800 0%, #6b3500 50%, #3a1d00 100%); color: #ffffff; }
+    .hero .subtitle { opacity: 0.95; }
+    .hero .meta { opacity: 0.8; }
+    .hero .meta span { color: #ffffff; }
+
+    .data-table { box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .data-table thead { background: #1a1008; }
+    .data-table--wide th:first-child { background: #1a1008; }
+    .data-table--wide td:first-child { background: var(--white); }
+    .data-table--wide tbody tr:hover td:first-child { background: var(--blue-light); }
+
+    .stat-card { box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+    .stat-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+    .card--link:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+
+    .table-wrap::after { background: linear-gradient(to right, transparent, rgba(18,18,30,0.85)); }
+
+    pre { background: #0a0a14; }
+    code { background: var(--gray-100); }
+
+    .pdf-embed-header { background: var(--gray-100); }
+
+    footer { background: #0a0a14; }
+
+    img, video { opacity: 0.9; }
+
+    .badge-claude { background: #3a2a08; color: #f0c870; }
+    .badge-copilot { background: #1a1a3a; color: #8888e0; }
+    .badge-cowork { background: #082a18; color: #60d0a0; }
+
+    .callout-warn { background: #2a2008; border-left-color: var(--orange); color: #f0c870; }
+}
+
 /* ── Print ── */
 @media print {
     nav, .skip-link, .pdf-embed iframe, .demo-grid iframe, .video-wrapper { display: none; }
