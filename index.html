@@ -27,7 +27,8 @@
         <a href="#ia-ufficio">Ufficio</a>
         <a href="#impatto">Impatto</a>
         <a href="#divario">Divario</a>
-        <a href="#rischi">Rischi</a>
+        <a href="#rischi">Rischi Inazione</a>
+        <a href="#rischi-adozione">Rischi Adozione</a>
         <a href="#raccomandazione">Claude</a>
         <a href="#uso-responsabile">Responsabilità</a>
         <a href="#strategia">Strategia</a>
@@ -61,7 +62,7 @@
         <p>L'Intelligenza Artificiale generativa ha raggiunto un livello di maturità tale da rappresentare non più una sperimentazione, ma un <strong>vantaggio competitivo concreto e misurabile</strong> per le aziende che la adottano in modo strutturato.</p>
 
         <h3 class="mt-sm">L'opportunità</h3>
-        <p>I dati di mercato sono inequivocabili: l'82% delle aziende prevede di integrare soluzioni IA entro il 2025, il 92% degli sviluppatori che le utilizzano riporta un aumento significativo della produttività, e il 74% delle organizzazioni sta già investendo in IA agentica. Chi non agisce ora rischia di accumulare un divario competitivo difficile da colmare.</p>
+        <p>I dati di mercato sono inequivocabili: l'85% degli sviluppatori usa già strumenti IA per il coding, il 95% li utilizza almeno settimanalmente, e il 75% affida all'IA più della metà del proprio lavoro di programmazione. Chi non agisce ora rischia di accumulare un divario competitivo difficile da colmare.</p>
 
         <h3>La raccomandazione</h3>
         <p>Dopo un'analisi approfondita delle soluzioni disponibili — inclusi 7 test comparativi su scenari reali — raccomandiamo l'adozione di <strong>Claude Enterprise</strong> (Anthropic) come piattaforma IA primaria. Claude si distingue per qualità del ragionamento, sicurezza enterprise-grade (Zero Data Retention, SOC2 Type II, HIPAA), e un ecosistema completo che copre sia lo sviluppo software (Claude Code) sia le attività di ufficio (Claude Cowork).</p>
@@ -103,19 +104,19 @@
 
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number">82%</div>
-                <div class="stat-label">Aziende che prevedono di adottare IA</div>
-                <div class="stat-source">Deloitte, 2024</div>
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Sviluppatori che usano strumenti IA per il coding</div>
+                <div class="stat-source">Pragmatic Engineer Survey, 2026</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">92%</div>
-                <div class="stat-label">Sviluppatori con aumento di produttività</div>
-                <div class="stat-source">GitHub Developer Survey, 2024</div>
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Sviluppatori che usano IA almeno settimanalmente</div>
+                <div class="stat-source">Developer Survey, 2026</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">74%</div>
-                <div class="stat-label">Organizzazioni che investono in IA agentica</div>
-                <div class="stat-source">IDC, 2025</div>
+                <div class="stat-number">75%</div>
+                <div class="stat-label">Sviluppatori che affidano all'IA oltre metà del coding</div>
+                <div class="stat-source">AI Coding Statistics, 2026</div>
             </div>
         </div>
 
@@ -421,11 +422,69 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 7. La nostra raccomandazione: Claude Enterprise -->
+<!-- 7. Rischi dell'adozione -->
+<!-- ════════════════════════════════════════════════ -->
+<section id="rischi-adozione">
+    <div class="container">
+        <div class="section-label">Sezione 7</div>
+        <h2>I Rischi dell'Adozione: Cosa Può Andare Storto</h2>
+        <p>Se la sezione precedente analizza i rischi del <strong>non adottare</strong> l'IA, è altrettanto importante affrontare con trasparenza i rischi del <strong>adottarla male</strong>. Un'adozione consapevole richiede la conoscenza dei pericoli e delle contromisure.</p>
+
+        <h3>7.1 Qualità e debito tecnico</h3>
+        <p>Gartner prevede un <strong>aumento del 2.500%</strong> dei difetti software legati all'IA nei prossimi anni, e stima che il <strong>75% dei leader tecnologici</strong> affronterà problemi di debito tecnico moderati o gravi attribuibili a codice generato dall'IA entro il 2026. Il codice IA è spesso funzionalmente corretto ma <strong>architetturalmente superficiale</strong>: funziona, ma non dimostra giudizio architetturale.</p>
+        <table class="data-table">
+            <thead><tr><th>Rischio</th><th>Dato</th><th>Fonte</th></tr></thead>
+            <tbody>
+                <tr><td>Costo nascosto anno 1 (review + test + rework)</td><td><strong>+12%</strong> rispetto al coding tradizionale</td><td>Codebridge, 2026</td></tr>
+                <tr><td>Costo manutenzione anno 2 (debito non gestito)</td><td><strong>4× i livelli tradizionali</strong></td><td>Pixelmojo, 2026</td></tr>
+                <tr><td>Codice IA con vulnerabilità (revisione manuale)</td><td><strong>68-73%</strong> dei campioni</td><td>Veracode, 2026</td></tr>
+                <tr><td>Dipendenze inesistenti suggerite dall'IA ("slopsquatting")</td><td><strong>~20%</strong> dei pacchetti suggeriti</td><td>Dark Reading, 2026</td></tr>
+            </tbody>
+        </table>
+
+        <h3>7.2 Allucinazioni e fiducia</h3>
+        <p>Gli sviluppatori segnalano output dall'aspetto plausibile che in realtà contengono: riferimenti ad API inesistenti, metodi deprecati, spiegazioni errate ma convincenti del codice e vulnerabilità sottili che sfuggono alla revisione superficiale. Secondo il sondaggio Stack Overflow 2025, solo il <strong>29% degli sviluppatori si fida</strong> dell'output IA — in calo di 11 punti rispetto al 2024, nonostante l'utilizzo sia in aumento.</p>
+
+        <h3>7.3 Deskilling e dipendenza cognitiva</h3>
+        <p>Uno studio MIT evidenzia <strong>riduzione dell'attività cerebrale, minore ritenzione mnemonica e pensiero meno originale</strong> come effetti collaterali della dipendenza eccessiva dall'IA. Il rischio è reale soprattutto per gli sviluppatori junior: l'IA può diventare una stampella che impedisce l'apprendimento, oppure un acceleratore che lo potenzia. La differenza dipende dalla capacità di <strong>valutare criticamente gli output</strong> — chi non ha basi solide nel dominio non è in grado di giudicare se l'IA ha risolto bene un problema.</p>
+
+        <h3>7.4 Governance e oversight</h3>
+        <p>I dati EY (marzo 2026) rivelano che il <strong>52% delle iniziative IA</strong> a livello dipartimentale opera <strong>senza approvazione formale</strong>, e il <strong>78% dei leader</strong> ammette che l'adozione dell'IA sta superando la capacità organizzativa di gestirne i rischi.</p>
+
+        <h3>7.5 Le nostre contromisure</h3>
+        <p>La strategia di adozione proposta in questo documento affronta ciascuno di questi rischi con misure specifiche:</p>
+        <table class="data-table">
+            <thead><tr><th>Rischio</th><th>Contromisura</th><th>Dove nel documento</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Debito tecnico e vulnerabilità</strong></td><td>Code review obbligatoria, gate CI/CD, validazione umana di ogni output IA</td><td>Sez. 9 (Uso responsabile) e KPI qualità</td></tr>
+                <tr><td><strong>Allucinazioni</strong></td><td>Formazione obbligatoria ("Patente AI"), cultura del pensiero critico, test automatici</td><td>Sez. 9 e Strategia Fase 2</td></tr>
+                <tr><td><strong>Deskilling</strong></td><td>Pair coding nella fase pilota, mentoring strutturato, l'IA come acceleratore non come sostituto</td><td>Strategia Fase 1 e Sez. 9</td></tr>
+                <tr><td><strong>Shadow AI e governance</strong></td><td>Strumenti enterprise con ZDR, audit log, RBAC, SSO, policy centralizzate</td><td>Sez. 6 e Sicurezza (8.5)</td></tr>
+                <tr><td><strong>Supply chain (slopsquatting)</strong></td><td>Lockfile obbligatori, verifica dipendenze, scanner vulnerabilità in CI/CD</td><td>Strategia Fase 2 (Hardening)</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout">
+            <strong>Il punto chiave:</strong> i rischi dell'adozione sono reali e documentati, ma sono tutti <strong>mitigabili con governance, formazione e processi</strong>. I rischi dell'inazione (sezione precedente) — Shadow AI, data leakage, divario competitivo — sono invece molto più difficili da contenere e tendono a peggiorare con il tempo.
+        </div>
+
+        <p class="sources"><strong>Fonti:</strong>
+            <a href="https://www.itpro.com/software/development/ai-software-development-2026-vibe-coding-security" target="_blank">IT Pro — AI Software Development 2026</a> ·
+            <a href="https://stackoverflow.blog/2026/02/18/closing-the-developer-ai-trust-gap/" target="_blank">Stack Overflow — AI Trust Gap</a> ·
+            <a href="https://www.codebridge.tech/articles/the-hidden-costs-of-ai-generated-software-why-it-works-isnt-enough" target="_blank">Codebridge — Hidden Costs</a> ·
+            <a href="https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026" target="_blank">Dark Reading — Security Pitfalls 2026</a> ·
+            <a href="https://www.ey.com/en_us/newsroom/2026/03/ey-survey-autonomous-ai-adoption-surges-at-tech-companies-as-oversight-falls-behind" target="_blank">EY Survey — Autonomous AI Adoption 2026</a> ·
+            <a href="https://venturebeat.com/ai/the-risks-of-ai-generated-code-are-real-heres-how-enterprises-can-manage-the-risk" target="_blank">VentureBeat — Managing AI Code Risks</a>
+        </p>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- 8. La nostra raccomandazione: Claude Enterprise -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="raccomandazione">
     <div class="container">
-        <div class="section-label">Sezione 7</div>
+        <div class="section-label">Sezione 8</div>
         <h2>La Nostra Raccomandazione: Claude Enterprise</h2>
         <p>Dopo un'analisi approfondita delle soluzioni disponibili sul mercato, raccomandiamo l'adozione di <strong>Claude</strong> (Anthropic) come piattaforma IA primaria per l'azienda. Questa raccomandazione si basa su cinque pilastri: qualità del ragionamento, flessibilità dei modelli, ecosistema integrato, sicurezza enterprise-grade e vantaggio organizzativo.</p>
 
@@ -443,7 +502,7 @@
             <iframe src="assets/pdf/Claude_Enterprise_Strategic_Case.pdf" title="Claude Enterprise Strategic Case" loading="lazy"></iframe>
         </div>
 
-        <h3>7.1 Il panorama degli strumenti IA per lo sviluppo</h3>
+        <h3>8.1 Il panorama degli strumenti IA per lo sviluppo</h3>
         <p>Il mercato degli strumenti IA per lo sviluppo software vale <strong>$7.37 miliardi</strong> nel 2025 e cresce a un tasso annuo del 35-40%. Cinque strumenti dominano il panorama. Li abbiamo analizzati tutti — inclusi <strong>7 test comparativi su scenari reali</strong> — per identificare la soluzione più adatta alle nostre esigenze.</p>
 
         <h4>Confronto strutturale</h4>
@@ -688,7 +747,7 @@
             <a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" target="_blank">Pragmatic Engineer 2026</a>
         </p>
 
-        <h3>7.2 Perché Claude: la nostra valutazione</h3>
+        <h3>8.2 Perché Claude: la nostra valutazione</h3>
         <p>Dai 7 test comparativi condotti su scenari reali e dall'analisi di mercato, emergono i punti di forza distintivi di Claude rispetto alle alternative:</p>
 
         <div class="card-grid">
@@ -698,7 +757,7 @@
             </div>
             <div class="card">
                 <h3>Contesto da 1M token</h3>
-                <p>La finestra di contesto più ampia in produzione. Permette di analizzare <strong>interi progetti</strong> senza frammentazione — critico per codebase enterprise complesse.</p>
+                <p>Finestra di contesto tra le più ampie in produzione (condivisa con Gemini). A differenza dei competitor multi-modello, Claude la sfrutta nativamente nell'agent — permette di analizzare <strong>interi progetti</strong> senza frammentazione, critico per codebase enterprise complesse.</p>
             </div>
             <div class="card">
                 <h3>Sicurezza best-in-class</h3>
@@ -712,6 +771,48 @@
 
         <div class="callout">
             <strong>Nota di trasparenza:</strong> Claude Code è lo strumento più apprezzato dagli sviluppatori (46% "most loved", Pragmatic Engineer Survey 2026) e domina nel coding agentico (71% degli utenti agent). GitHub Copilot mantiene la base installata enterprise più ampia (20M+ utenti, Leader Gartner MQ AI Code Assistants 2025) e offre un tier gratuito competitivo. Cursor è il competitor in più rapida crescita ($2B ARR). La nostra raccomandazione per Claude si basa sulla combinazione di <strong>qualità del ragionamento, leadership nel coding agentico, sicurezza enterprise e copertura funzionale</strong>.
+        </div>
+
+        <h3>8.3 Perché non le alternative: valutazione nel nostro contesto</h3>
+        <p>Tutti gli strumenti analizzati sono prodotti validi e in rapida evoluzione. La scelta di raccomandare Claude non nasce da una superiorità assoluta, ma dalla <strong>migliore aderenza al nostro contesto specifico</strong>: un'azienda manifatturiera italiana di medie dimensioni, con un team di sviluppo ristretto, codebase legacy in .NET/C#, e l'esigenza di coprire sia lo sviluppo software sia le attività di ufficio con un'unica piattaforma governata.</p>
+
+        <h4>GitHub Copilot: forte nell'ecosistema, debole nel nostro scenario</h4>
+        <p>Copilot è lo strumento con la maggiore base installata e il riconoscimento Gartner più alto. Tuttavia, nel nostro contesto presenta limiti specifici:</p>
+        <ul>
+            <li><strong>Architettura autocomplete-first:</strong> Copilot nasce come suggeritore inline. L'agent mode è stato aggiunto successivamente e, nei nostri test, produce risultati meno coerenti su task complessi multi-file — lo scenario che rappresenta il nostro bisogno principale (refactoring di codebase legacy, debugging architetturale)</li>
+            <li><strong>AGENTS.md non influenza l'autocomplete:</strong> le istruzioni personalizzate funzionano solo in agent mode e chat, ma <strong>non guidano i suggerimenti inline</strong> — la modalità che gli sviluppatori usano più frequentemente. Questo limita la capacità di imporre standard di codice aziendali in modo trasversale</li>
+            <li><strong>Nessuna copertura ufficio integrata:</strong> Copilot copre solo lo sviluppo. Per le attività di ufficio servirebbe un secondo strumento (Microsoft 365 Copilot), con un secondo contratto, una seconda governance e costi aggiuntivi significativi</li>
+            <li><strong>Zero Data Retention non disponibile:</strong> a differenza di Claude, Copilot non offre una garanzia nativa di non-retention dei dati — un punto critico per il nostro requisito di protezione del codice proprietario</li>
+            <li><strong>Mancanza di ISO 42001 e HIPAA:</strong> il profilo di certificazione è meno completo rispetto a Claude sul fronte della governance IA e del trattamento dati sensibili</li>
+        </ul>
+
+        <h4>Cursor: innovativo ma rischioso per l'enterprise</h4>
+        <p>Cursor è il competitor in più rapida crescita e offre un'esperienza IDE eccellente. Ma per un'adozione enterprise strutturata presenta criticità:</p>
+        <ul>
+            <li><strong>Vendor lock-in sull'IDE:</strong> Cursor è un fork di VS Code. Adottarlo significa vincolare l'intero team a un IDE specifico controllato da una startup. Se il team usa anche JetBrains Rider (comune in ambito .NET), servirebbero due strumenti paralleli</li>
+            <li><strong>Profilo di sicurezza incompleto:</strong> Cursor non possiede ISO 27001, ISO 42001 né HIPAA. Per un'azienda che tratta dati industriali e potenzialmente sensibili, questo gap è significativo</li>
+            <li><strong>Startup risk:</strong> nonostante la crescita impressionante ($2B ARR), Cursor è un'azienda giovane senza track record enterprise consolidato. Anthropic, pur essendo anch'essa relativamente giovane, ha un profilo di finanziamento ($15B+), clienti Fortune 10 e un programma enterprise strutturato che offre maggiori garanzie di continuità</li>
+            <li><strong>Nessuna copertura ufficio:</strong> come Copilot, Cursor copre esclusivamente lo sviluppo software</li>
+        </ul>
+
+        <h4>OpenAI Codex CLI: potenziale elevato, maturità enterprise da verificare</h4>
+        <p>Codex CLI è open source e tecnicamente promettente (GPT-5.3 raggiunge ~80% su SWE-bench), ma:</p>
+        <ul>
+            <li><strong>ZDR solo via API:</strong> la garanzia di non-retention dei dati è disponibile solo tramite l'API diretta, non attraverso i piani consumer o team — un'architettura meno trasparente per la governance</li>
+            <li><strong>Mancanza di ISO 42001 e HIPAA:</strong> profilo di certificazione inferiore a Claude</li>
+            <li><strong>Ecosistema frammentato:</strong> l'offerta OpenAI per l'enterprise (ChatGPT Enterprise + Codex + API) è distribuita su più prodotti con governance separata, a differenza dell'approccio unificato di Claude</li>
+        </ul>
+
+        <h4>Gemini CLI: forte su infrastruttura Google, meno rilevante per noi</h4>
+        <p>Gemini Code Assist è la scelta naturale per aziende già integrate nell'ecosistema Google Cloud. Nel nostro contesto:</p>
+        <ul>
+            <li><strong>Dipendenza da GCP:</strong> i vantaggi principali di Gemini (grounding su Google Search, integrazione Vertex AI, FedRAMP) presuppongono un'infrastruttura Google Cloud che non è il nostro stack primario</li>
+            <li><strong>SWE-bench inferiore:</strong> 76.2% vs 80.9% di Claude — un gap significativo proprio sui task di coding agentico complesso che rappresentano il nostro use case principale</li>
+            <li><strong>ZDR non disponibile:</strong> assente dalla matrice di sicurezza, a differenza di Claude</li>
+        </ul>
+
+        <div class="callout">
+            <strong>In sintesi:</strong> la scelta di Claude non esclude a priori le alternative. Il mercato evolve rapidamente e la strategia prevede una <strong>rivalutazione periodica</strong> ad ogni fase del rollout. Tuttavia, ad oggi, nessun competitor offre la stessa combinazione di qualità del ragionamento agentico, sicurezza enterprise-grade con ZDR nativo, copertura integrata sviluppo+ufficio e certificazioni complete — tutti requisiti prioritari per il nostro contesto.
         </div>
 
         <h4>Demo pratica: Claude Code vs GitHub Copilot</h4>
@@ -734,8 +835,8 @@
                 </div>
                 <div class="demo-card-body">
                     <span class="demo-badge badge-copilot">GitHub Copilot</span>
-                    <h3>Autocomplete Tradizionale</h3>
-                    <p>Suggerimenti inline riga per riga. L'onere della coerenza globale resta allo sviluppatore.</p>
+                    <h3>Modalità Autocomplete</h3>
+                    <p>Suggerimenti inline riga per riga. Copilot ha ora anche un agent mode, ma l'autocomplete resta la modalità dominante di utilizzo quotidiano.</p>
                 </div>
             </div>
         </div>
@@ -820,7 +921,7 @@
             <strong>Il codice sorgente</strong> del progetto è disponibile su <a href="https://github.com/marc04AM/5250_mbfix.git" target="_blank">github.com/marc04AM/5250_mbfix</a>. Questo caso dimostra che il beneficio non si limita a task semplici o demo: Claude Code ha prodotto valore misurabile su un <strong>problema reale di produzione</strong>, con impatto su architettura, qualità del codice, copertura di test e documentazione tecnica.
         </div>
 
-        <h3>7.2 Flessibilità dei modelli</h3>
+        <h3>8.4 Flessibilità dei modelli</h3>
         <p>Claude offre una gamma di modelli che consente di <strong>ottimizzare il rapporto costo/prestazioni</strong> in base alla complessità del task:</p>
         <table class="data-table">
             <thead><tr><th>Modello</th><th>Caratteristica</th><th>Costo (Input/Output per MTok)</th><th>Caso d'uso</th></tr></thead>
@@ -831,7 +932,7 @@
             </tbody>
         </table>
 
-        <h3>7.3 Ecosistema: Claude Code + Claude Cowork</h3>
+        <h3>8.5 Ecosistema: Claude Code + Claude Cowork</h3>
         <p>Un unico abbonamento enterprise fornisce accesso a un ecosistema integrato:</p>
         <ul>
             <li><strong>Claude Code:</strong> agente IA per lo sviluppo software, integrato direttamente nel terminale e nell'IDE dello sviluppatore. Opera come un agente autonomo supervisionato, in grado di leggere interi progetti, pianificare modifiche e eseguirle su larga scala</li>
@@ -883,7 +984,7 @@
             </div>
         </div>
 
-        <h3>7.4 Sicurezza enterprise-grade</h3>
+        <h3>8.6 Sicurezza enterprise-grade</h3>
         <p>La sicurezza è il primo criterio di valutazione per qualsiasi strumento enterprise. Claude soddisfa i requisiti più stringenti:</p>
         <table class="data-table">
             <thead><tr><th>Requisito</th><th>Dettaglio</th></tr></thead>
@@ -898,7 +999,7 @@
             </tbody>
         </table>
 
-        <h3>7.5 Vantaggio organizzativo</h3>
+        <h3>8.7 Vantaggio organizzativo</h3>
         <p>Claude non è solo uno strumento di produttività individuale. A livello organizzativo:</p>
         <ul>
             <li><strong>Mentoring continuo:</strong> Claude funge da mentore senior sempre disponibile, accelerando l'onboarding ed eliminando il lavoro ripetitivo</li>
@@ -913,7 +1014,7 @@
 <!-- ════════════════════════════════════════════════ -->
 <section id="uso-responsabile">
     <div class="container">
-        <div class="section-label">Sezione 8</div>
+        <div class="section-label">Sezione 9</div>
         <h2>Utilizzo Responsabile dell'IA</h2>
         <p>L'adozione dell'IA deve essere accompagnata da una chiara cornice di utilizzo responsabile. Tre principi fondamentali guidano il nostro approccio.</p>
 
@@ -939,7 +1040,7 @@
 <!-- ════════════════════════════════════════════════ -->
 <section id="strategia">
     <div class="container">
-        <div class="section-label">Sezione 9</div>
+        <div class="section-label">Sezione 10</div>
         <h2>Strategia di Adozione</h2>
         <p>Un approccio progressivo e sicuro, articolato in tre fasi, che minimizza il rischio operativo e consente di misurare il ROI ad ogni passaggio.</p>
 
@@ -992,6 +1093,16 @@
         <h3>Formazione gratuita offerta da Anthropic</h3>
         <p>Anthropic mette a disposizione <strong>corsi gratuiti</strong> per imparare a utilizzare i propri strumenti, accelerando l'onboarding del team senza costi aggiuntivi di formazione:</p>
         <div class="card-grid card-grid--wide">
+            <a href="https://anthropic.skilljar.com/claude-101" target="_blank" class="card card--link">
+                <h3>Claude 101</h3>
+                <p>Corso introduttivo per tutti i collaboratori: come usare Claude nelle attività quotidiane, dal brainstorming alla stesura di documenti, email e analisi.</p>
+                <span class="card-link-label">anthropic.skilljar.com</span>
+            </a>
+            <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" class="card card--link">
+                <h3>AI Fluency Framework — Foundations</h3>
+                <p>Le basi della fluency IA: come comunicare efficacemente con l'IA, scrivere prompt efficaci e integrare l'IA nei propri flussi di lavoro.</p>
+                <span class="card-link-label">anthropic.skilljar.com</span>
+            </a>
             <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" class="card card--link">
                 <h3>Claude Code in Action</h3>
                 <p>Corso pratico sull'utilizzo di Claude Code per lo sviluppo software: ciclo agentico, comandi, workflow quotidiani e best practice.</p>
@@ -1011,7 +1122,7 @@
 <!-- ════════════════════════════════════════════════ -->
 <section id="kpi">
     <div class="container">
-        <div class="section-label">Sezione 10</div>
+        <div class="section-label">Sezione 11</div>
         <h2>Metriche di Successo (KPI)</h2>
         <p>Il successo dell'adozione verrà misurato rigorosamente su tre dimensioni:</p>
 
@@ -1057,7 +1168,7 @@
 <!-- ════════════════════════════════════════════════ -->
 <section id="roi">
     <div class="container">
-        <div class="section-label">Sezione 11</div>
+        <div class="section-label">Sezione 12</div>
         <h2>Analisi Costi e ROI</h2>
 
         <h3>Il vero ROI: fare di più, non spendere di meno</h3>
@@ -1074,11 +1185,12 @@
             <thead><tr><th>Voce</th><th>Costo indicativo</th></tr></thead>
             <tbody>
                 <tr><td>Costo orario sviluppatore (caricato)</td><td>40-80 EUR/ora</td></tr>
-                <tr><td>Licenza Claude Team (mensile, per utente)</td><td>~30 USD/mese</td></tr>
-                <tr><td>Licenza Claude Enterprise (mensile, per utente)</td><td>~60 USD/mese</td></tr>
+                <tr><td>Licenza Claude Team Standard (mensile, per utente)</td><td>$25/mese</td></tr>
+                <tr><td>Licenza Claude Team Premium con Code (mensile, per utente)</td><td>$150/mese</td></tr>
+                <tr><td>Licenza Claude Enterprise (mensile, per utente)</td><td>Personalizzato (trattativa)</td></tr>
             </tbody>
         </table>
-        <p><strong>Il calcolo è semplice:</strong> una licenza Enterprise costa quanto meno di un'ora di lavoro di uno sviluppatore al mese. Se lo strumento fa risparmiare anche solo <strong>1-2 ore al mese</strong> per persona, l'investimento è già ripagato. I dati reali mostrano risparmi molto superiori.</p>
+        <p><strong>Il calcolo è semplice:</strong> anche la licenza Team Premium ($150/mese) costa meno di 2-4 ore di lavoro di uno sviluppatore. Se lo strumento fa risparmiare anche solo <strong>poche ore al mese</strong> per persona, l'investimento è già ripagato. I dati reali mostrano risparmi di <strong>3.6 ore/settimana</strong> (~187 ore/anno) per sviluppatore.</p>
 
         <h3>Ottimizzazione del consumo</h3>
         <ul>
@@ -1106,7 +1218,7 @@
 <!-- ════════════════════════════════════════════════ -->
 <section id="prossimi-passi">
     <div class="container">
-        <div class="section-label">Sezione 12</div>
+        <div class="section-label">Sezione 13</div>
         <h2>Prossimi Passi</h2>
         <p>Per avviare immediatamente la <strong>Fase 1 (Pilota)</strong>, sono necessarie tre azioni:</p>
 
@@ -1186,15 +1298,17 @@
             <li><strong>Proporre miglioramenti strutturali</strong> basati sulla comprensione del dominio</li>
         </ul>
 
-        <h3>A.6 Differenza rispetto all'autocomplete tradizionale</h3>
+        <h3>A.6 Confronto tra approcci: autocomplete, agent IDE e agent-first</h3>
+        <p>Nel 2026 tutti i principali strumenti offrono una qualche forma di agent mode, ma l'architettura di base determina dove ciascuno eccelle:</p>
         <table class="data-table">
-            <thead><tr><th>Caratteristica</th><th>Autocomplete tradizionale</th><th>Claude Code</th></tr></thead>
+            <thead><tr><th>Caratteristica</th><th>Autocomplete (es. Copilot inline)</th><th>Agent IDE (es. Cursor, Copilot agent mode)</th><th>Agent-first (Claude Code)</th></tr></thead>
             <tbody>
-                <tr><td><strong>Scope</strong></td><td>Poche righe nel file corrente</td><td>Intero progetto</td></tr>
-                <tr><td><strong>Comprensione</strong></td><td>Sintattica/locale</td><td>Semantica/globale</td></tr>
-                <tr><td><strong>Modalità</strong></td><td>Suggerimento passivo</td><td>Agente attivo</td></tr>
-                <tr><td><strong>Pianificazione</strong></td><td>Nessuna</td><td>Piano multi-step</td></tr>
-                <tr><td><strong>Modifica</strong></td><td>Singolo punto</td><td>Multi-file coordinato</td></tr>
+                <tr><td><strong>Scope</strong></td><td>Poche righe nel file corrente</td><td>Progetto aperto nell'IDE</td><td>Intero progetto + filesystem</td></tr>
+                <tr><td><strong>Comprensione</strong></td><td>Sintattica/locale</td><td>Semantica/progetto IDE</td><td>Semantica/globale</td></tr>
+                <tr><td><strong>Modalità</strong></td><td>Suggerimento passivo</td><td>Agente integrato nell'editor</td><td>Agente autonomo da terminale</td></tr>
+                <tr><td><strong>Pianificazione</strong></td><td>Nessuna</td><td>Piano per sessione</td><td>Piano multi-step con subagent paralleli</td></tr>
+                <tr><td><strong>Modifica</strong></td><td>Singolo punto</td><td>Multi-file nell'IDE</td><td>Multi-file coordinato + agent teams</td></tr>
+                <tr><td><strong>Personalizzazione</strong></td><td>Non personalizzabile</td><td>Rules per progetto</td><td>CLAUDE.md + hooks + skills + MCP</td></tr>
             </tbody>
         </table>
 
@@ -1208,10 +1322,10 @@
         <h3>A.8 Limiti tecnici</h3>
         <p>È fondamentale comprendere i limiti attuali:</p>
         <ul>
-            <li>Non ha accesso alla runtime reale dell'applicazione (salvo integrazione esplicita con il terminale)</li>
-            <li>Non esegue codice autonomamente senza supervisione</li>
-            <li>Richiede validazione umana di tutte le modifiche proposte</li>
-            <li>Le performance dipendono dalla qualità del contesto fornito (CLAUDE.md)</li>
+            <li>Esegue comandi bash e modifica file, ma con <strong>livelli di autonomia configurabili</strong> dallo sviluppatore (da approvazione singola a modalità completamente autonoma)</li>
+            <li>La validazione umana resta <strong>raccomandata</strong> per tutte le modifiche che entrano in produzione — anche in modalità autonoma, i gate CI/CD e le code review fungono da rete di sicurezza</li>
+            <li>Le performance dipendono dalla qualità del contesto fornito (CLAUDE.md, hooks, skills)</li>
+            <li>Non ha visibilità sullo stato runtime dell'applicazione in esecuzione, salvo integrazione esplicita tramite MCP o comandi terminale</li>
         </ul>
         <div class="callout">
             <strong>Lo sviluppatore rimane il supervisore e il decisore finale.</strong>
@@ -1246,13 +1360,14 @@
             <strong>Lavoro già avviato:</strong> è stata prodotta una prima bozza interna dei file di configurazione agente, disponibile su <a href="https://github.com/marc04AM/Agents" target="_blank">github.com/marc04AM/Agents</a>. Questo lavoro preparatorio, realizzato fuori dall'orario di lavoro, costituisce una base concreta da cui partire per la configurazione aziendale durante la Fase 1 del pilota.
         </div>
 
-        <h3>B.2 Gestione agenti paralleli (Swarm)</h3>
-        <p>Quando più agenti IA lavorano in parallelo sullo stesso progetto, è necessario prevenire conflitti. Le regole di ingaggio:</p>
+        <h3>B.2 Gestione agenti paralleli (Agent Teams)</h3>
+        <p>Da febbraio 2026, Claude Code supporta nativamente gli <strong>Agent Teams</strong>: sessioni Claude indipendenti che si coordinano, scambiano messaggi e dividono il lavoro in parallelo. Quando più agenti lavorano sullo stesso progetto, è necessario prevenire conflitti. Le regole di ingaggio:</p>
         <p><strong>Flusso di stato:</strong> In Attesa &rarr; Rivendicato &rarr; In Progresso &rarr; Revisione &rarr; Completo</p>
         <ul>
-            <li><strong>Stati di attività rigidi:</strong> nessun agente può prendere un compito già rivendicato. I battiti cardiaci rilevano gli agenti inattivi</li>
+            <li><strong>Subagent isolati:</strong> fino a 10 subagent paralleli, ciascuno con prompt, tool e permessi configurabili indipendentemente. Nessun agente può prendere un compito già rivendicato</li>
             <li><strong>Nessun stato mutabile condiviso:</strong> evitare che gli agenti leggano le note in corso degli altri. L'Agente A produce una specifica JSON, l'Agente B la consuma</li>
             <li><strong>PR obbligatorie per tutto:</strong> utilizzo di piattaforme come Linear per creare una storia condivisa delle decisioni tecniche, imponendo revisione del codice e test TDD prima di ogni merge</li>
+            <li><strong>Hooks deterministici:</strong> script che si attivano automaticamente a eventi del ciclo di vita (pre/post tool call, avvio/fine sessione) per imporre vincoli non aggirabili via prompting</li>
         </ul>
 
         <h3>B.3 Topologia di deployment</h3>
