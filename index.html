@@ -15,6 +15,8 @@
 <body>
 
 <a href="#executive-summary" class="skip-link">Vai al contenuto</a>
+<div class="reading-progress" aria-hidden="true"></div>
+<span class="reading-pct" aria-hidden="true">0 %</span>
 
 <!-- Navigation -->
 <nav aria-label="Navigazione principale">
@@ -29,7 +31,7 @@
         <a href="#impatto">Impatto</a>
         <a href="#divario">Divario</a>
         <a href="#rischi">Rischi Inazione</a>
-        <a href="#rischi-adozione">Rischi Adozione</a>
+        <!-- <a href="#rischi-adozione">Rischi Adozione</a> -->
         <a href="#raccomandazione">Claude</a>
         <a href="#uso-responsabile">Responsabilità</a>
         <a href="#strategia">Strategia</a>
@@ -1541,6 +1543,23 @@
 </footer>
 
 <script>
+/* Reading progress */
+(function () {
+    var bar = document.querySelector('.reading-progress');
+    var pct = document.querySelector('.reading-pct');
+    var hideTimer;
+    window.addEventListener('scroll', function () {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var percent = docHeight > 0 ? Math.min(Math.round((scrollTop / docHeight) * 100), 100) : 0;
+        bar.style.width = percent + '%';
+        pct.textContent = percent + ' %';
+        pct.classList.add('is-shown');
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(function () { pct.classList.remove('is-shown'); }, 1500);
+    }, { passive: true });
+})();
+
 /* Nav toggle */
 document.querySelector('.nav-toggle').addEventListener('click', function () {
     const nav = document.querySelector('.nav-inner');
@@ -1553,6 +1572,75 @@ document.querySelectorAll('.nav-inner a:not(.nav-brand)').forEach(function (a) {
         document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
     });
 });
+
+/* Scroll-reveal with IntersectionObserver */
+(function () {
+    var containers = document.querySelectorAll('section .container, .c-level-brief .container');
+    containers.forEach(function (el) { el.classList.add('reveal'); });
+
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        containers.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+    }
+
+    /* Entry observer — triggers when section enters from below */
+    var entryObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                entry.target.classList.remove('is-exiting');
+            } else {
+                /* Section scrolled below viewport — reset so it animates again on re-entry */
+                var rect = entry.boundingClientRect;
+                if (rect.top > 0) {
+                    entry.target.classList.remove('is-visible');
+                    entry.target.classList.remove('is-exiting');
+                }
+            }
+        });
+    }, { threshold: 0, rootMargin: '0px 0px -100px 0px' });
+
+    /* Exit observer — triggers fade-out when section nears top edge */
+    var exitObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+                var rect = entry.boundingClientRect;
+                if (rect.bottom < 200) {
+                    entry.target.classList.add('is-exiting');
+                    entry.target.classList.remove('is-visible');
+                }
+            }
+        });
+    }, { threshold: 0, rootMargin: '200px 0px 0px 0px' });
+
+    containers.forEach(function (el) {
+        entryObs.observe(el);
+        exitObs.observe(el);
+    });
+})();
+
+/* Nav active link on scroll */
+(function () {
+    var sections = document.querySelectorAll('section[id], header[id]');
+    var navLinks = document.querySelectorAll('nav a:not(.nav-brand)');
+    if (!sections.length || !navLinks.length) return;
+
+    var navHeight = 70;
+    var current = '';
+
+    function updateActive() {
+        var scrollY = window.scrollY + navHeight + 40;
+        sections.forEach(function (s) {
+            if (s.offsetTop <= scrollY) current = s.getAttribute('id');
+        });
+        navLinks.forEach(function (link) {
+            link.classList.toggle('nav-active', link.getAttribute('href') === '#' + current);
+        });
+    }
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+})();
 
 /* Wrap tables for mobile scroll */
 document.querySelectorAll('.data-table').forEach(function (table) {
