@@ -39,6 +39,11 @@ nav a:not(.nav-brand) { color: rgba(255,255,255,0.6); text-decoration: none; fon
 nav a:not(.nav-brand):hover { color: #ffffff; background: rgba(255,255,255,0.1); }
 .nav-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.4rem; cursor: pointer; padding: 0.5rem; margin-left: auto; }
 
+/* ── Reading Progress ── */
+.reading-progress { position: fixed; bottom: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(90deg, var(--blue-mid), #ffb347); z-index: 101; transition: width 0.15s linear; pointer-events: none; }
+.reading-pct { position: fixed; bottom: 12px; right: 16px; z-index: 101; font-size: 0.7rem; font-weight: 700; color: var(--blue-mid); background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 0.15rem 0.5rem; opacity: 0; transition: opacity 0.3s; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.reading-pct.is-shown { opacity: 1; }
+
 /* ── Hero ── */
 .hero { background: linear-gradient(135deg, var(--blue-dark) 0%, #d97000 50%, var(--blue-mid) 100%); color: var(--white); padding: 5rem 1.5rem 4rem; text-align: center; }
 .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; max-width: 900px; margin: 0 auto 1rem; line-height: 1.2; }
@@ -359,7 +364,7 @@ nav a.nav-active:not(.nav-brand) { color: #ffffff; background: rgba(255,255,255,
 
 /* ── Print ── */
 @media print {
-    nav, .skip-link, .pdf-embed iframe, .demo-grid iframe, .video-wrapper { display: none; }
+    nav, .skip-link, .pdf-embed iframe, .demo-grid iframe, .video-wrapper, .reading-progress, .reading-pct { display: none; }
     section { padding: 1.5rem 0; break-inside: avoid; }
     .hero { padding: 2rem 0; background: none; color: var(--gray-800); }
     .card, .stat-card, .step-card, .phase { box-shadow: none; border: 1px solid var(--gray-300); }

@@ -15,6 +15,8 @@
 <body>
 
 <a href="#executive-summary" class="skip-link">Vai al contenuto</a>
+<div class="reading-progress" aria-hidden="true"></div>
+<span class="reading-pct" aria-hidden="true">0 %</span>
 
 <!-- Navigation -->
 <nav aria-label="Navigazione principale">
@@ -1541,6 +1543,23 @@
 </footer>
 
 <script>
+/* Reading progress */
+(function () {
+    var bar = document.querySelector('.reading-progress');
+    var pct = document.querySelector('.reading-pct');
+    var hideTimer;
+    window.addEventListener('scroll', function () {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var percent = docHeight > 0 ? Math.min(Math.round((scrollTop / docHeight) * 100), 100) : 0;
+        bar.style.width = percent + '%';
+        pct.textContent = percent + ' %';
+        pct.classList.add('is-shown');
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(function () { pct.classList.remove('is-shown'); }, 1500);
+    }, { passive: true });
+})();
+
 /* Nav toggle */
 document.querySelector('.nav-toggle').addEventListener('click', function () {
     const nav = document.querySelector('.nav-inner');
