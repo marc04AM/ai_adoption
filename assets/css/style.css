@@ -89,11 +89,8 @@ hr.section-divider { border: none; border-top: 1px solid var(--gray-200); margin
 .stat-source { font-size: 0.8rem; color: var(--gray-500); }
 
 /* ── Tables ── */
-.table-wrap { position: relative; margin: 1.5rem 0; }
+.table-wrap { margin: 1.5rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 10px; }
 .table-wrap .data-table { margin: 0; }
-.table-wrap::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 2rem; pointer-events: none; background: linear-gradient(to right, transparent, rgba(255,255,255,0.85)); border-radius: 0 10px 10px 0; opacity: 0; transition: opacity 0.2s; }
-.table-wrap.is-scrollable::after { opacity: 1; }
-.table-wrap.scrolled-end::after { opacity: 0; }
 .data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
 .data-table thead { background: var(--blue-dark); color: var(--white); }
 .data-table th { padding: 0.85rem 1rem; text-align: left; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -184,7 +181,6 @@ footer strong { color: rgba(255,255,255,0.85); }
     .pdf-embed iframe { display: none; }
     .pdf-embed-header { border-bottom: none; }
     .pdf-embed-header .pdf-download-btn { font-size: 0.88rem; padding: 0.6rem 1.2rem; }
-    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 10px; }
     .data-table { min-width: 500px; }
     .data-table th, .data-table td { font-size: 0.78rem; padding: 0.55rem 0.65rem; }
     .data-table td:first-child, .data-table th:first-child { min-width: 100px; }
@@ -228,7 +224,7 @@ footer strong { color: rgba(255,255,255,0.85); }
     .data-table { box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
     .data-table thead { background: #1a1008; color: #ffffff; }
     .data-table th { color: #ffffff; }
-    .data-table--wide th:first-child { background: #1a1008; color: #ffffff; }
+    .data-table--wide thead th:first-child { background: #1a1008; color: #ffffff; }
     .data-table--wide td:first-child { background: var(--white); }
     .data-table--wide tbody tr:hover td:first-child { background: var(--blue-light); }
 
@@ -237,7 +233,6 @@ footer strong { color: rgba(255,255,255,0.85); }
 
     .card--link:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
 
-    .table-wrap::after { background: linear-gradient(to right, transparent, rgba(18,18,30,0.85)); }
 
     pre { background: #0a0a14; }
     code { background: var(--gray-100); }

@@ -1649,15 +1649,6 @@ document.querySelectorAll('.data-table').forEach(function (table) {
     wrap.className = 'table-wrap';
     table.parentNode.insertBefore(wrap, table);
     wrap.appendChild(table);
-
-    function checkScroll() {
-        var scrollable = wrap.scrollWidth > wrap.clientWidth + 2;
-        wrap.classList.toggle('is-scrollable', scrollable);
-        wrap.classList.toggle('scrolled-end', wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2);
-    }
-    wrap.addEventListener('scroll', checkScroll, { passive: true });
-    window.addEventListener('resize', checkScroll, { passive: true });
-    checkScroll();
 });
 </script>
 </body>
