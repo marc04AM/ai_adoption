@@ -54,7 +54,7 @@
 </header>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 1. Executive Summary -->
+<!-- Executive Summary -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="executive-summary">
     <div class="container">
@@ -159,7 +159,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 2. Contesto di Mercato -->
+<!-- Contesto di Mercato -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="contesto-mercato">
     <div class="container">
@@ -205,7 +205,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 3. L'IA nello sviluppo software -->
+<!-- L'IA nello sviluppo software -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="ia-sviluppo">
     <div class="container">
@@ -266,7 +266,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 4. L'IA nelle attività di ufficio -->
+<!-- L'IA nelle attività di ufficio -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="ia-ufficio">
     <div class="container">
@@ -296,7 +296,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 5. Impatto misurabile -->
+<!-- Impatto misurabile -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="impatto">
     <div class="container">
@@ -342,7 +342,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 5bis. Il divario competitivo: cosa dicono i dati -->
+<!-- Il divario competitivo: cosa dicono i dati -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="divario">
     <div class="container">
@@ -440,7 +440,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 6. Rischi dell'inazione -->
+<!-- Rischi dell'inazione -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="rischi">
     <div class="container">
@@ -487,9 +487,9 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 7. Rischi dell'adozione -->
+<!-- Rischi dell'adozione COMMENTATO-->
 <!-- ════════════════════════════════════════════════ -->
-<section id="rischi-adozione">
+<!-- <section id="rischi-adozione">
     <div class="container">
         <div class="section-label">Sezione 7</div>
         <h2>I Rischi dell'Adozione: Cosa Può Andare Storto</h2>
@@ -542,10 +542,10 @@
             <a href="https://venturebeat.com/ai/the-risks-of-ai-generated-code-are-real-heres-how-enterprises-can-manage-the-risk" target="_blank">VentureBeat — Managing AI Code Risks</a>
         </p>
     </div>
-</section>
+</section> -->
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 8. La nostra raccomandazione: Claude Enterprise -->
+<!-- La nostra raccomandazione: Claude Enterprise -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="raccomandazione">
     <div class="container">
@@ -1083,7 +1083,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 8. Utilizzo responsabile dell'IA -->
+<!-- Utilizzo responsabile dell'IA -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="uso-responsabile">
     <div class="container">
@@ -1109,7 +1109,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 9. Strategia di adozione -->
+<!-- Strategia di adozione -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="strategia">
     <div class="container">
@@ -1191,7 +1191,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 10. KPI -->
+<!-- KPI -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="kpi">
     <div class="container">
@@ -1237,7 +1237,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 11. Analisi costi e ROI -->
+<!-- Analisi costi e ROI -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="roi">
     <div class="container">
@@ -1287,7 +1287,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- 12. Prossimi passi -->
+<!-- Prossimi passi -->
 <!-- ════════════════════════════════════════════════ -->
 <section id="prossimi-passi">
     <div class="container">
@@ -1346,8 +1346,39 @@
             <li>Genera direttamente modifiche applicabili al codice, non solo suggerimenti</li>
         </ul>
 
-        <h3>A.2 Il ciclo operativo agentico</h3>
-        <p>Il funzionamento di Claude Code segue un ciclo in 6 fasi:</p>
+        <h3>A.2 Il ciclo operativo agentico (Agentic Loop)</h3>
+
+        <figure style="margin: 1.5rem 0; text-align: center;">
+            <img src="assets/images/agentic-loop.svg" alt="Diagramma dell'agentic loop di Claude Code: prompt → gather context → take action → verify results → loop o done" style="max-width: 100%; height: auto;" loading="lazy">
+            <figcaption style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">L'agentic loop — il ciclo autonomo che distingue Claude Code dagli strumenti tradizionali</figcaption>
+        </figure>
+
+        <p>L'<strong>agentic loop</strong> è il meccanismo fondamentale che distingue Claude Code da un semplice assistente di completamento. Non si tratta di una singola richiesta-risposta, ma di un <strong>ciclo continuo e autonomo</strong> in cui l'agente ragiona, agisce, verifica e itera fino al completamento dell'obiettivo — esattamente come farebbe uno sviluppatore esperto.</p>
+
+        <p>Il ciclo si articola in tre fasi che si ripetono:</p>
+        <ol>
+            <li><strong>Gather Context</strong> — l'agente raccoglie le informazioni necessarie: legge file sorgente, definizioni di classi, dipendenze, configurazioni, output di comandi terminale. Costruisce una rappresentazione interna del sistema per capire <em>dove</em> e <em>come</em> intervenire.</li>
+            <li><strong>Take Action</strong> — sulla base del contesto raccolto, l'agente esegue azioni concrete: modifica file, crea nuove classi, esegue comandi, installa dipendenze, lancia test. Non suggerisce — <em>fa</em>.</li>
+            <li><strong>Verify Results</strong> — dopo ogni azione, l'agente verifica autonomamente i risultati: controlla che il codice compili, che i test passino, che le modifiche siano coerenti con l'architettura esistente.</li>
+        </ol>
+
+        <p>Se la verifica rileva problemi, il ciclo <strong>riparte automaticamente</strong>: l'agente raccoglie nuovo contesto (es. l'errore di compilazione), decide una nuova azione correttiva, e verifica di nuovo. Questo loop continua fino a quando l'obiettivo non è raggiunto o l'agente richiede input umano.</p>
+
+        <h4>Il ruolo dello sviluppatore: supervisore, non operatore</h4>
+        <p>Lo sviluppatore può intervenire in qualsiasi momento del ciclo per:</p>
+        <ul>
+            <li><strong>Correggere la rotta:</strong> "No, usa il pattern Repository, non accesso diretto al DB"</li>
+            <li><strong>Aggiungere contesto:</strong> "Tieni conto che questo servizio gira anche in ambiente Docker"</li>
+            <li><strong>Raffinare l'obiettivo:</strong> "Aggiungi anche i test unitari per i casi edge"</li>
+        </ul>
+        <p>Questo modello di <strong>autonomia supervisionata</strong> è la differenza chiave: lo sviluppatore passa dal ruolo di <em>operatore</em> (scrivere ogni riga) a quello di <em>supervisore</em> (guidare e validare il lavoro dell'agente).</p>
+
+        <div class="callout">
+            <strong>Esempio pratico:</strong> lo sviluppatore chiede "Aggiungi la validazione degli input al controller OrderController". Claude Code autonomamente: (1) legge OrderController e i modelli correlati, (2) identifica tutti gli endpoint senza validazione, (3) implementa la validazione con i DTO appropriati, (4) esegue i test esistenti per verificare che nulla si sia rotto, (5) se un test fallisce, corregge e ri-verifica — il tutto senza ulteriore intervento umano.
+        </div>
+
+        <h4>Il dettaglio delle 6 fasi interne</h4>
+        <p>All'interno dell'agentic loop, ogni iterazione segue 6 fasi più granulari:</p>
         <ol>
             <li><strong>Goal Interpretation:</strong> lo sviluppatore fornisce un obiettivo in linguaggio naturale. L'agente traduce questo obiettivo in attività tecniche concrete.</li>
             <li><strong>Context Gathering:</strong> Claude Code legge i file sorgente, le definizioni delle classi, le dipendenze e le configurazioni del progetto. Costruisce una rappresentazione interna del sistema.</li>
@@ -1384,6 +1415,33 @@
                 <tr><td><strong>Personalizzazione</strong></td><td>Non personalizzabile</td><td>Rules per progetto</td><td>CLAUDE.md + hooks + skills + MCP</td></tr>
             </tbody>
         </table>
+
+        <h3>A.6.1 Architettura multi-agente: Subagents vs Agent Teams</h3>
+        <p>Un'evoluzione architetturale fondamentale distingue gli strumenti di coding IA di ultima generazione. Esistono due paradigmi per gestire task complessi che richiedono parallelismo:</p>
+
+        <figure style="margin: 1.5rem 0; text-align: center;">
+            <img src="assets/images/subagents-vs-agent-teams.png" alt="Confronto architetturale: Subagents (paradigma gerarchico) vs Agent Teams (paradigma collaborativo)" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy">
+            <figcaption style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Subagents (sinistra): modello gerarchico con agenti isolati — Agent Teams (destra): modello collaborativo con task list condivisa</figcaption>
+        </figure>
+
+        <table class="data-table">
+            <thead><tr><th></th><th>Subagents (es. GitHub Copilot)</th><th>Agent Teams (Claude Code)</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Architettura</strong></td><td>Gerarchica — l'agente principale spawna sub-agenti isolati che riportano i risultati</td><td>Collaborativa — un Team Lead assegna task a teammate che comunicano tra loro</td></tr>
+                <tr><td><strong>Comunicazione</strong></td><td>Unidirezionale: main → sub → result. I sub-agenti <strong>non comunicano tra loro</strong></td><td>Bidirezionale: i teammate si scambiano messaggi, condividono contesto e si coordinano in tempo reale</td></tr>
+                <tr><td><strong>Coordinamento</strong></td><td>Nessuno — ogni sub-agente lavora in isolamento, rischio di conflitti e duplicazioni</td><td>Shared Task List con flusso di stato (In Attesa → Rivendicato → In Progresso → Revisione → Completo)</td></tr>
+                <tr><td><strong>Scalabilità</strong></td><td>Limitata — l'agente principale diventa collo di bottiglia nel coordinamento</td><td>Elevata — i teammate si auto-organizzano, il Team Lead supervisiona senza bloccare</td></tr>
+                <tr><td><strong>Analogia</strong></td><td>Un manager che assegna compiti a consulenti esterni che non si parlano</td><td>Un tech lead con un team affiatato che usa una board condivisa</td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>GitHub Copilot</strong> utilizza ancora il paradigma dei <strong>subagents</strong>: l'agente principale delega task a sotto-agenti che lavorano in isolamento e restituiscono risultati senza coordinamento reciproco. Questo approccio funziona per task indipendenti, ma diventa fragile su refactoring complessi dove le modifiche di un agente impattano il lavoro di un altro.</p>
+
+        <p><strong>Claude Code</strong> ha adottato fin da febbraio 2026 l'architettura <strong>Agent Teams</strong>: più agenti che condividono una task list, comunicano tra loro e si coordinano per evitare conflitti. Il risultato è un sistema che scala naturalmente su codebase enterprise, dove le interdipendenze tra componenti sono la norma.</p>
+
+        <div class="callout">
+            <strong>Impatto pratico:</strong> su un refactoring che tocca 30 file interdipendenti, i subagents rischiano di produrre modifiche incoerenti (un agente rinomina un metodo, un altro continua a usare il nome vecchio). Gli Agent Teams si coordinano in tempo reale, garantendo coerenza globale.
+        </div>
 
         <h3>A.7 Casi d'uso concreti</h3>
         <h4>Creazione di un compilatore C</h4>
