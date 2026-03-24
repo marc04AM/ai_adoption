@@ -9,18 +9,39 @@
     <meta property="og:description" content="Proposta strutturata per l'adozione di strumenti IA enterprise-grade a supporto dello sviluppo software e delle attività di ufficio.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="assets/images/sistec-logo.png">
+    <meta property="og:locale" content="it_IT">
+    <meta name="theme-color" content="#c46200">
     <link rel="icon" href="assets/images/sistec-logo.png" type="image/png">
+    <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Proposta Adozione IA — Sviluppo Software e Attività di Ufficio",
+        "description": "Proposta strutturata per l'adozione di strumenti IA enterprise-grade a supporto dello sviluppo software e delle attività di ufficio.",
+        "image": "assets/images/sistec-logo.png",
+        "datePublished": "2026-03",
+        "inLanguage": "it",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sistec",
+            "logo": { "@type": "ImageObject", "url": "assets/images/sistec-logo.png" }
+        }
+    }
+    </script>
 </head>
 <body>
 
 <a href="#executive-summary" class="skip-link">Vai al contenuto</a>
 <div class="reading-progress" aria-hidden="true"></div>
 <span class="reading-pct" aria-hidden="true">0 %</span>
+<button class="back-to-top" aria-label="Torna su" title="Torna su">&#8593;</button>
 
 <!-- Navigation -->
 <nav aria-label="Navigazione principale">
     <div class="nav-inner">
+        <button class="theme-toggle" aria-label="Cambia tema" title="Cambia tema">&#9790;</button>
         <a href="#hero" class="nav-brand">Proposta IA</a>
         <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">&#9776;</button>
         <a href="#executive-summary">Summary</a>
@@ -31,7 +52,7 @@
         <a href="#impatto">Impatto</a>
         <a href="#divario">Divario</a>
         <a href="#rischi">Rischi Inazione</a>
-        <!-- <a href="#rischi-adozione">Rischi Adozione</a> -->
+        <a href="#rischi-adozione">Rischi Adozione</a>
         <a href="#raccomandazione">Claude</a>
         <a href="#uso-responsabile">Responsabilità</a>
         <a href="#strategia">Strategia</a>
@@ -201,7 +222,7 @@
         <p>L'Italia si trova in una posizione critica. Da un lato, la consapevolezza dell'importanza dell'IA sta crescendo rapidamente a livello dirigenziale. Dall'altro, molte organizzazioni sono ancora in fase esplorativa, senza una strategia di adozione strutturata. Questo crea un'asimmetria competitiva significativa: le aziende che adottano ora soluzioni IA mature avranno un vantaggio sproporzionato rispetto a chi rimanda.</p>
 
         <div class="callout">
-            <strong>Approfondimento:</strong> <a href="assets/pdf/Enterprise_Agentic_AI_Playbook.pdf" target="_blank">Il Playbook dell'IA Agentica per l'Enterprise</a> — dati di mercato, framework di governance e architettura di deployment.
+            <strong>Approfondimento:</strong> <a href="assets/pdf/Enterprise_Agentic_AI_Playbook.pdf" target="_blank" rel="noopener noreferrer">Il Playbook dell'IA Agentica per l'Enterprise</a> — dati di mercato, framework di governance e architettura di deployment.
         </div>
     </div>
 </section>
@@ -306,28 +327,35 @@
         <h2>Impatto Misurabile sull'Efficienza Aziendale</h2>
         <p>I benefici dell'adozione dell'IA non sono teorici. I dati raccolti da organizzazioni che hanno già completato il rollout mostrano risultati quantificabili in quattro aree chiave.</p>
 
-        <h3>5.1 Produttività</h3>
+        <details class="collapsible">
+        <summary><h3>5.1 Produttività</h3></summary>
         <ul>
             <li><strong>+164% di velocità</strong> per i nuovi membri del team assistiti da IA, rispetto all'onboarding tradizionale</li>
             <li>Riduzione dei tempi di completamento per task standard (boilerplate, test, documentazione)</li>
             <li>Aumento del throughput complessivo del team senza aumento dell'organico</li>
         </ul>
+        </details>
 
-        <h3>5.2 Qualità</h3>
+        <details class="collapsible">
+        <summary><h3>5.2 Qualità</h3></summary>
         <ul>
             <li><strong>Riduzione degli errori:</strong> identificazione proattiva di bug, null reference, race condition e codice duplicato</li>
             <li><strong>Standardizzazione:</strong> codice più uniforme e conforme alle best practice aziendali</li>
             <li><strong>Testing più completo:</strong> copertura di scenari che spesso vengono trascurati nei test manuali</li>
         </ul>
+        </details>
 
-        <h3>5.3 Autonomia e velocità di apprendimento</h3>
+        <details class="collapsible">
+        <summary><h3>5.3 Autonomia e velocità di apprendimento</h3></summary>
         <ul>
             <li>Gli sviluppatori risolvono più problemi in autonomia, riducendo le interruzioni ai colleghi senior</li>
             <li>Le nuove tecnologie vengono adottate più rapidamente</li>
             <li>Il time-to-productivity dei nuovi assunti si riduce significativamente</li>
         </ul>
+        </details>
 
-        <h3>5.4 Impatto sull'intero SDLC</h3>
+        <details class="collapsible">
+        <summary><h3>5.4 Impatto sull'intero SDLC</h3></summary>
         <p>L'IA non interviene solo in una fase specifica, ma produce benefici lungo <strong>l'intero ciclo di vita dello sviluppo software</strong>:</p>
         <table class="data-table">
             <thead><tr><th>Fase SDLC</th><th>Impatto IA</th></tr></thead>
@@ -340,6 +368,7 @@
                 <tr><td><strong>Maintenance</strong></td><td>Comprensione codice legacy, debugging, documentazione</td></tr>
             </tbody>
         </table>
+        </details>
     </div>
 </section>
 
@@ -352,7 +381,8 @@
         <h2>Il Divario Competitivo: Chi Non Adotta l'IA Resta Indietro</h2>
         <p>I dati di mercato del 2025-2026 convergono su un messaggio univoco: l'adozione di strumenti IA per lo sviluppo software non è più un vantaggio — è il <strong>requisito minimo per non perdere terreno</strong>. Le ricerche più recenti di Gartner, Deloitte, Stack Overflow, JetBrains e analisti indipendenti delineano un quadro inequivocabile.</p>
 
-        <h3>L'adozione è ormai la norma, non l'eccezione</h3>
+        <details class="collapsible">
+        <summary><h3>L'adozione è ormai la norma, non l'eccezione</h3></summary>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">84%</div>
@@ -371,16 +401,20 @@
             </div>
         </div>
         <p>Un team di sviluppo <strong>senza accesso a strumenti IA opera oggi con uno svantaggio strutturale</strong> rispetto alla concorrenza. Non si tratta più di un vantaggio competitivo, ma di <em>table stakes</em> — il minimo indispensabile per competere.</p>
+        </details>
 
-        <h3>I vantaggi dell'IA sono cumulativi</h3>
-        <p>Uno degli aspetti più insidiosi del divario è la sua natura <strong>auto-rinforzante</strong>. Secondo l'analisi di <a href="https://www.debevoisedatablog.com/2026/01/07/ai-advantages-tend-to-compound-increasing-the-risks-of-falling-too-far-behind/" target="_blank">Debevoise & Plimpton (gennaio 2026)</a>:</p>
+        <details class="collapsible">
+        <summary><h3>I vantaggi dell'IA sono cumulativi</h3></summary>
+        <p>Uno degli aspetti più insidiosi del divario è la sua natura <strong>auto-rinforzante</strong>. Secondo l'analisi di <a href="https://www.debevoisedatablog.com/2026/01/07/ai-advantages-tend-to-compound-increasing-the-risks-of-falling-too-far-behind/" target="_blank" rel="noopener noreferrer">Debevoise & Plimpton (gennaio 2026)</a>:</p>
         <div class="callout callout-warn">
-            <p class="mb-sm"><em>"AI success leads to more AI success, including increased buy-in from employees and management, better understanding of what AI tools can and cannot do, and more ideas for how to use AI to save time and money."</em></p>
-            <p class="mb-0"><em>"Those firms that are ahead now will find it relatively easy to stay ahead, especially if they can poach talent from the firms that have fallen behind."</em></p>
+            <p class="mb-sm"><span lang="en"><em>"AI success leads to more AI success, including increased buy-in from employees and management, better understanding of what AI tools can and cannot do, and more ideas for how to use AI to save time and money."</em></span></p>
+            <p class="mb-0"><span lang="en"><em>"Those firms that are ahead now will find it relatively easy to stay ahead, especially if they can poach talent from the firms that have fallen behind."</em></span></p>
         </div>
         <p>Le aziende che hanno superato la fase pilota stanno entrando in un <strong>ciclo virtuoso</strong>: i dipendenti sviluppano competenze IA che accelerano l'adozione di nuovi use case, che a loro volta generano ulteriori benefici. Chi rimane fermo accumula un divario che diventa progressivamente più difficile da colmare.</p>
+        </details>
 
-        <h3>I numeri della produttività</h3>
+        <details class="collapsible">
+        <summary><h3>I numeri della produttività</h3></summary>
         <table class="data-table">
             <thead><tr><th>Indicatore</th><th>Dato</th><th>Fonte</th></tr></thead>
             <tbody>
@@ -391,16 +425,20 @@
                 <tr><td>Incremento produttività nelle fasi build e test</td><td><strong>+50%</strong></td><td>Analisi di settore 2025-2026</td></tr>
             </tbody>
         </table>
+        </details>
 
-        <h3>Le previsioni di Gartner: finestra di azione limitata</h3>
+        <details class="collapsible">
+        <summary><h3>Le previsioni di Gartner: finestra di azione limitata</h3></summary>
         <p>Gartner ha identificato una <strong>finestra critica di 3-6 mesi</strong> per i dirigenti delle organizzazioni software per definire la propria strategia di IA agentica. Chi non pianifica lo sviluppo di capacità agentiche rischia di restare indietro rispetto ai concorrenti.</p>
         <ul>
-            <li>Entro il <strong>2026</strong>: il 40% delle applicazioni enterprise integrerà agenti IA specifici per task (dal 5% attuale) — <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" target="_blank">Gartner, agosto 2025</a></li>
-            <li>Entro il <strong>2030</strong>: l'80% delle organizzazioni evolverà i team di sviluppo grandi in <strong>team più piccoli e agili potenziati dall'IA</strong> — <a href="https://www.gartner.com/en/newsroom/press-releases/2025-10-20-gartner-identifies-the-top-strategic-technology-trends-for-2026" target="_blank">Gartner, Top Strategic Technology Trends 2026</a></li>
+            <li>Entro il <strong>2026</strong>: il 40% delle applicazioni enterprise integrerà agenti IA specifici per task (dal 5% attuale) — <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" target="_blank" rel="noopener noreferrer">Gartner, agosto 2025</a></li>
+            <li>Entro il <strong>2030</strong>: l'80% delle organizzazioni evolverà i team di sviluppo grandi in <strong>team più piccoli e agili potenziati dall'IA</strong> — <a href="https://www.gartner.com/en/newsroom/press-releases/2025-10-20-gartner-identifies-the-top-strategic-technology-trends-for-2026" target="_blank" rel="noopener noreferrer">Gartner, Top Strategic Technology Trends 2026</a></li>
         </ul>
+        </details>
 
-        <h3>Deloitte: l'esecuzione resta il collo di bottiglia</h3>
-        <p>Il report <a href="https://www.deloitte.com/global/en/issues/generative-ai/state-of-ai-in-enterprise.html" target="_blank">State of AI in the Enterprise 2026</a> di Deloitte rivela un paradosso: nonostante l'accelerazione dell'adozione, solo il <strong>40% delle organizzazioni</strong> dichiara la propria strategia IA come "altamente preparata". Le lacune più critiche:</p>
+        <details class="collapsible">
+        <summary><h3>Deloitte: l'esecuzione resta il collo di bottiglia</h3></summary>
+        <p>Il report <a href="https://www.deloitte.com/global/en/issues/generative-ai/state-of-ai-in-enterprise.html" target="_blank" rel="noopener noreferrer">State of AI in the Enterprise 2026</a> di Deloitte rivela un paradosso: nonostante l'accelerazione dell'adozione, solo il <strong>40% delle organizzazioni</strong> dichiara la propria strategia IA come "altamente preparata". Le lacune più critiche:</p>
         <table class="data-table">
             <thead><tr><th>Area</th><th>Organizzazioni pronte</th></tr></thead>
             <tbody>
@@ -412,8 +450,10 @@
             </tbody>
         </table>
         <p>Questo significa che <strong>chi si muove ora con un piano strutturato</strong> — come quello proposto in questo documento — si posiziona nel gruppo di testa, non nel gruppo di inseguimento.</p>
+        </details>
 
-        <h3>La crescita esplosiva di Claude Code</h3>
+        <details class="collapsible">
+        <summary><h3>La crescita esplosiva di Claude Code</h3></summary>
         <p>Claude Code rappresenta il caso più eclatante di adozione nel settore:</p>
         <ul>
             <li>Lanciato a maggio 2025, ha raggiunto <strong>$1 miliardo di ricavi annualizzati in 6 mesi</strong> — più velocemente di ChatGPT e di qualsiasi altro prodotto software enterprise nella storia</li>
@@ -422,21 +462,22 @@
             <li>Scelto come strumento preferito per <strong>task complessi</strong> (refactoring multi-file, architettura, debugging) dal <strong>44%</strong> degli sviluppatori — più di GitHub Copilot (28%) e ChatGPT (19%)</li>
             <li><strong>8 delle Fortune 10</strong> sono clienti Claude</li>
         </ul>
+        </details>
 
         <div class="callout callout-warn">
             <strong>Il punto di non ritorno si avvicina.</strong> Come la trasformazione digitale degli anni 2010, la trasformazione IA della metà degli anni 2020 sta separando le aziende che agiscono da quelle che aspettano. La differenza: questa volta la velocità di adozione è molto più alta, e la finestra per recuperare il divario è molto più stretta.
         </div>
 
         <p class="sources"><strong>Fonti:</strong>
-            <a href="https://survey.stackoverflow.co/2025/ai/" target="_blank">Stack Overflow Developer Survey 2025</a> ·
-            <a href="https://blog.jetbrains.com/research/2025/10/state-of-developer-ecosystem-2025/" target="_blank">JetBrains State of Developer Ecosystem 2025</a> ·
-            <a href="https://www.debevoisedatablog.com/2026/01/07/ai-advantages-tend-to-compound-increasing-the-risks-of-falling-too-far-behind/" target="_blank">Debevoise Data Blog 2026</a> ·
-            <a href="https://www.faros.ai/blog/ai-software-engineering" target="_blank">Faros AI Productivity Paradox Report</a> ·
-            <a href="https://www.getpanto.ai/blog/ai-coding-assistant-statistics" target="_blank">Panto AI Coding Statistics 2026</a> ·
-            <a href="https://www.gartner.com/en/articles/strategic-predictions-for-2026" target="_blank">Gartner Strategic Predictions 2026</a> ·
-            <a href="https://www.deloitte.com/global/en/issues/generative-ai/state-of-ai-in-enterprise.html" target="_blank">Deloitte State of AI in the Enterprise 2026</a> ·
-            <a href="https://claude5.ai/news/developer-survey-2026-ai-coding-73-percent-daily" target="_blank">Developer Survey 2026</a> ·
-            <a href="https://aibusinessweekly.net/p/claude-ai-statistics" target="_blank">Claude AI Statistics 2026</a>
+            <a href="https://survey.stackoverflow.co/2025/ai/" target="_blank" rel="noopener noreferrer">Stack Overflow Developer Survey 2025</a> ·
+            <a href="https://blog.jetbrains.com/research/2025/10/state-of-developer-ecosystem-2025/" target="_blank" rel="noopener noreferrer">JetBrains State of Developer Ecosystem 2025</a> ·
+            <a href="https://www.debevoisedatablog.com/2026/01/07/ai-advantages-tend-to-compound-increasing-the-risks-of-falling-too-far-behind/" target="_blank" rel="noopener noreferrer">Debevoise Data Blog 2026</a> ·
+            <a href="https://www.faros.ai/blog/ai-software-engineering" target="_blank" rel="noopener noreferrer">Faros AI Productivity Paradox Report</a> ·
+            <a href="https://www.getpanto.ai/blog/ai-coding-assistant-statistics" target="_blank" rel="noopener noreferrer">Panto AI Coding Statistics 2026</a> ·
+            <a href="https://www.gartner.com/en/articles/strategic-predictions-for-2026" target="_blank" rel="noopener noreferrer">Gartner Strategic Predictions 2026</a> ·
+            <a href="https://www.deloitte.com/global/en/issues/generative-ai/state-of-ai-in-enterprise.html" target="_blank" rel="noopener noreferrer">Deloitte State of AI in the Enterprise 2026</a> ·
+            <a href="https://claude5.ai/news/developer-survey-2026-ai-coding-73-percent-daily" target="_blank" rel="noopener noreferrer">Developer Survey 2026</a> ·
+            <a href="https://aibusinessweekly.net/p/claude-ai-statistics" target="_blank" rel="noopener noreferrer">Claude AI Statistics 2026</a>
         </p>
     </div>
 </section>
@@ -450,7 +491,8 @@
         <h2>I Rischi dell'Inazione: Shadow AI e Vibe Coding</h2>
         <p>Non adottare ufficialmente strumenti IA non significa che l'IA non venga utilizzata. Significa che viene utilizzata <strong>senza controllo, senza governance e senza sicurezza</strong>.</p>
 
-        <h3>6.1 Shadow AI</h3>
+        <details class="collapsible">
+        <summary><h3>6.1 Shadow AI</h3></summary>
         <p>L'utilizzo non autorizzato di strumenti IA da parte dei dipendenti, al di fuori delle policy aziendali. La Shadow AI è già una realtà nella maggior parte delle organizzazioni. Quando l'azienda non fornisce strumenti IA ufficiali, i dipendenti utilizzano autonomamente account personali su ChatGPT, Claude, o altri servizi, estensioni browser non autorizzate, e strumenti IA integrati negli editor di codice.</p>
         <div class="callout callout-warn">
             <strong>I rischi concreti:</strong>
@@ -461,19 +503,25 @@
                 <li><strong>Assenza di audit trail:</strong> nessuna tracciabilità di cosa viene chiesto all'IA e cosa viene prodotto</li>
             </ul>
         </div>
+        </details>
 
-        <h3>6.2 Blind Trust</h3>
+        <details class="collapsible">
+        <summary><h3>6.2 Blind Trust</h3></summary>
         <p>L'accettazione acritica dell'output generato dall'IA, senza validazione umana. Questo è particolarmente pericoloso quando sviluppatori junior accettano codice generato dall'IA senza comprenderne le implicazioni in termini di sicurezza, performance o manutenibilità.</p>
+        </details>
 
-        <h3>6.3 Vibe Coding</h3>
+        <details class="collapsible">
+        <summary><h3>6.3 Vibe Coding</h3></summary>
         <p>La pratica di scrivere codice interamente attraverso prompt IA, senza una comprensione profonda di ciò che viene generato. Il Vibe Coding produce:</p>
         <ul>
             <li><strong>Debito tecnico accelerato:</strong> codice che funziona ma è fragile, non testato e difficile da mantenere</li>
             <li><strong>Vulnerabilità di sicurezza:</strong> pattern insicuri che sfuggono alla revisione perché "il codice funziona"</li>
             <li><strong>Perdita di competenze:</strong> atrofia delle capacità tecniche del team nel medio-lungo termine</li>
         </ul>
+        </details>
 
-        <h3>6.4 La soluzione: Secure Enablement, non divieto</h3>
+        <details class="collapsible">
+        <summary><h3>6.4 La soluzione: Secure Enablement, non divieto</h3></summary>
         <p><strong>Vietare l'IA genera più Shadow AI.</strong> La strategia corretta è l'<strong>abilitazione sicura</strong>: fornire strumenti IA enterprise-grade con governance integrata, in modo che:</p>
         <ul>
             <li>I dati aziendali restino protetti (Zero Data Retention)</li>
@@ -481,6 +529,7 @@
             <li>La formazione garantisca un uso responsabile e consapevole</li>
             <li>I framework sicuri favoriscano la produttività senza compromettere la sicurezza</li>
         </ul>
+        </details>
 
         <div class="callout">
             L'IA estende le capacità umane, non le sostituisce. Il ruolo dell'azienda è costruire il contesto sicuro perché questo avvenga.
@@ -489,62 +538,72 @@
 </section>
 
 <!-- ════════════════════════════════════════════════ -->
-<!-- Rischi dell'adozione COMMENTATO-->
+<!-- Rischi dell'adozione -->
 <!-- ════════════════════════════════════════════════ -->
-<!-- <section id="rischi-adozione">
+<section id="rischi-adozione">
     <div class="container">
         <div class="section-label">Sezione 7</div>
         <h2>I Rischi dell'Adozione: Cosa Può Andare Storto</h2>
         <p>Se la sezione precedente analizza i rischi del <strong>non adottare</strong> l'IA, è altrettanto importante affrontare con trasparenza i rischi del <strong>adottarla male</strong>. Un'adozione consapevole richiede la conoscenza dei pericoli e delle contromisure.</p>
 
-        <h3>7.1 Qualità e debito tecnico</h3>
-        <p>Gartner prevede un <strong>aumento del 2.500%</strong> dei difetti software legati all'IA nei prossimi anni, e stima che il <strong>75% dei leader tecnologici</strong> affronterà problemi di debito tecnico moderati o gravi attribuibili a codice generato dall'IA entro il 2026. Il codice IA è spesso funzionalmente corretto ma <strong>architetturalmente superficiale</strong>: funziona, ma non dimostra giudizio architetturale.</p>
-        <table class="data-table">
-            <thead><tr><th>Rischio</th><th>Dato</th><th>Fonte</th></tr></thead>
-            <tbody>
-                <tr><td>Costo nascosto anno 1 (review + test + rework)</td><td><strong>+12%</strong> rispetto al coding tradizionale</td><td>Codebridge, 2026</td></tr>
-                <tr><td>Costo manutenzione anno 2 (debito non gestito)</td><td><strong>4× i livelli tradizionali</strong></td><td>Pixelmojo, 2026</td></tr>
-                <tr><td>Codice IA con vulnerabilità (revisione manuale)</td><td><strong>68-73%</strong> dei campioni</td><td>Veracode, 2026</td></tr>
-                <tr><td>Dipendenze inesistenti suggerite dall'IA ("slopsquatting")</td><td><strong>~20%</strong> dei pacchetti suggeriti</td><td>Dark Reading, 2026</td></tr>
-            </tbody>
-        </table>
+        <details class="collapsible">
+            <summary><h3>7.1 Qualità e debito tecnico</h3></summary>
+            <p>Gartner prevede un <strong>aumento del 2.500%</strong> dei difetti software legati all'IA nei prossimi anni, e stima che il <strong>75% dei leader tecnologici</strong> affronterà problemi di debito tecnico moderati o gravi attribuibili a codice generato dall'IA entro il 2026. Il codice IA è spesso funzionalmente corretto ma <strong>architetturalmente superficiale</strong>: funziona, ma non dimostra giudizio architetturale.</p>
+            <table class="data-table">
+                <thead><tr><th>Rischio</th><th>Dato</th><th>Fonte</th></tr></thead>
+                <tbody>
+                    <tr><td>Costo nascosto anno 1 (review + test + rework)</td><td><strong>+12%</strong> rispetto al coding tradizionale</td><td>Codebridge, 2026</td></tr>
+                    <tr><td>Costo manutenzione anno 2 (debito non gestito)</td><td><strong>4× i livelli tradizionali</strong></td><td>Pixelmojo, 2026</td></tr>
+                    <tr><td>Codice IA con vulnerabilità (revisione manuale)</td><td><strong>68-73%</strong> dei campioni</td><td>Veracode, 2026</td></tr>
+                    <tr><td>Dipendenze inesistenti suggerite dall'IA ("slopsquatting")</td><td><strong>~20%</strong> dei pacchetti suggeriti</td><td>Dark Reading, 2026</td></tr>
+                </tbody>
+            </table>
+        </details>
 
-        <h3>7.2 Allucinazioni e fiducia</h3>
-        <p>Gli sviluppatori segnalano output dall'aspetto plausibile che in realtà contengono: riferimenti ad API inesistenti, metodi deprecati, spiegazioni errate ma convincenti del codice e vulnerabilità sottili che sfuggono alla revisione superficiale. Secondo il sondaggio Stack Overflow 2025, solo il <strong>29% degli sviluppatori si fida</strong> dell'output IA — in calo di 11 punti rispetto al 2024, nonostante l'utilizzo sia in aumento.</p>
+        <details class="collapsible">
+            <summary><h3>7.2 Allucinazioni e fiducia</h3></summary>
+            <p>Gli sviluppatori segnalano output dall'aspetto plausibile che in realtà contengono: riferimenti ad API inesistenti, metodi deprecati, spiegazioni errate ma convincenti del codice e vulnerabilità sottili che sfuggono alla revisione superficiale. Secondo il sondaggio Stack Overflow 2025, solo il <strong>29% degli sviluppatori si fida</strong> dell'output IA — in calo di 11 punti rispetto al 2024, nonostante l'utilizzo sia in aumento.</p>
+        </details>
 
-        <h3>7.3 Deskilling e dipendenza cognitiva</h3>
-        <p>Uno studio MIT evidenzia <strong>riduzione dell'attività cerebrale, minore ritenzione mnemonica e pensiero meno originale</strong> come effetti collaterali della dipendenza eccessiva dall'IA. Il rischio è reale soprattutto per gli sviluppatori junior: l'IA può diventare una stampella che impedisce l'apprendimento, oppure un acceleratore che lo potenzia. La differenza dipende dalla capacità di <strong>valutare criticamente gli output</strong> — chi non ha basi solide nel dominio non è in grado di giudicare se l'IA ha risolto bene un problema.</p>
+        <details class="collapsible">
+            <summary><h3>7.3 Deskilling e dipendenza cognitiva</h3></summary>
+            <p>Uno studio MIT evidenzia <strong>riduzione dell'attività cerebrale, minore ritenzione mnemonica e pensiero meno originale</strong> come effetti collaterali della dipendenza eccessiva dall'IA. Il rischio è reale soprattutto per gli sviluppatori junior: l'IA può diventare una stampella che impedisce l'apprendimento, oppure un acceleratore che lo potenzia. La differenza dipende dalla capacità di <strong>valutare criticamente gli output</strong> — chi non ha basi solide nel dominio non è in grado di giudicare se l'IA ha risolto bene un problema.</p>
+        </details>
 
-        <h3>7.4 Governance e oversight</h3>
-        <p>I dati EY (marzo 2026) rivelano che il <strong>52% delle iniziative IA</strong> a livello dipartimentale opera <strong>senza approvazione formale</strong>, e il <strong>78% dei leader</strong> ammette che l'adozione dell'IA sta superando la capacità organizzativa di gestirne i rischi.</p>
+        <details class="collapsible">
+            <summary><h3>7.4 Governance e oversight</h3></summary>
+            <p>I dati EY (marzo 2026) rivelano che il <strong>52% delle iniziative IA</strong> a livello dipartimentale opera <strong>senza approvazione formale</strong>, e il <strong>78% dei leader</strong> ammette che l'adozione dell'IA sta superando la capacità organizzativa di gestirne i rischi.</p>
+        </details>
 
-        <h3>7.5 Le nostre contromisure</h3>
-        <p>La strategia di adozione proposta in questo documento affronta ciascuno di questi rischi con misure specifiche:</p>
-        <table class="data-table">
-            <thead><tr><th>Rischio</th><th>Contromisura</th><th>Dove nel documento</th></tr></thead>
-            <tbody>
-                <tr><td><strong>Debito tecnico e vulnerabilità</strong></td><td>Code review obbligatoria, gate CI/CD, validazione umana di ogni output IA</td><td>Sez. 9 (Uso responsabile) e KPI qualità</td></tr>
-                <tr><td><strong>Allucinazioni</strong></td><td>Formazione obbligatoria ("Patente AI"), cultura del pensiero critico, test automatici</td><td>Sez. 9 e Strategia Fase 2</td></tr>
-                <tr><td><strong>Deskilling</strong></td><td>Pair coding nella fase pilota, mentoring strutturato, l'IA come acceleratore non come sostituto</td><td>Strategia Fase 1 e Sez. 9</td></tr>
-                <tr><td><strong>Shadow AI e governance</strong></td><td>Strumenti enterprise con ZDR, audit log, RBAC, SSO, policy centralizzate</td><td>Sez. 6 e Sicurezza (8.5)</td></tr>
-                <tr><td><strong>Supply chain (slopsquatting)</strong></td><td>Lockfile obbligatori, verifica dipendenze, scanner vulnerabilità in CI/CD</td><td>Strategia Fase 2 (Hardening)</td></tr>
-            </tbody>
-        </table>
+        <details class="collapsible">
+            <summary><h3>7.5 Le nostre contromisure</h3></summary>
+            <p>La strategia di adozione proposta in questo documento affronta ciascuno di questi rischi con misure specifiche:</p>
+            <table class="data-table">
+                <thead><tr><th>Rischio</th><th>Contromisura</th><th>Dove nel documento</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Debito tecnico e vulnerabilità</strong></td><td>Code review obbligatoria, gate CI/CD, validazione umana di ogni output IA</td><td>Sez. 9 (Uso responsabile) e KPI qualità</td></tr>
+                    <tr><td><strong>Allucinazioni</strong></td><td>Formazione obbligatoria ("Patente AI"), cultura del pensiero critico, test automatici</td><td>Sez. 9 e Strategia Fase 2</td></tr>
+                    <tr><td><strong>Deskilling</strong></td><td>Pair coding nella fase pilota, mentoring strutturato, l'IA come acceleratore non come sostituto</td><td>Strategia Fase 1 e Sez. 9</td></tr>
+                    <tr><td><strong>Shadow AI e governance</strong></td><td>Strumenti enterprise con ZDR, audit log, RBAC, SSO, policy centralizzate</td><td>Sez. 6 e Sicurezza (8.5)</td></tr>
+                    <tr><td><strong>Supply chain (slopsquatting)</strong></td><td>Lockfile obbligatori, verifica dipendenze, scanner vulnerabilità in CI/CD</td><td>Strategia Fase 2 (Hardening)</td></tr>
+                </tbody>
+            </table>
+        </details>
 
         <div class="callout">
             <strong>Il punto chiave:</strong> i rischi dell'adozione sono reali e documentati, ma sono tutti <strong>mitigabili con governance, formazione e processi</strong>. I rischi dell'inazione (sezione precedente) — Shadow AI, data leakage, divario competitivo — sono invece molto più difficili da contenere e tendono a peggiorare con il tempo.
         </div>
 
         <p class="sources"><strong>Fonti:</strong>
-            <a href="https://www.itpro.com/software/development/ai-software-development-2026-vibe-coding-security" target="_blank">IT Pro — AI Software Development 2026</a> ·
-            <a href="https://stackoverflow.blog/2026/02/18/closing-the-developer-ai-trust-gap/" target="_blank">Stack Overflow — AI Trust Gap</a> ·
-            <a href="https://www.codebridge.tech/articles/the-hidden-costs-of-ai-generated-software-why-it-works-isnt-enough" target="_blank">Codebridge — Hidden Costs</a> ·
-            <a href="https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026" target="_blank">Dark Reading — Security Pitfalls 2026</a> ·
-            <a href="https://www.ey.com/en_us/newsroom/2026/03/ey-survey-autonomous-ai-adoption-surges-at-tech-companies-as-oversight-falls-behind" target="_blank">EY Survey — Autonomous AI Adoption 2026</a> ·
-            <a href="https://venturebeat.com/ai/the-risks-of-ai-generated-code-are-real-heres-how-enterprises-can-manage-the-risk" target="_blank">VentureBeat — Managing AI Code Risks</a>
+            <a href="https://www.itpro.com/software/development/ai-software-development-2026-vibe-coding-security" target="_blank" rel="noopener noreferrer">IT Pro — AI Software Development 2026</a> ·
+            <a href="https://stackoverflow.blog/2026/02/18/closing-the-developer-ai-trust-gap/" target="_blank" rel="noopener noreferrer">Stack Overflow — AI Trust Gap</a> ·
+            <a href="https://www.codebridge.tech/articles/the-hidden-costs-of-ai-generated-software-why-it-works-isnt-enough" target="_blank" rel="noopener noreferrer">Codebridge — Hidden Costs</a> ·
+            <a href="https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026" target="_blank" rel="noopener noreferrer">Dark Reading — Security Pitfalls 2026</a> ·
+            <a href="https://www.ey.com/en_us/newsroom/2026/03/ey-survey-autonomous-ai-adoption-surges-at-tech-companies-as-oversight-falls-behind" target="_blank" rel="noopener noreferrer">EY Survey — Autonomous AI Adoption 2026</a> ·
+            <a href="https://venturebeat.com/ai/the-risks-of-ai-generated-code-are-real-heres-how-enterprises-can-manage-the-risk" target="_blank" rel="noopener noreferrer">VentureBeat — Managing AI Code Risks</a>
         </p>
     </div>
-</section> -->
+</section>
 
 <!-- ════════════════════════════════════════════════ -->
 <!-- La nostra raccomandazione: Claude Enterprise -->
@@ -569,7 +628,8 @@
             <iframe src="assets/pdf/Claude_Enterprise_Strategic_Case.pdf" title="Claude Enterprise Strategic Case" loading="lazy"></iframe>
         </div>
 
-        <h3>8.1 Il panorama degli strumenti IA per lo sviluppo</h3>
+        <details class="collapsible" open>
+            <summary><h3>8.1 Il panorama degli strumenti IA per lo sviluppo</h3></summary>
         <p>Il mercato degli strumenti IA per lo sviluppo software vale <strong>$7.37 miliardi</strong> nel 2025 e cresce a un tasso annuo del 35-40%. Cinque strumenti dominano il panorama. Li abbiamo analizzati tutti — inclusi <strong>7 test comparativi su scenari reali</strong> — per identificare la soluzione più adatta alle nostre esigenze.</p>
 
         <h4>Confronto strutturale</h4>
@@ -660,12 +720,12 @@
             </tbody>
         </table>
         <p class="sources"><strong>Fonti:</strong>
-            <a href="https://www.vals.ai/benchmarks/swebench" target="_blank">SWE-bench Leaderboard</a> ·
-            <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank">Scale Labs SWE-bench Pro</a> ·
-            <a href="https://www.morphllm.com/ai-coding-agent" target="_blank">MorphLLM — AI Coding Agents Test 2026</a> ·
-            <a href="https://code.claude.com/docs/en/sub-agents" target="_blank">Claude Code Subagents Docs</a>
+            <a href="https://www.vals.ai/benchmarks/swebench" target="_blank" rel="noopener noreferrer">SWE-bench Leaderboard</a> ·
+            <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank" rel="noopener noreferrer">Scale Labs SWE-bench Pro</a> ·
+            <a href="https://www.morphllm.com/ai-coding-agent" target="_blank" rel="noopener noreferrer">MorphLLM — AI Coding Agents Test 2026</a> ·
+            <a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener noreferrer">Claude Code Subagents Docs</a>
         </p>
-        <p class="note"><strong>Nota su SWE-bench Verified:</strong> OpenAI ha rilevato contaminazione dei dati di training in tutti i modelli frontier testati (GPT-5.2, Opus 4.5, Gemini 3 Flash) e ha smesso di riportare score Verified, raccomandando <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank">SWE-bench Pro</a> come benchmark più affidabile. I dati sopra restano indicativi delle capacità relative.</p>
+        <p class="note"><strong>Nota su SWE-bench Verified:</strong> OpenAI ha rilevato contaminazione dei dati di training in tutti i modelli frontier testati (GPT-5.2, Opus 4.5, Gemini 3 Flash) e ha smesso di riportare score Verified, raccomandando <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank" rel="noopener noreferrer">SWE-bench Pro</a> come benchmark più affidabile. I dati sopra restano indicativi delle capacità relative.</p>
 
         <h4>Confronto pricing</h4>
         <table class="data-table data-table--wide">
@@ -715,11 +775,11 @@
             </tbody>
         </table>
         <p class="sources"><strong>Fonti:</strong>
-            <a href="https://claude.com/pricing" target="_blank">Claude Pricing</a> ·
-            <a href="https://github.com/features/copilot/plans" target="_blank">GitHub Copilot Plans</a> ·
-            <a href="https://developers.openai.com/codex/pricing" target="_blank">OpenAI Codex Pricing</a> ·
-            <a href="https://codeassist.google/" target="_blank">Gemini Code Assist</a> ·
-            <a href="https://cursor.com/pricing" target="_blank">Cursor Pricing</a>
+            <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Claude Pricing</a> ·
+            <a href="https://github.com/features/copilot/plans" target="_blank" rel="noopener noreferrer">GitHub Copilot Plans</a> ·
+            <a href="https://developers.openai.com/codex/pricing" target="_blank" rel="noopener noreferrer">OpenAI Codex Pricing</a> ·
+            <a href="https://codeassist.google/" target="_blank" rel="noopener noreferrer">Gemini Code Assist</a> ·
+            <a href="https://cursor.com/pricing" target="_blank" rel="noopener noreferrer">Cursor Pricing</a>
         </p>
 
         <h4>Sicurezza e compliance</h4>
@@ -745,9 +805,9 @@
             </tbody>
         </table>
         <p class="sources"><strong>Fonti:</strong>
-            <a href="https://privacy.claude.com/en/articles/10015870-what-certifications-has-anthropic-obtained" target="_blank">Anthropic Privacy Center</a> ·
-            <a href="https://openai.com/security-and-privacy/" target="_blank">OpenAI Security</a> ·
-            <a href="https://docs.google.com/gemini/docs/codeassist/security-privacy-compliance" target="_blank">Google Gemini Compliance</a>
+            <a href="https://privacy.claude.com/en/articles/10015870-what-certifications-has-anthropic-obtained" target="_blank" rel="noopener noreferrer">Anthropic Privacy Center</a> ·
+            <a href="https://openai.com/security-and-privacy/" target="_blank" rel="noopener noreferrer">OpenAI Security</a> ·
+            <a href="https://docs.google.com/gemini/docs/codeassist/security-privacy-compliance" target="_blank" rel="noopener noreferrer">Google Gemini Compliance</a>
         </p>
 
         <h4>Adozione e posizionamento di mercato</h4>
@@ -806,15 +866,17 @@
             </tbody>
         </table>
         <p class="sources"><strong>Fonti:</strong>
-            <a href="https://www.gradually.ai/en/claude-code-statistics/" target="_blank">Claude Code Statistics 2026</a> ·
-            <a href="https://techcrunch.com/2025/07/30/github-copilot-crosses-20-million-all-time-users/" target="_blank">TechCrunch</a> ·
-            <a href="https://fortune.com/2026/03/04/openai-codex-growth-enterprise-ai-agents/" target="_blank">Fortune — Codex</a> ·
-            <a href="https://techcrunch.com/2026/03/02/cursor-has-reportedly-surpassed-2b-in-annualized-revenue/" target="_blank">TechCrunch — Cursor</a> ·
-            <a href="https://github.blog/ai-and-ml/github-copilot/gartner-positions-github-as-a-leader-in-the-2025-magic-quadrant-for-ai-code-assistants-for-the-second-year-in-a-row/" target="_blank">GitHub Blog — Gartner MQ</a> ·
-            <a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" target="_blank">Pragmatic Engineer 2026</a>
+            <a href="https://www.gradually.ai/en/claude-code-statistics/" target="_blank" rel="noopener noreferrer">Claude Code Statistics 2026</a> ·
+            <a href="https://techcrunch.com/2025/07/30/github-copilot-crosses-20-million-all-time-users/" target="_blank" rel="noopener noreferrer">TechCrunch</a> ·
+            <a href="https://fortune.com/2026/03/04/openai-codex-growth-enterprise-ai-agents/" target="_blank" rel="noopener noreferrer">Fortune — Codex</a> ·
+            <a href="https://techcrunch.com/2026/03/02/cursor-has-reportedly-surpassed-2b-in-annualized-revenue/" target="_blank" rel="noopener noreferrer">TechCrunch — Cursor</a> ·
+            <a href="https://github.blog/ai-and-ml/github-copilot/gartner-positions-github-as-a-leader-in-the-2025-magic-quadrant-for-ai-code-assistants-for-the-second-year-in-a-row/" target="_blank" rel="noopener noreferrer">GitHub Blog — Gartner MQ</a> ·
+            <a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" target="_blank" rel="noopener noreferrer">Pragmatic Engineer 2026</a>
         </p>
+        </details>
 
-        <h3>8.2 Perché Claude: la nostra valutazione</h3>
+        <details class="collapsible">
+            <summary><h3>8.2 Perché Claude: la nostra valutazione</h3></summary>
         <p>Dai 7 test comparativi condotti su scenari reali e dall'analisi di mercato, emergono i punti di forza distintivi di Claude rispetto alle alternative:</p>
 
         <div class="card-grid">
@@ -839,8 +901,10 @@
         <div class="callout">
             <strong>Nota di trasparenza:</strong> Claude Code è lo strumento più apprezzato dagli sviluppatori (46% "most loved", Pragmatic Engineer Survey 2026) e domina nel coding agentico (71% degli utenti agent). GitHub Copilot mantiene la base installata enterprise più ampia (20M+ utenti, Leader Gartner MQ AI Code Assistants 2025) e offre un tier gratuito competitivo. Cursor è il competitor in più rapida crescita ($2B ARR). La nostra raccomandazione per Claude si basa sulla combinazione di <strong>qualità del ragionamento, leadership nel coding agentico, sicurezza enterprise e copertura funzionale</strong>.
         </div>
+        </details>
 
-        <h3>8.3 Perché non le alternative: valutazione nel nostro contesto</h3>
+        <details class="collapsible">
+            <summary><h3>8.3 Perché non le alternative: valutazione nel nostro contesto</h3></summary>
         <p>Tutti gli strumenti analizzati sono prodotti validi e in rapida evoluzione. La scelta di raccomandare Claude non nasce da una superiorità assoluta, ma dalla <strong>migliore aderenza al nostro contesto specifico</strong>: un'azienda manifatturiera italiana di medie dimensioni, con un team di sviluppo ristretto, codebase legacy in .NET/C#, e l'esigenza di coprire sia lo sviluppo software sia le attività di ufficio con un'unica piattaforma governata.</p>
 
         <h4>GitHub Copilot: forte nell'ecosistema, debole nel nostro scenario</h4>
@@ -881,14 +945,19 @@
         <div class="callout">
             <strong>In sintesi:</strong> la scelta di Claude non esclude a priori le alternative. Il mercato evolve rapidamente e la strategia prevede una <strong>rivalutazione periodica</strong> ad ogni fase del rollout. Tuttavia, ad oggi, nessun competitor offre la stessa combinazione di qualità del ragionamento agentico, sicurezza enterprise-grade con ZDR nativo, copertura integrata sviluppo+ufficio e certificazioni complete — tutti requisiti prioritari per il nostro contesto.
         </div>
+        </details>
 
-        <h4>Demo pratica: Claude Code vs GitHub Copilot</h4>
+        <details class="collapsible" open>
+            <summary><h3>Demo pratica: Claude Code vs GitHub Copilot</h3></summary>
         <p>Per illustrare la differenza concreta tra l'approccio agentico (Claude Code) e l'autocomplete tradizionale (Copilot), abbiamo completato lo stesso task — la creazione di un'app Todo CLI in .NET 9 — con entrambi gli strumenti:</p>
 
         <div class="demo-grid">
             <div class="demo-card">
                 <div class="video-wrapper">
-                    <iframe class="video-iframe" src="https://www.youtube.com/embed/0L94YceG4tk" title="Demo Claude Code — Todo CLI .NET 9" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="yt-facade" data-vid="0L94YceG4tk">
+                        <img src="https://i.ytimg.com/vi/0L94YceG4tk/hqdefault.jpg" alt="Demo Claude Code — Todo CLI .NET 9" loading="lazy">
+                        <button class="yt-facade-play" aria-label="Riproduci video">&#9654;</button>
+                    </div>
                 </div>
                 <div class="demo-card-body">
                     <span class="demo-badge badge-claude">Claude Code</span>
@@ -898,7 +967,10 @@
             </div>
             <div class="demo-card">
                 <div class="video-wrapper">
-                    <iframe class="video-iframe" src="https://www.youtube.com/embed/QqSDvXUx-XI" title="Demo GitHub Copilot — Todo CLI .NET 9" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="yt-facade" data-vid="QqSDvXUx-XI">
+                        <img src="https://i.ytimg.com/vi/QqSDvXUx-XI/hqdefault.jpg" alt="Demo GitHub Copilot — Todo CLI .NET 9" loading="lazy">
+                        <button class="yt-facade-play" aria-label="Riproduci video">&#9654;</button>
+                    </div>
                 </div>
                 <div class="demo-card-body">
                     <span class="demo-badge badge-copilot">GitHub Copilot</span>
@@ -946,14 +1018,14 @@
                 <div class="stat-source">Riduzione del 50%</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number stat-number--sm">4.0 &rarr; 9.0</div>
+                <div class="stat-number stat-number--sm">4.0 &rarr; 9.2</div>
                 <div class="stat-label">Punteggio qualità /10</div>
                 <div class="stat-source">Da ucZ9 pre-sprint a ucVision</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number stat-number--sm">108</div>
+                <div class="stat-number stat-number--sm">138</div>
                 <div class="stat-label">Test automatici scritti</div>
-                <div class="stat-source">91 unit + 17 integration</div>
+                <div class="stat-source">121 unit + 17 integration</div>
             </div>
         </div>
 
@@ -970,14 +1042,14 @@
         <table class="data-table">
             <thead><tr><th>Dimensione</th><th>Peso</th><th>Punteggio</th></tr></thead>
             <tbody>
-                <tr><td>Architettura e separazione delle responsabilità</td><td>20%</td><td><strong>9/10</strong></td></tr>
-                <tr><td>Correttezza state machine</td><td>15%</td><td><strong>9/10</strong></td></tr>
+                <tr><td>Architettura e separazione delle responsabilità</td><td>20%</td><td><strong>10/10</strong></td></tr>
+                <tr><td>Correttezza state machine</td><td>15%</td><td><strong>10/10</strong></td></tr>
                 <tr><td>Thread safety</td><td>15%</td><td><strong>9/10</strong></td></tr>
-                <tr><td>Error handling e resilienza</td><td>10%</td><td><strong>9/10</strong></td></tr>
+                <tr><td>Error handling e resilienza</td><td>10%</td><td><strong>10/10</strong></td></tr>
                 <tr><td>Implementazione protocollo</td><td>10%</td><td><strong>9/10</strong></td></tr>
-                <tr><td>Copertura test (unit)</td><td>10%</td><td><strong>8/10</strong></td></tr>
+                <tr><td>Copertura test (unit)</td><td>10%</td><td><strong>9/10</strong></td></tr>
                 <tr><td>Copertura test (integration)</td><td>10%</td><td><strong>9/10</strong></td></tr>
-                <tr><td>Qualità codice e naming</td><td>5%</td><td><strong>9/10</strong></td></tr>
+                <tr><td>Qualità codice e naming</td><td>5%</td><td><strong>10/10</strong></td></tr>
                 <tr><td>Testabilità e osservabilità</td><td>5%</td><td><strong>10/10</strong></td></tr>
             </tbody>
         </table>
@@ -985,10 +1057,12 @@
         <p>Questo tipo di analisi — normalmente riservata a consulenti esterni o a code review approfondite che richiedono giorni — è stata prodotta <strong>in minuti</strong> come parte naturale del flusso di lavoro con Claude Code. La qualità del documento dimostra la capacità dello strumento di operare non solo come generatore di codice, ma come <strong>analista tecnico e revisore architetturale</strong>.</p>
 
         <div class="callout">
-            <strong>Il codice sorgente</strong> del progetto è disponibile su <a href="https://github.com/marc04AM/5250_mbfix.git" target="_blank">github.com/marc04AM/5250_mbfix</a>. Questo caso dimostra che il beneficio non si limita a task semplici o demo: Claude Code ha prodotto valore misurabile su un <strong>problema reale di produzione</strong>, con impatto su architettura, qualità del codice, copertura di test e documentazione tecnica.
+            <strong>Il codice sorgente</strong> del progetto è disponibile su <a href="https://github.com/marc04AM/5250_mbfix.git" target="_blank" rel="noopener noreferrer">github.com/marc04AM/5250_mbfix</a>. Questo caso dimostra che il beneficio non si limita a task semplici o demo: Claude Code ha prodotto valore misurabile su un <strong>problema reale di produzione</strong>, con impatto su architettura, qualità del codice, copertura di test e documentazione tecnica.
         </div>
+        </details>
 
-        <h3>8.4 Flessibilità dei modelli</h3>
+        <details class="collapsible">
+            <summary><h3>8.4 Flessibilità dei modelli</h3></summary>
         <p>Claude offre una gamma di modelli che consente di <strong>ottimizzare il rapporto costo/prestazioni</strong> in base alla complessità del task:</p>
         <table class="data-table">
             <thead><tr><th>Modello</th><th>Caratteristica</th><th>Costo (Input/Output per MTok)</th><th>Caso d'uso</th></tr></thead>
@@ -998,8 +1072,10 @@
                 <tr><td><strong>Opus</strong></td><td>Ragionamento profondo</td><td>$15 / $75</td><td>Architettura complessa, debugging critico, analisi strategiche</td></tr>
             </tbody>
         </table>
+        </details>
 
-        <h3>8.5 Ecosistema: Claude Code + Claude Cowork</h3>
+        <details class="collapsible">
+            <summary><h3>8.5 Ecosistema: Claude Code + Claude Cowork</h3></summary>
         <p>Un unico abbonamento enterprise fornisce accesso a un ecosistema integrato:</p>
         <ul>
             <li><strong>Claude Code:</strong> agente IA per lo sviluppo software, integrato direttamente nel terminale e nell'IDE dello sviluppatore. Opera come un agente autonomo supervisionato, in grado di leggere interi progetti, pianificare modifiche e eseguirle su larga scala</li>
@@ -1010,7 +1086,10 @@
         <div class="demo-grid">
             <div class="demo-card">
                 <div class="video-wrapper">
-                    <iframe class="video-iframe" src="https://www.youtube.com/embed/AJpK3YTTKZ4" title="Claude Code — Video ufficiale Anthropic" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="yt-facade" data-vid="AJpK3YTTKZ4">
+                        <img src="https://i.ytimg.com/vi/AJpK3YTTKZ4/hqdefault.jpg" alt="Claude Code — Video ufficiale Anthropic" loading="lazy">
+                        <button class="yt-facade-play" aria-label="Riproduci video">&#9654;</button>
+                    </div>
                 </div>
                 <div class="demo-card-body">
                     <span class="demo-badge badge-claude">Claude Code</span>
@@ -1020,7 +1099,10 @@
             </div>
             <div class="demo-card">
                 <div class="video-wrapper">
-                    <iframe class="video-iframe" src="https://www.youtube.com/embed/UAmKyyZ-b9E" title="Claude Cowork — Video ufficiale Anthropic" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="yt-facade" data-vid="UAmKyyZ-b9E">
+                        <img src="https://i.ytimg.com/vi/UAmKyyZ-b9E/hqdefault.jpg" alt="Claude Cowork — Video ufficiale Anthropic" loading="lazy">
+                        <button class="yt-facade-play" aria-label="Riproduci video">&#9654;</button>
+                    </div>
                 </div>
                 <div class="demo-card-body">
                     <span class="demo-badge badge-cowork">Cowork</span>
@@ -1030,20 +1112,26 @@
             </div>
             <div class="demo-card"> 
                 <div class="video-wrapper">
-                    <iframe class="video-iframe" src="https://www.youtube.com/embed/cIctgHKEeMA?t=94s" title="Claude — Estensione Chrome" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="yt-facade" data-vid="cIctgHKEeMA" data-start="94">
+                        <img src="https://i.ytimg.com/vi/cIctgHKEeMA/hqdefault.jpg" alt="Claude — Excel & PowerPoint" loading="lazy">
+                        <button class="yt-facade-play" aria-label="Riproduci video">&#9654;</button>
+                    </div>
                 </div>
                 <div class="demo-card-body">
-                    <span class="demo-badge badge-cowork">Excel & PowerPoint</span>
+                    <span class="demo-badge badge-excel">Excel & PowerPoint</span>
                     <h3>Claude per i fogli di calcolo e le presentazioni </h3>
                     <p>Claude applicato a Excel e PowerPoint: analisi dati, generazione formule, manipolazione di tabelle complesse e automazione di task ripetitivi.</p>
                 </div>
             </div>
             <div class="demo-card">
                 <div class="video-wrapper">
-                    <iframe class="video-iframe" src="https://www.youtube.com/embed/rBJnWMD0Pho" title="Claude — Estensione Chrome" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="yt-facade" data-vid="rBJnWMD0Pho">
+                        <img src="https://i.ytimg.com/vi/rBJnWMD0Pho/hqdefault.jpg" alt="Claude — Estensione Chrome" loading="lazy">
+                        <button class="yt-facade-play" aria-label="Riproduci video">&#9654;</button>
+                    </div>
                 </div>
                 <div class="demo-card-body">
-                    <span class="demo-badge badge-cowork">Chrome</span>
+                    <span class="demo-badge badge-chrome">Chrome</span>
                     <h3>Estensione per il browser</h3>
                     <p>Claude integrato direttamente nel browser: assistenza contestuale su qualsiasi pagina web, sintesi di contenuti e supporto alla navigazione.</p>
                 </div>
@@ -1058,6 +1146,7 @@
                 <strong>Per il CEO:</strong> Abbattimento dei silos informativi — Claude recupera il contesto dai documenti aziendali senza caricamenti manuali. Riduzione del time-to-productivity per i nuovi assunti e maggiore retention dei talenti.
             </div>
         </div>
+        </details>
 
         <h3>8.6 Sicurezza enterprise-grade</h3>
         <p>La sicurezza è il primo criterio di valutazione per qualsiasi strumento enterprise. Claude soddisfa i requisiti più stringenti:</p>
@@ -1119,8 +1208,26 @@
         <h2>Strategia di Adozione</h2>
         <p>Un approccio progressivo e sicuro, articolato in tre fasi, che minimizza il rischio operativo e consente di misurare il ROI ad ogni passaggio.</p>
 
-        <div class="phase">
-            <h4>Fase 1: Pilota (Settimane 1-4)</h4>
+        <div class="timeline">
+            <div class="timeline-step">
+                <div class="timeline-dot">1</div>
+                <div class="timeline-label">Pilota</div>
+                <div class="timeline-period">Settimane 1-4</div>
+            </div>
+            <div class="timeline-step">
+                <div class="timeline-dot">2</div>
+                <div class="timeline-label">Hardening</div>
+                <div class="timeline-period">Settimane 5-8</div>
+            </div>
+            <div class="timeline-step">
+                <div class="timeline-dot">3</div>
+                <div class="timeline-label">Enterprise</div>
+                <div class="timeline-period">Settimane 9+</div>
+            </div>
+        </div>
+
+        <details class="phase" open>
+            <summary><h4>Fase 1: Pilota (Settimane 1-4)</h4></summary>
             <p><strong>Obiettivo:</strong> validare il valore dello strumento su un gruppo ristretto e raccogliere dati iniziali.</p>
             <table class="data-table">
                 <tbody>
@@ -1132,10 +1239,10 @@
                 </tbody>
             </table>
             <p class="mt-xs"><strong>Approccio:</strong> Pair coding — affiancare gli sviluppatori junior ad esperti per calibrare il contesto attraverso l'osservazione.</p>
-        </div>
+        </details>
 
-        <div class="phase">
-            <h4>Fase 2: Hardening (Settimane 5-8)</h4>
+        <details class="phase">
+            <summary><h4>Fase 2: Hardening (Settimane 5-8)</h4></summary>
             <p><strong>Obiettivo:</strong> configurare l'infrastruttura enterprise e le policy di sicurezza.</p>
             <table class="data-table">
                 <tbody>
@@ -1146,10 +1253,10 @@
                     <tr><td><strong>Sicurezza</strong></td><td>Coinvolgimento InfoSec, implementazione AI-SPM per validazione continua e proxy di rete</td></tr>
                 </tbody>
             </table>
-        </div>
+        </details>
 
-        <div class="phase">
-            <h4>Fase 3: Rollout Enterprise (Settimane 9+)</h4>
+        <details class="phase">
+            <summary><h4>Fase 3: Rollout Enterprise (Settimane 9+)</h4></summary>
             <p><strong>Obiettivo:</strong> distribuzione globale con governance completa.</p>
             <table class="data-table">
                 <tbody>
@@ -1159,7 +1266,7 @@
                     <tr><td><strong>Ottimizzazione</strong></td><td>Analisi costi, prompt caching, ottimizzazione scelta modelli</td></tr>
                 </tbody>
             </table>
-        </div>
+        </details>
 
         <div class="callout">
             <strong>Per il CEO:</strong> rischio operativo minimizzato tramite deployment graduale. Ogni fase produce dati misurabili che validano l'investimento prima di procedere alla successiva.
@@ -1167,23 +1274,23 @@
 
         <h3>Formazione gratuita offerta da Anthropic</h3>
         <p>Anthropic mette a disposizione <strong>corsi gratuiti</strong> per imparare a utilizzare i propri strumenti, accelerando l'onboarding del team senza costi aggiuntivi di formazione:</p>
-        <div class="card-grid card-grid--wide">
-            <a href="https://anthropic.skilljar.com/claude-101" target="_blank" class="card card--link">
+        <div class="card-grid card-grid--2x2">
+            <a href="https://anthropic.skilljar.com/claude-101" target="_blank" rel="noopener noreferrer" class="card card--link">
                 <h3>Claude 101</h3>
                 <p>Corso introduttivo per tutti i collaboratori: come usare Claude nelle attività quotidiane, dal brainstorming alla stesura di documenti, email e analisi.</p>
                 <span class="card-link-label">anthropic.skilljar.com</span>
             </a>
-            <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" class="card card--link">
+            <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" rel="noopener noreferrer" class="card card--link">
                 <h3>AI Fluency Framework — Foundations</h3>
                 <p>Le basi della fluency IA: come comunicare efficacemente con l'IA, scrivere prompt efficaci e integrare l'IA nei propri flussi di lavoro.</p>
                 <span class="card-link-label">anthropic.skilljar.com</span>
             </a>
-            <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" class="card card--link">
+            <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" rel="noopener noreferrer" class="card card--link">
                 <h3>Claude Code in Action</h3>
                 <p>Corso pratico sull'utilizzo di Claude Code per lo sviluppo software: ciclo agentico, comandi, workflow quotidiani e best practice.</p>
                 <span class="card-link-label">anthropic.skilljar.com</span>
             </a>
-            <a href="https://anthropic.skilljar.com/introduction-to-agent-skills" target="_blank" class="card card--link">
+            <a href="https://anthropic.skilljar.com/introduction-to-agent-skills" target="_blank" rel="noopener noreferrer" class="card card--link">
                 <h3>Introduction to Agent Skills</h3>
                 <p>Introduzione alle competenze agentiche: come configurare, personalizzare e orchestrare agenti IA per task complessi.</p>
                 <span class="card-link-label">anthropic.skilljar.com</span>
@@ -1201,36 +1308,42 @@
         <h2>Metriche di Successo (KPI)</h2>
         <p>Il successo dell'adozione verrà misurato rigorosamente su tre dimensioni:</p>
 
-        <h3>Adozione</h3>
-        <table class="data-table">
-            <thead><tr><th>KPI</th><th>Target</th><th>Misurazione</th></tr></thead>
-            <tbody>
-                <tr><td>Weekly Active Users (WAU)</td><td><strong>70%+</strong> delle licenze attive</td><td>Dashboard Anthropic</td></tr>
-                <tr><td>Frequenza di utilizzo</td><td>Utilizzo quotidiano</td><td>Log di sistema</td></tr>
-                <tr><td>Copertura team</td><td>100% dei team di sviluppo entro Fase 3</td><td>Report interno</td></tr>
-            </tbody>
-        </table>
+        <details class="collapsible">
+            <summary><h3>Adozione</h3></summary>
+            <table class="data-table">
+                <thead><tr><th>KPI</th><th>Target</th><th>Misurazione</th></tr></thead>
+                <tbody>
+                    <tr><td>Weekly Active Users (WAU)</td><td><strong>70%+</strong> delle licenze attive</td><td>Dashboard Anthropic</td></tr>
+                    <tr><td>Frequenza di utilizzo</td><td>Utilizzo quotidiano</td><td>Log di sistema</td></tr>
+                    <tr><td>Copertura team</td><td>100% dei team di sviluppo entro Fase 3</td><td>Report interno</td></tr>
+                </tbody>
+            </table>
+        </details>
 
-        <h3>Velocità</h3>
-        <table class="data-table">
-            <thead><tr><th>KPI</th><th>Target</th><th>Misurazione</th></tr></thead>
-            <tbody>
-                <tr><td>Time-to-merge per Pull Request</td><td>Riduzione significativa vs baseline</td><td>Metriche Git/GitHub</td></tr>
-                <tr><td>Tempo di completamento task</td><td>Riduzione misurabile per task standard</td><td>Project management tool</td></tr>
-                <tr><td>Time-to-productivity nuovi assunti</td><td>Riduzione vs onboarding tradizionale</td><td>Valutazione manager</td></tr>
-            </tbody>
-        </table>
+        <details class="collapsible">
+            <summary><h3>Velocità</h3></summary>
+            <table class="data-table">
+                <thead><tr><th>KPI</th><th>Target</th><th>Misurazione</th></tr></thead>
+                <tbody>
+                    <tr><td>Time-to-merge per Pull Request</td><td>Riduzione significativa vs baseline</td><td>Metriche Git/GitHub</td></tr>
+                    <tr><td>Tempo di completamento task</td><td>Riduzione misurabile per task standard</td><td>Project management tool</td></tr>
+                    <tr><td>Time-to-productivity nuovi assunti</td><td>Riduzione vs onboarding tradizionale</td><td>Valutazione manager</td></tr>
+                </tbody>
+            </table>
+        </details>
 
-        <h3>Qualità</h3>
-        <table class="data-table">
-            <thead><tr><th>KPI</th><th>Target</th><th>Misurazione</th></tr></thead>
-            <tbody>
-                <tr><td>Acceptance rate codice IA</td><td>Trend crescente</td><td>Metriche di utilizzo</td></tr>
-                <tr><td>Fallimenti CI/CD</td><td>Riduzione vs baseline</td><td>Pipeline CI/CD</td></tr>
-                <tr><td>Bug in produzione</td><td>Riduzione vs baseline</td><td>Bug tracker</td></tr>
-                <tr><td>Copertura test</td><td>Aumento vs baseline</td><td>Coverage tool</td></tr>
-            </tbody>
-        </table>
+        <details class="collapsible">
+            <summary><h3>Qualità</h3></summary>
+            <table class="data-table">
+                <thead><tr><th>KPI</th><th>Target</th><th>Misurazione</th></tr></thead>
+                <tbody>
+                    <tr><td>Acceptance rate codice IA</td><td>Trend crescente</td><td>Metriche di utilizzo</td></tr>
+                    <tr><td>Fallimenti CI/CD</td><td>Riduzione vs baseline</td><td>Pipeline CI/CD</td></tr>
+                    <tr><td>Bug in produzione</td><td>Riduzione vs baseline</td><td>Bug tracker</td></tr>
+                    <tr><td>Copertura test</td><td>Aumento vs baseline</td><td>Coverage tool</td></tr>
+                </tbody>
+            </table>
+        </details>
 
         <div class="callout">
             <strong>Per il CTO:</strong> monitoraggio continuo della sicurezza e del drift delle policy tramite AI-SPM (AI Security Posture Management). I KPI di qualità sono altrettanto importanti di quelli di velocità.
@@ -1246,45 +1359,53 @@
         <div class="section-label">Sezione 12</div>
         <h2>Analisi Costi e ROI</h2>
 
-        <h3>Il vero ROI: fare di più, non spendere di meno</h3>
-        <div class="callout callout-warn">
-            <p class="mb-sm"><strong>Un chiarimento fondamentale:</strong> il ritorno sull'investimento in IA <strong>non</strong> si ottiene riducendo il personale.</p>
-            <p class="mb-sm">Il modello <strong>sbagliato</strong> è: <em>pago l'IA &rarr; licenzio sviluppatori &rarr; pago meno per lo stesso lavoro.</em></p>
-            <p class="mb-0">Il modello <strong>corretto</strong> è: <em>pago l'IA &rarr; lo stesso lavoro si completa in metà del tempo &rarr; <strong>il team può fare più lavoro nello stesso tempo</strong>, anticipare le deadline e affrontare progetti che prima non erano fattibili.</em></p>
-        </div>
-        <p>Il risultato è duplice: l'azienda ottiene <strong>più output a parità di organico</strong>, e i dipendenti sperimentano una maggiore soddisfazione professionale — completano più lavoro, rispettano (e anticipano) le scadenze, e dedicano più tempo alle attività ad alto valore invece che ai task ripetitivi. L'IA non rimpiazza le persone: <strong>moltiplica il valore di ogni persona nel team</strong>.</p>
+        <details class="collapsible">
+            <summary><h3>Il vero ROI: fare di più, non spendere di meno</h3></summary>
+            <div class="callout callout-warn">
+                <p class="mb-sm"><strong>Un chiarimento fondamentale:</strong> il ritorno sull'investimento in IA <strong>non</strong> si ottiene riducendo il personale.</p>
+                <p class="mb-sm">Il modello <strong>sbagliato</strong> è: <em>pago l'IA &rarr; licenzio sviluppatori &rarr; pago meno per lo stesso lavoro.</em></p>
+                <p class="mb-0">Il modello <strong>corretto</strong> è: <em>pago l'IA &rarr; lo stesso lavoro si completa in metà del tempo &rarr; <strong>il team può fare più lavoro nello stesso tempo</strong>, anticipare le deadline e affrontare progetti che prima non erano fattibili.</em></p>
+            </div>
+            <p>Il risultato è duplice: l'azienda ottiene <strong>più output a parità di organico</strong>, e i dipendenti sperimentano una maggiore soddisfazione professionale — completano più lavoro, rispettano (e anticipano) le scadenze, e dedicano più tempo alle attività ad alto valore invece che ai task ripetitivi. L'IA non rimpiazza le persone: <strong>moltiplica il valore di ogni persona nel team</strong>.</p>
+        </details>
 
-        <h3>Il confronto economico</h3>
-        <p>Il costo di uno strumento IA va confrontato con il costo dell'alternativa: il tempo dello sviluppatore.</p>
-        <table class="data-table">
-            <thead><tr><th>Voce</th><th>Costo indicativo</th></tr></thead>
-            <tbody>
-                <tr><td>Costo orario sviluppatore (caricato)</td><td>40-80 EUR/ora</td></tr>
-                <tr><td>Licenza Claude Team Standard (mensile, per utente)</td><td>$25/mese</td></tr>
-                <tr><td>Licenza Claude Team Premium con Code (mensile, per utente)</td><td>$150/mese</td></tr>
-                <tr><td>Licenza Claude Enterprise (mensile, per utente)</td><td>Personalizzato (trattativa)</td></tr>
-            </tbody>
-        </table>
-        <p><strong>Il calcolo è semplice:</strong> anche la licenza Team Premium ($150/mese) costa meno di 2-4 ore di lavoro di uno sviluppatore. Se lo strumento fa risparmiare anche solo <strong>poche ore al mese</strong> per persona, l'investimento è già ripagato. I dati reali mostrano risparmi di <strong>3.6 ore/settimana</strong> (~187 ore/anno) per sviluppatore.</p>
+        <details class="collapsible">
+            <summary><h3>Il confronto economico</h3></summary>
+            <p>Il costo di uno strumento IA va confrontato con il costo dell'alternativa: il tempo dello sviluppatore.</p>
+            <table class="data-table">
+                <thead><tr><th>Voce</th><th>Costo indicativo</th></tr></thead>
+                <tbody>
+                    <tr><td>Costo orario sviluppatore (caricato)</td><td>40-80 EUR/ora</td></tr>
+                    <tr><td>Licenza Claude Team Standard (mensile, per utente)</td><td>$25/mese</td></tr>
+                    <tr><td>Licenza Claude Team Premium con Code (mensile, per utente)</td><td>$150/mese</td></tr>
+                    <tr><td>Licenza Claude Enterprise (mensile, per utente)</td><td>Personalizzato (trattativa)</td></tr>
+                </tbody>
+            </table>
+            <p><strong>Il calcolo è semplice:</strong> anche la licenza Team Premium ($150/mese) costa meno di 2-4 ore di lavoro di uno sviluppatore. Se lo strumento fa risparmiare anche solo <strong>poche ore al mese</strong> per persona, l'investimento è già ripagato. I dati reali mostrano risparmi di <strong>3.6 ore/settimana</strong> (~187 ore/anno) per sviluppatore.</p>
+        </details>
 
-        <h3>Ottimizzazione del consumo</h3>
-        <ul>
-            <li><strong>Prompt caching:</strong> riutilizzo del contesto tra chiamate consecutive, riducendo il volume di token processati</li>
-            <li><strong>Scelta del modello appropriato:</strong> utilizzare Haiku per task semplici, Sonnet per il lavoro quotidiano, Opus solo quando necessario</li>
-            <li><strong>CLAUDE.md strutturato:</strong> un file di contesto ben scritto riduce la necessità di re-spiegare il progetto ad ogni interazione, risparmiando token</li>
-        </ul>
+        <details class="collapsible">
+            <summary><h3>Ottimizzazione del consumo</h3></summary>
+            <ul>
+                <li><strong>Prompt caching:</strong> riutilizzo del contesto tra chiamate consecutive, riducendo il volume di token processati</li>
+                <li><strong>Scelta del modello appropriato:</strong> utilizzare Haiku per task semplici, Sonnet per il lavoro quotidiano, Opus solo quando necessario</li>
+                <li><strong>CLAUDE.md strutturato:</strong> un file di contesto ben scritto riduce la necessità di re-spiegare il progetto ad ogni interazione, risparmiando token</li>
+            </ul>
+        </details>
 
-        <h3>ROI atteso</h3>
-        <p>Considerando un team di 10 sviluppatori:</p>
-        <table class="data-table">
-            <thead><tr><th>Scenario</th><th>Risparmio stimato</th></tr></thead>
-            <tbody>
-                <tr><td>Conservativo (5% efficienza)</td><td>~2 ore/persona/settimana</td></tr>
-                <tr><td>Moderato (15% efficienza)</td><td>~6 ore/persona/settimana</td></tr>
-                <tr><td>Ottimistico (25% efficienza)</td><td>~10 ore/persona/settimana</td></tr>
-            </tbody>
-        </table>
-        <p>Anche nello scenario conservativo, il ROI è ampiamente positivo già dal primo mese.</p>
+        <details class="collapsible">
+            <summary><h3>ROI atteso</h3></summary>
+            <p>Considerando un team di 10 sviluppatori:</p>
+            <table class="data-table">
+                <thead><tr><th>Scenario</th><th>Risparmio stimato</th></tr></thead>
+                <tbody>
+                    <tr><td>Conservativo (5% efficienza)</td><td>~2 ore/persona/settimana</td></tr>
+                    <tr><td>Moderato (15% efficienza)</td><td>~6 ore/persona/settimana</td></tr>
+                    <tr><td>Ottimistico (25% efficienza)</td><td>~10 ore/persona/settimana</td></tr>
+                </tbody>
+            </table>
+            <p>Anche nello scenario conservativo, il ROI è ampiamente positivo già dal primo mese.</p>
+        </details>
     </div>
 </section>
 
@@ -1316,8 +1437,7 @@
         </div>
 
         <div class="callout callout-warn">
-            <strong>Per CEO e CTO:</strong> l'obiettivo è passare dallo "Shadow AI" — l'utilizzo incontrollato che sta già avvenendo — al vantaggio competitivo governato. Ogni giorno di ritardo è un giorno in cui i dati aziendali vengono potenzialmente esposti senza protezioni.
-        </div>
+            <strong>Per CEO e CTO:</strong> l'obiettivo è passare dallo "Shadow AI" — l'utilizzo incontrollato che sta già avvenendo — al vantaggio competitivo governato.
     </div>
 </section>
 
@@ -1339,56 +1459,62 @@
             <iframe src="assets/pdf/Operational_AI_Mastery.pdf" title="Operational AI Mastery" loading="lazy"></iframe>
         </div>
 
-        <h3>A.1 Cos'è Claude Code</h3>
-        <p>Claude Code è uno strumento di Intelligenza Artificiale progettato per operare come un <strong>agente software autonomo supervisionato dallo sviluppatore</strong>. A differenza dei tradizionali strumenti di autocomplete (come Copilot inline), Claude Code:</p>
-        <ul>
-            <li>Legge e comprende <strong>interi progetti software</strong>, non solo il file corrente</li>
-            <li>Analizza più file contemporaneamente, costruendo una mappa semantica del sistema</li>
-            <li>Pianifica e propone modifiche coerenti su larga scala</li>
-            <li>Genera direttamente modifiche applicabili al codice, non solo suggerimenti</li>
-        </ul>
+        <details class="collapsible">
+            <summary><h3>A.1 Cos'è Claude Code</h3></summary>
+            <p>Claude Code è uno strumento di Intelligenza Artificiale progettato per operare come un <strong>agente software autonomo supervisionato dallo sviluppatore</strong>. A differenza dei tradizionali strumenti di autocomplete (come Copilot inline), Claude Code:</p>
+            <ul>
+                <li>Legge e comprende <strong>interi progetti software</strong>, non solo il file corrente</li>
+                <li>Analizza più file contemporaneamente, costruendo una mappa semantica del sistema</li>
+                <li>Pianifica e propone modifiche coerenti su larga scala</li>
+                <li>Genera direttamente modifiche applicabili al codice, non solo suggerimenti</li>
+            </ul>
+        </details>
 
-        <h3>A.2 Il ciclo operativo agentico (Agentic Loop)</h3>
+        <details class="collapsible">
+            <summary><h3>A.2 Il ciclo operativo agentico (Agentic Loop)</h3></summary>
 
-        <figure style="margin: 1.5rem 0; text-align: center;">
-            <img src="assets/images/agentic-loop.svg" alt="Diagramma dell'agentic loop di Claude Code: prompt → gather context → take action → verify results → loop o done" style="max-width: 100%; height: auto;" loading="lazy">
-            <figcaption style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">L'agentic loop — il ciclo autonomo che distingue Claude Code dagli strumenti tradizionali</figcaption>
-        </figure>
+            <figure style="margin: 1.5rem 0; text-align: center;">
+                <img src="assets/images/agentic-loop.svg" alt="Diagramma dell'agentic loop di Claude Code: prompt → gather context → take action → verify results → loop o done" style="max-width: 100%; height: auto;" loading="lazy">
+                <figcaption style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">L'agentic loop — il ciclo autonomo che distingue Claude Code dagli strumenti tradizionali</figcaption>
+            </figure>
 
-        <p>L'<strong>agentic loop</strong> è il meccanismo fondamentale che distingue Claude Code da un semplice assistente di completamento. Non si tratta di una singola richiesta-risposta, ma di un <strong>ciclo continuo e autonomo</strong> in cui l'agente ragiona, agisce, verifica e itera fino al completamento dell'obiettivo — esattamente come farebbe uno sviluppatore esperto.</p>
+            <p>L'<strong>agentic loop</strong> è il meccanismo fondamentale che distingue Claude Code da un semplice assistente di completamento. Non si tratta di una singola richiesta-risposta, ma di un <strong>ciclo continuo e autonomo</strong> in cui l'agente ragiona, agisce, verifica e itera fino al completamento dell'obiettivo — esattamente come farebbe uno sviluppatore esperto.</p>
 
-        <p>Il ciclo si articola in tre fasi che si ripetono:</p>
-        <ol>
-            <li><strong>Gather Context</strong> — l'agente raccoglie le informazioni necessarie: legge file sorgente, definizioni di classi, dipendenze, configurazioni, output di comandi terminale. Costruisce una rappresentazione interna del sistema per capire <em>dove</em> e <em>come</em> intervenire.</li>
-            <li><strong>Take Action</strong> — sulla base del contesto raccolto, l'agente esegue azioni concrete: modifica file, crea nuove classi, esegue comandi, installa dipendenze, lancia test. Non suggerisce — <em>fa</em>.</li>
-            <li><strong>Verify Results</strong> — dopo ogni azione, l'agente verifica autonomamente i risultati: controlla che il codice compili, che i test passino, che le modifiche siano coerenti con l'architettura esistente.</li>
-        </ol>
+            <p>Il ciclo si articola in tre fasi che si ripetono:</p>
+            <ol>
+                <li><strong>Gather Context</strong> — l'agente raccoglie le informazioni necessarie: legge file sorgente, definizioni di classi, dipendenze, configurazioni, output di comandi terminale. Costruisce una rappresentazione interna del sistema per capire <em>dove</em> e <em>come</em> intervenire.</li>
+                <li><strong>Take Action</strong> — sulla base del contesto raccolto, l'agente esegue azioni concrete: modifica file, crea nuove classi, esegue comandi, installa dipendenze, lancia test. Non suggerisce — <em>fa</em>.</li>
+                <li><strong>Verify Results</strong> — dopo ogni azione, l'agente verifica autonomamente i risultati: controlla che il codice compili, che i test passino, che le modifiche siano coerenti con l'architettura esistente.</li>
+            </ol>
 
-        <p>Se la verifica rileva problemi, il ciclo <strong>riparte automaticamente</strong>: l'agente raccoglie nuovo contesto (es. l'errore di compilazione), decide una nuova azione correttiva, e verifica di nuovo. Questo loop continua fino a quando l'obiettivo non è raggiunto o l'agente richiede input umano.</p>
+            <p>Se la verifica rileva problemi, il ciclo <strong>riparte automaticamente</strong>: l'agente raccoglie nuovo contesto (es. l'errore di compilazione), decide una nuova azione correttiva, e verifica di nuovo. Questo loop continua fino a quando l'obiettivo non è raggiunto o l'agente richiede input umano.</p>
+        </details>
 
-        <h4>Il ruolo dello sviluppatore: supervisore, non operatore</h4>
-        <p>Lo sviluppatore può intervenire in qualsiasi momento del ciclo per:</p>
-        <ul>
-            <li><strong>Correggere la rotta:</strong> "No, usa il pattern Repository, non accesso diretto al DB"</li>
-            <li><strong>Aggiungere contesto:</strong> "Tieni conto che questo servizio gira anche in ambiente Docker"</li>
-            <li><strong>Raffinare l'obiettivo:</strong> "Aggiungi anche i test unitari per i casi edge"</li>
-        </ul>
-        <p>Questo modello di <strong>autonomia supervisionata</strong> è la differenza chiave: lo sviluppatore passa dal ruolo di <em>operatore</em> (scrivere ogni riga) a quello di <em>supervisore</em> (guidare e validare il lavoro dell'agente).</p>
+        <details class="collapsible">
+            <summary><h3>Il ruolo dello sviluppatore: supervisore, non operatore</h3></summary>
+            <p>Lo sviluppatore può intervenire in qualsiasi momento del ciclo per:</p>
+            <ul>
+                <li><strong>Correggere la rotta:</strong> "No, usa il pattern Repository, non accesso diretto al DB"</li>
+                <li><strong>Aggiungere contesto:</strong> "Tieni conto che questo servizio gira anche in ambiente Docker"</li>
+                <li><strong>Raffinare l'obiettivo:</strong> "Aggiungi anche i test unitari per i casi edge"</li>
+            </ul>
+            <p>Questo modello di <strong>autonomia supervisionata</strong> è la differenza chiave: lo sviluppatore passa dal ruolo di <em>operatore</em> (scrivere ogni riga) a quello di <em>supervisore</em> (guidare e validare il lavoro dell'agente).</p>
 
-        <div class="callout">
-            <strong>Esempio pratico:</strong> lo sviluppatore chiede "Aggiungi la validazione degli input al controller OrderController". Claude Code autonomamente: (1) legge OrderController e i modelli correlati, (2) identifica tutti gli endpoint senza validazione, (3) implementa la validazione con i DTO appropriati, (4) esegue i test esistenti per verificare che nulla si sia rotto, (5) se un test fallisce, corregge e ri-verifica — il tutto senza ulteriore intervento umano.
-        </div>
+            <div class="callout">
+                <strong>Esempio pratico:</strong> lo sviluppatore chiede "Aggiungi la validazione degli input al controller OrderController". Claude Code autonomamente: (1) legge OrderController e i modelli correlati, (2) identifica tutti gli endpoint senza validazione, (3) implementa la validazione con i DTO appropriati, (4) esegue i test esistenti per verificare che nulla si sia rotto, (5) se un test fallisce, corregge e ri-verifica — il tutto senza ulteriore intervento umano.
+            </div>
 
-        <h4>Il dettaglio delle 6 fasi interne</h4>
-        <p>All'interno dell'agentic loop, ogni iterazione segue 6 fasi più granulari:</p>
-        <ol>
-            <li><strong>Goal Interpretation:</strong> lo sviluppatore fornisce un obiettivo in linguaggio naturale. L'agente traduce questo obiettivo in attività tecniche concrete.</li>
-            <li><strong>Context Gathering:</strong> Claude Code legge i file sorgente, le definizioni delle classi, le dipendenze e le configurazioni del progetto. Costruisce una rappresentazione interna del sistema.</li>
-            <li><strong>Planning:</strong> l'agente genera un piano dettagliato: identificare i punti di intervento, creare nuove classi se necessario, modificare le chiamate esistenti.</li>
-            <li><strong>Execution:</strong> genera le modifiche al codice: modifica di file esistenti, creazione di nuovi file, refactoring.</li>
-            <li><strong>Validation:</strong> verifica la coerenza logica delle modifiche: compatibilità dei tipi, correttezza sintattica, coerenza con l'architettura esistente.</li>
-            <li><strong>Iteration:</strong> migliora i risultati su feedback dello sviluppatore, iterando fino a raggiungere l'obiettivo.</li>
-        </ol>
+            <h4>Il dettaglio delle 6 fasi interne</h4>
+            <p>All'interno dell'agentic loop, ogni iterazione segue 6 fasi più granulari:</p>
+            <ol>
+                <li><strong>Goal Interpretation:</strong> lo sviluppatore fornisce un obiettivo in linguaggio naturale. L'agente traduce questo obiettivo in attività tecniche concrete.</li>
+                <li><strong>Context Gathering:</strong> Claude Code legge i file sorgente, le definizioni delle classi, le dipendenze e le configurazioni del progetto. Costruisce una rappresentazione interna del sistema.</li>
+                <li><strong>Planning:</strong> l'agente genera un piano dettagliato: identificare i punti di intervento, creare nuove classi se necessario, modificare le chiamate esistenti.</li>
+                <li><strong>Execution:</strong> genera le modifiche al codice: modifica di file esistenti, creazione di nuovi file, refactoring.</li>
+                <li><strong>Validation:</strong> verifica la coerenza logica delle modifiche: compatibilità dei tipi, correttezza sintattica, coerenza con l'architettura esistente.</li>
+                <li><strong>Iteration:</strong> migliora i risultati su feedback dello sviluppatore, iterando fino a raggiungere l'obiettivo.</li>
+            </ol>
+        </details>
 
         <h3>A.3 Comprensione semantica del codice</h3>
         <p>Claude Code non lavora solo a livello testuale. Costruisce una <strong>mappa mentale del sistema</strong> che include relazioni tra classi e moduli, flow delle chiamate tra componenti, e responsabilità delle singole componenti.</p>
@@ -1490,7 +1616,7 @@
         <p>In pratica, <code>CLAUDE.md</code> diventa il <strong>manuale di stile eseguibile</strong> dell'organizzazione: non un documento che gli sviluppatori devono leggere e ricordare, ma un'istruzione che l'IA applica automaticamente ad ogni interazione.</p>
 
         <div class="callout">
-            <strong>Lavoro già avviato:</strong> è stata prodotta una prima bozza interna dei file di configurazione agente, disponibile su <a href="https://github.com/marc04AM/Agents" target="_blank">github.com/marc04AM/Agents</a>. Questo lavoro preparatorio, realizzato fuori dall'orario di lavoro, costituisce una base concreta da cui partire per la configurazione aziendale durante la Fase 1 del pilota.
+            <strong>Lavoro già avviato:</strong> è stata prodotta una prima bozza interna dei file di configurazione agente, disponibile su <a href="https://github.com/marc04AM/Agents" target="_blank" rel="noopener noreferrer">github.com/marc04AM/Agents</a>. Questo lavoro preparatorio, realizzato fuori dall'orario di lavoro, costituisce una base concreta da cui partire per la configurazione aziendale durante la Fase 1 del pilota.
         </div>
 
         <h3>B.2 Gestione agenti paralleli (Agent Teams)</h3>
@@ -1560,6 +1686,41 @@
     }, { passive: true });
 })();
 
+/* Back to top */
+(function () {
+    var btn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function () {
+        btn.classList.toggle('is-shown', window.scrollY > 600);
+    }, { passive: true });
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+
+/* Theme toggle (auto → dark → light → auto) */
+(function () {
+    var btn = document.querySelector('.theme-toggle');
+    var html = document.documentElement;
+    var states = ['auto', 'dark', 'light'];
+    var icons = ['\u25D1', '\u263E', '\u263C'];
+    var idx = states.indexOf(localStorage.getItem('theme') || 'auto');
+    if (idx < 0) idx = 0;
+
+    function apply() {
+        html.classList.remove('dark', 'light');
+        if (states[idx] !== 'auto') html.classList.add(states[idx]);
+        btn.textContent = icons[idx];
+        btn.title = 'Tema: ' + states[idx];
+        localStorage.setItem('theme', states[idx]);
+    }
+
+    btn.addEventListener('click', function () {
+        idx = (idx + 1) % states.length;
+        apply();
+    });
+    apply();
+})();
+
 /* Nav toggle */
 document.querySelector('.nav-toggle').addEventListener('click', function () {
     const nav = document.querySelector('.nav-inner');
@@ -1627,20 +1788,161 @@ document.querySelectorAll('.nav-inner a:not(.nav-brand)').forEach(function (a) {
 
     var navHeight = 70;
     var current = '';
+    var ticking = false;
+    var lockUntil = 0;
 
-    function updateActive() {
-        var scrollY = window.scrollY + navHeight + 40;
-        sections.forEach(function (s) {
-            if (s.offsetTop <= scrollY) current = s.getAttribute('id');
-        });
+    function setActive(id) {
+        if (id === current) return;
+        current = id;
         navLinks.forEach(function (link) {
             link.classList.toggle('nav-active', link.getAttribute('href') === '#' + current);
         });
     }
 
-    window.addEventListener('scroll', updateActive, { passive: true });
-    updateActive();
+    function updateFromScroll() {
+        if (Date.now() < lockUntil) { ticking = false; return; }
+        var scrollY = window.scrollY + navHeight + 40;
+        var next = '';
+        sections.forEach(function (s) {
+            if (s.offsetTop <= scrollY) next = s.getAttribute('id');
+        });
+        setActive(next);
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(updateFromScroll); }
+    }, { passive: true });
+
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            var id = link.getAttribute('href').replace('#', '');
+            setActive(id);
+            lockUntil = Date.now() + 800;
+        });
+    });
+
+    updateFromScroll();
 })();
+
+/* Timeline ↔ collapsible phases */
+(function () {
+    var tl = document.querySelector('.timeline');
+    var phases = document.querySelectorAll('details.phase');
+    var dots = tl ? tl.querySelectorAll('.timeline-dot') : [];
+    if (!tl || !phases.length) return;
+
+    function update() {
+        var lastOpen = -1;
+        phases.forEach(function (d, i) {
+            if (i < dots.length) dots[i].classList.toggle('is-active', d.open);
+            if (d.open) lastOpen = i;
+        });
+        var allOpen = Array.prototype.every.call(phases, function (d) { return d.open; });
+        var stops = [0.167, 0.5, allOpen ? 1 : 0.833];
+        var progress = lastOpen < 0 ? 0 : stops[lastOpen];
+        tl.style.setProperty('--tl-progress', progress);
+    }
+
+    phases.forEach(function (d) { d.addEventListener('toggle', update); });
+    update();
+})();
+
+/* YouTube facade */
+document.querySelectorAll('.yt-facade').forEach(function (el) {
+    el.addEventListener('click', function () {
+        var vid = el.dataset.vid;
+        var start = el.dataset.start || '';
+        var src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1' + (start ? '&start=' + start : '');
+        var iframe = document.createElement('iframe');
+        iframe.className = 'video-iframe';
+        iframe.src = src;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        el.parentNode.replaceChild(iframe, el);
+    });
+});
+
+/* Open all details before print */
+window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details.collapsible, details.phase').forEach(function (d) { d.open = true; });
+});
+
+/* Animate collapsible details (wrap content + handle close animation) */
+document.querySelectorAll('details.collapsible').forEach(function (det) {
+    var body = document.createElement('div');
+    body.className = 'collapsible-body';
+    var inner = document.createElement('div');
+    inner.className = 'collapsible-inner';
+    var nodes = Array.prototype.slice.call(det.childNodes);
+    nodes.forEach(function (n) { if (n.tagName !== 'SUMMARY') inner.appendChild(n); });
+    body.appendChild(inner);
+    det.appendChild(body);
+
+    var summary = det.querySelector('summary');
+    var closing = false;
+    summary.addEventListener('click', function (e) {
+        if (closing) return;
+        if (det.open) {
+            e.preventDefault();
+            closing = true;
+            det.classList.add('is-closing');
+            body.addEventListener('transitionend', function handler() {
+                body.removeEventListener('transitionend', handler);
+                det.open = false;
+                det.classList.remove('is-closing');
+                closing = false;
+            });
+        }
+    });
+});
+
+/* Anchor links on h3 headings */
+document.querySelectorAll('section .container h3').forEach(function (h3) {
+    var section = h3.closest('section');
+    if (!section || !section.id) return;
+    var text = h3.textContent.trim().toLowerCase().replace(/[^a-z0-9àèéìòù]+/g, '-').replace(/(^-|-$)/g, '');
+    var id = section.id + '--' + text;
+    h3.id = id;
+    var a = document.createElement('a');
+    a.href = '#' + id;
+    a.className = 'anchor-link';
+    a.setAttribute('aria-label', 'Link a questa sezione');
+    a.textContent = '#';
+    h3.appendChild(a);
+});
+
+/* Expand/Collapse all buttons */
+document.querySelectorAll('section').forEach(function (sec) {
+    var details = sec.querySelectorAll('details.collapsible');
+    if (details.length < 2) return;
+    var bar = document.createElement('div');
+    bar.className = 'toggle-all-bar';
+    var btnExpand = document.createElement('button');
+    btnExpand.className = 'toggle-all-btn';
+    btnExpand.textContent = 'Espandi tutto';
+    btnExpand.addEventListener('click', function () { details.forEach(function (d) { d.open = true; }); });
+    var btnCollapse = document.createElement('button');
+    btnCollapse.className = 'toggle-all-btn';
+    btnCollapse.textContent = 'Comprimi tutto';
+    btnCollapse.addEventListener('click', function () {
+        details.forEach(function (d) {
+            if (!d.open) return;
+            var body = d.querySelector('.collapsible-body');
+            if (!body) { d.open = false; return; }
+            d.classList.add('is-closing');
+            body.addEventListener('transitionend', function handler() {
+                body.removeEventListener('transitionend', handler);
+                d.open = false;
+                d.classList.remove('is-closing');
+            });
+        });
+    });
+    bar.appendChild(btnExpand);
+    bar.appendChild(btnCollapse);
+    var h2 = sec.querySelector('h2');
+    if (h2 && h2.nextSibling) h2.parentNode.insertBefore(bar, h2.nextSibling);
+});
 
 /* Wrap tables for mobile scroll */
 document.querySelectorAll('.data-table').forEach(function (table) {
