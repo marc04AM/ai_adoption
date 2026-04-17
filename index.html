@@ -72,7 +72,7 @@
     <div class="meta">
         <span>Documento riservato</span><span>|</span>
         <span>Versione 1.0</span><span>|</span>
-        <span>Marzo 2026</span>
+        <span>Aprile 2026</span>
     </div>
 </header>
 
@@ -917,6 +917,52 @@
             <li><strong>Mancanza di ISO 42001 e HIPAA:</strong> il profilo di certificazione è meno completo rispetto a Claude sul fronte della governance IA e del trattamento dati sensibili</li>
         </ul>
 
+        <details class="collapsible">
+            <summary><h4>Analisi economica e operativa approfondita: Copilot vs Claude Code</h4></summary>
+
+        <p>Il ragionamento "Copilot costa meno, quindi conviene" confonde il costo della licenza con il costo reale. Ecco perché il calcolo è più complesso.</p>
+
+        <h4>Il layer economico</h4>
+        <p>GitHub Copilot aggiunge un layer di margine Microsoft sopra il costo del modello OpenAI. Claude Code è diretto Anthropic — un layer in meno. Ma questo è secondario rispetto al differenziale operativo.</p>
+
+        <table class="data-table">
+            <thead><tr><th>Scenario</th><th>Costo mensile</th><th>Valore (3,6 ore risparmiate/sett.)</th><th>Rapporto costo/valore</th></tr></thead>
+            <tbody>
+                <tr><td>Claude Code (Team Premium)</td><td>$150</td><td>~€700–1.200</td><td><strong>1:5–8</strong></td></tr>
+                <tr><td>GitHub Copilot (Individuale)</td><td>$10–20</td><td>~€700–1.200</td><td><strong>1:35–70</strong></td></tr>
+                <tr><td>GitHub Copilot (Business)</td><td>$19/utente</td><td>~€700–1.200</td><td><strong>1:37</strong></td></tr>
+            </tbody>
+        </table>
+        <p>Il costo della licenza è rumore nel calcolo reale. Il differenziale vero è: <strong>quanto tempo risparmia ogni strumento?</strong></p>
+
+        <h4>SWE-bench: il benchmark che riflette il tuo lavoro reale</h4>
+        <p>SWE-bench Verified misura la capacità di risolvere issue reali su repository open source — lo stesso tipo di task che uno sviluppatore affronta su una codebase legacy complessa.</p>
+
+        <table class="data-table">
+            <thead><tr><th>Strumento</th><th>SWE-bench Verified</th><th>Implicazione pratica</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Claude Code (Opus)</strong></td><td><strong>80,9%</strong></td><td>Completa il task autonomamente 8 volte su 10</td></tr>
+                <tr><td>GitHub Copilot (agent mode)</td><td>56,0%</td><td>Fallisce il 44% delle volte, richiedendo intervento manuale</td></tr>
+            </tbody>
+        </table>
+        <p>Su un refactoring multi-file di 30 file dipendenti (scenario tipico su codebase .NET legacy), questa differenza si traduce direttamente in ore di debug dell'output errato.</p>
+
+        <h4>Agentic loop vs autocomplete: il differenziale di flusso</h4>
+        <table class="data-table">
+            <thead><tr><th></th><th>GitHub Copilot (utilizzo quotidiano)</th><th>Claude Code</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Flusso</strong></td><td>1. Scrivi commento → 2. Copilot suggerisce una riga → 3. Accetti/rigetti → 4. Ripeti ×100</td><td>1. Descrivi il task → 2. Claude analizza l'intero progetto → 3. Modifica tutti i file necessari → 4. Verifica i test → 5. Corregge autonomamente i fallimenti → 6. Task finito</td></tr>
+                <tr><td><strong>Cicli richiesti</strong></td><td>~100 cicli iterativi manuali</td><td>1 conversazione</td></tr>
+                <tr><td><strong>Context</strong></td><td>File corrente (pochi KB)</td><td>Intero progetto (fino a 500 KB di codice, context window 128K–1M token)</td></tr>
+                <tr><td><strong>Coerenza cross-file</strong></td><td>Assente: lo sviluppatore gestisce le dipendenze manualmente</td><td>Nativa: Claude comprende semanticamente le dipendenze tra moduli</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout">
+            <strong>Conclusione economica:</strong> Non è "conviene passare direttamente ad Anthropic per risparmiare il margine Microsoft". È: <strong>"Vuoi lo strumento che risolve il tuo task autonomamente l'80% delle volte, o quello che fallisce il 44% delle volte richiedendo intervento manuale?"</strong> Il costo della licenza è irrilevante rispetto al costo del tempo dello sviluppatore.
+        </div>
+        </details>
+
         <h4>Cursor: innovativo ma rischioso per l'enterprise</h4>
         <p>Cursor è il competitor in più rapida crescita e offre un'esperienza IDE eccellente. Ma per un'adozione enterprise strutturata presenta criticità:</p>
         <ul>
@@ -1658,6 +1704,224 @@
             <li><strong>Partenza Guidata (Pair Coding):</strong> abbandonare la documentazione statica. Affiancare sviluppatori junior ad esperti per calibrare il contesto tramite l'osservazione</li>
             <li><strong>Abilitazione Sicura, Non Restrizione:</strong> vietare l'IA genera Shadow AI. Costruire framework sicuri che favoriscano la produttività responsabile. L'IA estende le capacità umane, non le sostituisce</li>
         </ol>
+
+        <hr class="section-divider">
+
+        <h2>Appendice C — Alternative locali: Qwen e hardware on-premise</h2>
+        <p><em>Per chi valuta LLM open source locali (Qwen, Llama, ecc.) come alternativa a Claude Cloud. Analisi costi, qualità e limitazioni architetturali.</em></p>
+
+        <h3>C.1 Confronto diretto: Qwen 32B locale vs Claude Code cloud</h3>
+
+        <table class="data-table">
+            <thead><tr><th></th><th>Qwen 32B locale + Ollama</th><th>Claude Code cloud</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Latenza risposta</strong></td><td>2–5 secondi</td><td>2–4 minuti (ma autonomo: tu fai altro)</td></tr>
+                <tr><td><strong>Qualità SWE-bench</strong></td><td>~65% (Qwen 3.6, senza quantizzazione)</td><td>80,9% (Claude Opus)</td></tr>
+                <tr><td><strong>Parallelismo</strong></td><td>Nessuno (GPU è il collo di bottiglia)</td><td>Fino a 10 subagent paralleli</td></tr>
+                <tr><td><strong>Context window</strong></td><td>8–12K token con 24 GB VRAM</td><td>128K–1M token</td></tr>
+                <tr><td><strong>Costo hardware</strong></td><td>RTX 5090 32 GB (~€2.100 MSRP, street €3.000–3.600) o RTX 4090 24 GB usata (~€2.500–3.500) + RAM 64 GB (~€200)</td><td>€0</td></tr>
+                <tr><td><strong>Costo energia/anno</strong></td><td>~€600–900 (GPU 450–575 W attiva)</td><td>Incluso nel token pricing</td></tr>
+                <tr><td><strong>Refactoring 30 file</strong></td><td>2–3 ore (guidato manualmente step by step)</td><td>5–10 minuti (autonomo)</td></tr>
+                <tr><td><strong>Output</strong></td><td>Richiede supervisione continua</td><td>Ready-to-merge</td></tr>
+            </tbody>
+        </table>
+
+        <h3>C.2 Il punto critico: l'agentic loop</h3>
+        <p>Qwen locale non ha un'architettura agentica nativa. Il costo nascosto non è il GPU — è il <strong>tempo dello sviluppatore nel ciclo di correzione manuale</strong>.</p>
+
+        <table class="data-table">
+            <thead><tr><th>Qwen locale: devi fare tutto tu</th><th>Claude Code: autonomo</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><pre style="margin:0; font-size:0.8rem;">context = read_codebase()
+plan = qwen.generate(...)
+# Devi parsare il piano manualmente
+for step in plan:
+    code = qwen.generate(...)
+    if not verify(code):
+        # Devi correggere manualmente
+        code = qwen.generate(f"Fix {error}")
+# Risultato: 10+ loop iterativi manuali</pre></td>
+                    <td><pre style="margin:0; font-size:0.8rem;">claude "Refactorizza il modulo legacy"
+
+# Risultato: 1 comando
+# Claude analizza, pianifica,
+# modifica, testa e corregge
+# autonomamente</pre></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>C.3 Hardware locale: i costi reali</h3>
+        <p>Il calcolo intuitivo "<strong>€3.500 hardware una volta vs €50/mese per sempre</strong>" trascura quattro fattori che cambiano completamente il risultato (<em>prezzi aprile 2026</em>).</p>
+
+        <h4>1. Quantizzazione degrada la qualità</h4>
+        <p>Qwen 32B full precision richiede ~70 GB VRAM. Nemmeno una RTX 5090 (32 GB GDDR7) o una RTX 4090 (24 GB) bastano per caricarlo in fp16. La soluzione è la quantizzazione aggressiva (Q4_K_M, ~9 GB), che però comporta una perdita del 15–20% di qualità rispetto al modello cloud e un aumento del hallucination rate. Il SWE-bench scende da ~70% a ~55%. L'alternativa professionale — RTX PRO 6000 Blackwell (96 GB) — costa ~€8.500, fuori scala per un setup desktop.</p>
+
+        <h4>2. Context window ridotto</h4>
+        <p>Con 24–32 GB VRAM il context window massimo è 8–16K token. Un progetto .NET con 30 file occupa ~50K token: non è caricabile in una singola sessione. Il risultato è la frammentazione del lavoro: lo sviluppatore deve caricare i file manualmente, spezzando la capacità agentica dello strumento.</p>
+
+        <h4>3. Parallelismo assente</h4>
+        <p>Claude Code esegue fino a 10 subagent paralleli coordinati. Ollama con Qwen locale gestisce un processo alla volta. Un task da 5 minuti con Claude Code diventa 45 minuti con un setup locale.</p>
+
+        <h4>4. Hardware che invecchia rapidamente</h4>
+        <p>Il rilascio di nuovi modelli (Claude 4.x, Qwen 4, Llama 5) avviene ogni 6–12 mesi. Il setup hardware Tier 2 diventa insufficiente senza un upgrade (~€2.000–3.000 ogni 18 mesi sui prezzi consumer attuali, con RTX 5090 sopra MSRP per scarsità GDDR7).</p>
+
+        <h3>C.4 Il confronto economico su 3 anni</h3>
+
+        <table class="data-table">
+            <thead><tr><th>Voce</th><th>Claude Cloud</th><th>Setup locale Tier 2</th></tr></thead>
+            <tbody>
+                <tr><td>Hardware iniziale (GPU 24–32 GB + RAM + build)</td><td>€0</td><td>€3.500–4.000</td></tr>
+                <tr><td>Energia (450 W × 24/7 × 3 anni, ~€0,25/kWh)</td><td>Inclusa</td><td>~€2.500</td></tr>
+                <tr><td>Manutenzione/cooling (3 anni)</td><td>€0</td><td>~€600</td></tr>
+                <tr><td>Upgrade hardware (anno 2–3)</td><td>€0</td><td>€2.000–3.000</td></tr>
+                <tr><td>Abbonamento Claude (3 anni)</td><td>~€1.800</td><td>—</td></tr>
+                <tr><td><strong>TOTALE 3 ANNI</strong></td><td><strong>~€1.800</strong></td><td><strong>€8.500–10.000</strong></td></tr>
+                <tr><td>Qualità output (SWE-bench)</td><td>80,9%</td><td>~55–60% (quantizzato)</td></tr>
+                <tr><td>Context window</td><td>128K–1M token</td><td>8–12K token</td></tr>
+                <tr><td>Parallelismo (subagent)</td><td>10 paralleli</td><td>1 sequenziale</td></tr>
+            </tbody>
+        </table>
+
+        <h3>C.5 Quando il setup locale ha senso (scenari reali)</h3>
+        <ul>
+            <li><strong>Privacy assoluta e offline garantito:</strong> governo, esercito, banking con vincolo esplicito "il codice non può lasciare la rete aziendale". Il costo di €8.500–10.000 è giustificato per la garanzia di no-exfil</li>
+            <li><strong>Inferenza massiva:</strong> se si generano oltre 1 milione di token/giorno, il costo API cloud diventa proibitivo (~€500/giorno). Il setup locale si ammortizza in pochi giorni</li>
+            <li><strong>Latenza critica sub-100ms:</strong> sistemi real-time, robotica, trading ad alta frequenza. L'API cloud introduce 200–500ms di round trip inaccettabili</li>
+            <li><strong>Ricerca e ML con fine-tuning continuo:</strong> se si addestrano modelli, l'hardware GPU è già necessario. L'inferenza locale diventa un costo marginale</li>
+        </ul>
+
+        <div class="callout">
+            <strong>Il punto chiave:</strong> il vantaggio di Claude Code non è il prezzo — è l'architettura del sistema. Anthropic ha investito in un agentic loop maturo, subagent con shared task list, Model Context Protocol (MCP) per le integrazioni e Zero Data Retention nativo. Un LLM locale, per quanto capace, richiede di costruire tutto questo dall'inizio — e quel lavoro ha un costo molto alto in ore.
+        </div>
+
+        <h3>TL;DR — Alternative locali</h3>
+        <table class="data-table">
+            <thead><tr><th>Domanda</th><th>Risposta</th></tr></thead>
+            <tbody>
+                <tr><td>Posso usare Qwen come backend di Claude Code?</td><td>No. Claude Code è il modello + l'orchestrazione + gli agenti. Non sono separabili</td></tr>
+                <tr><td>Qwen locale + Ollama al posto di Claude Code?</td><td>Tecnicamente sì. Costerà più tempo per output di qualità inferiore. Conveniente solo con vincoli di privacy/offline assoluti</td></tr>
+                <tr><td>Quanto costa un LLM locale decente?</td><td>Tier 2 (13–34B): ~€3.500–4.000 hardware (RTX 5090 o RTX 4090) + €800/anno energia e manutenzione. Qualità 15–20% inferiore a Claude cloud</td></tr>
+                <tr><td>Conviene economicamente?</td><td>No, nel caso generale. Costo totale 3 anni: €8.500–10.000 locale vs €1.800 Claude. Qualità peggiore</td></tr>
+                <tr><td>E se i modelli locali raggiungessero il livello di Claude?</td><td>Quando Qwen raggiunge l'80%+ su SWE-bench Verified (non benchmark contaminati), la valutazione va rifatta. Non è ancora successo</td></tr>
+            </tbody>
+        </table>
+
+        <hr class="section-divider">
+
+        <h2>Appendice D — Fine-tuning vs Context Files: la trappola da evitare</h2>
+        <p><em>Per chi valuta il fine-tuning di modelli locali come alternativa ai context file (CLAUDE.md, skills, hooks). Analisi costi, obsolescenza e qualità dell'output.</em></p>
+
+        <h3>D.1 Il malinteso fondamentale</h3>
+
+        <table class="data-table">
+            <thead><tr><th>Approccio</th><th>Definizione</th><th>Analogia</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Fine-tuning</strong></td><td>"Alleno il modello sui miei 500 file .NET proprietari, così impara lo stile aziendale"</td><td>Assumere un dipendente che osserva come lavorate e cerca di replicarlo statisticamente</td></tr>
+                <tr><td><strong>Context file (CLAUDE.md)</strong></td><td>"Fornisco al modello una guida di stile che consulta ogni volta che lavora"</td><td>Consegnare al dipendente un manuale di stile aggiornato prima di ogni task</td></tr>
+            </tbody>
+        </table>
+
+        <h3>D.2 Perché il fine-tuning diventa obsoleto in 2 settimane</h3>
+
+        <table class="data-table">
+            <thead><tr><th>Settimana</th><th>Fine-tuning locale</th><th>CLAUDE.md</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>Fine-tuni Qwen sulla codebase attuale</td><td>Scrivi CLAUDE.md con gli standard attuali</td></tr>
+                <tr><td>2</td><td>Refactori il modulo principale</td><td>Refactori il modulo principale</td></tr>
+                <tr><td>3</td><td>Il modello genera codice nel <strong>vecchio stile</strong> — l'addestramento è già obsoleto</td><td>Aggiorni CLAUDE.md in 5 minuti per riflettere il nuovo pattern</td></tr>
+                <tr><td>4</td><td>Re-training: altre 12–24 ore GPU + €15–80 cloud (A100 80 GB ~$0,67–0,79/h su Vast.ai/RunPod)</td><td>Claude applica il nuovo stile automaticamente</td></tr>
+            </tbody>
+        </table>
+
+        <h3>D.3 Confronto dettagliato: fine-tuning vs context file</h3>
+
+        <table class="data-table">
+            <thead><tr><th>Aspetto</th><th>Fine-tuning locale</th><th>CLAUDE.md + context</th></tr></thead>
+            <tbody>
+                <tr><td>Setup iniziale</td><td>4–8 ore + GPU locale (€3.500+) o cloud (A100/H100)</td><td>2–3 ore + editor testo</td></tr>
+                <tr><td>Costo primo training</td><td>€15–80 compute cloud (QLoRA 7–32B su A100 80 GB, 20–100 h) — full fine-tune 70B: €200–400</td><td>€0</td></tr>
+                <tr><td>Aggiornamento dopo refactor</td><td>12–24 h GPU + €15–80 cloud (o elettricità locale)</td><td>10–30 minuti</td></tr>
+                <tr><td>Frequenza aggiornamenti sostenibile</td><td>2–3 volte/mese (troppo costoso fare di più)</td><td>2–3 volte/settimana (zero attrito)</td></tr>
+                <tr><td>Qualità output di stile</td><td>75–85% (rischio overfitting)</td><td>95%+ (sempre aggiornato)</td></tr>
+                <tr><td>Generalizzazione</td><td>Scarsa: apprende anche gli errori nel dataset</td><td>Ottima: riceve regole esplicite, non pattern statistici</td></tr>
+                <tr><td>Versioning</td><td>Checkpoint binari pesanti, non adatti a Git</td><td>File .md nativo in Git (<code>git log CLAUDE.md</code>)</td></tr>
+                <tr><td>Sharing tra sviluppatori</td><td>Problematico: chi ha la versione più recente?</td><td>Triviale: tutti vedono CLAUDE.md aggiornato nel repository</td></tr>
+                <tr><td>Debugging dell'output</td><td>"Perché genera questo?" → black box</td><td>"Perché genera questo?" → vedi riga 42 di CLAUDE.md</td></tr>
+            </tbody>
+        </table>
+
+        <h3>D.4 Esempio concreto: naming convention .NET</h3>
+
+        <h4>Approccio fine-tuning (problematico)</h4>
+        <p>Si addestra il modello con 500 file .NET con le convenzioni aziendali. Il modello apprende le <strong>correlazioni statistiche</strong>, non le regole. Se uno dei 500 file ha un errore di naming (inevitabile in una codebase reale), il modello lo apprende. Se il team cambia convenzione in una PR, il fine-tuning è già obsoleto.</p>
+
+        <h4>Approccio context file (corretto)</h4>
+        <pre>
+# CLAUDE.md - Naming Conventions
+
+## C# Naming Rules
+
+### Classes
+- PascalCase (no underscores)
+- Suffix: -Manager, -Service, -Repository per pattern specifici
+- Esempio: OrderProcessingService, UserRepository
+
+### Private Methods
+- camelCase con prefisso underscore: _validateInput(), _calculateTotal()
+- Evitare abbreviazioni: NO _calc(), SI _calculate()
+
+### Constants
+- UPPER_SNAKE_CASE
+- Esempio: MAX_RETRY_COUNT, DEFAULT_TIMEOUT_MS
+
+## Anti-patterns da evitare
+- No Hungarian notation (iCount, strName)
+- No SCREAMING_CAMEL_CASE
+- No variabili a singola lettera eccetto i, j per i loop
+        </pre>
+        <p>Claude legge questa guida e genera codice coerente sempre, perché segue <strong>regole esplicite</strong>, non pattern appresi da dati storici potenzialmente inconsistenti.</p>
+
+        <h3>D.5 Il vero costo nascosto: la deriva statistica</h3>
+        <p>Il fine-tuning apprende la distribuzione statistica del codice al momento del training. Se la codebase ha il 25% di codice legacy con pattern da eliminare, il modello genera quel pattern il 25% delle volte — anche dopo che il refactoring è stato completato. CLAUDE.md, al contrario, <strong>impone il futuro</strong>, non replica il passato.</p>
+
+        <div class="callout">
+            <strong>La regola d'oro:</strong> se puoi descrivere la regola in testo (CLAUDE.md), non addestrare il modello. Se non puoi descriverla in testo, allora forse è un problema da fine-tuning — ma nella pratica dello sviluppo software, questo caso è molto raro.
+        </div>
+
+        <h3>D.6 Architettura ottimale: layering di context</h3>
+        <p>Non è "CLAUDE.md vs fine-tuning". È CLAUDE.md come fondazione, a cui aggiungere strati progressivi:</p>
+        <pre>
+Layer 1: CLAUDE.md di organizzazione
+         (standard C#, naming, architettura globale)
+
+Layer 2: CLAUDE.md per-progetto
+         (convenzioni specifiche del dominio, es. HMI, .NET legacy)
+
+Layer 3: Hooks custom
+         (script che validano automaticamente il codice generato)
+
+Layer 4: MCP custom
+         (integrazioni con sistemi interni: database, SCADA, CI/CD)
+
+Layer 5: Skills personalizzate
+         (workflow ripetibili, es. "migrate-to-new-pattern", "generate-state-machine")
+
+Fine-tuning? Non serve.
+        </pre>
+
+        <h3>TL;DR — Fine-tuning vs context files</h3>
+        <table class="data-table">
+            <thead><tr><th>Domanda</th><th>Risposta</th></tr></thead>
+            <tbody>
+                <tr><td>Devo fine-tunare un modello locale?</td><td>No. CLAUDE.md è 100x più efficace e 100x meno costoso per lo sviluppo software</td></tr>
+                <tr><td>Con il fine-tuning non ottengo codice più specifico?</td><td>Sì, ma dopo 2 settimane è obsoleto. CLAUDE.md resta sempre aggiornato</td></tr>
+                <tr><td>Il fine-tuning non è il futuro?</td><td>Per la ricerca ML sì. Per lo sviluppo software no: il context è architetturalmente superiore</td></tr>
+                <tr><td>Cosa succede con un fine-tuning continuo?</td><td>Si sta reinventando il context system, con più attrito e costi hardware</td></tr>
+                <tr><td>Quando ha davvero senso il fine-tuning?</td><td>Dominio super-specializzato senza dataset pubblici, latenza critica offline, licenze open source obbligatorie. Tre scenari molto specifici</td></tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
