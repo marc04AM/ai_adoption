@@ -1719,8 +1719,8 @@
                 <tr><td><strong>Qualità SWE-bench</strong></td><td>~65% (Qwen 3.6, senza quantizzazione)</td><td>80,9% (Claude Opus)</td></tr>
                 <tr><td><strong>Parallelismo</strong></td><td>Nessuno (GPU è il collo di bottiglia)</td><td>Fino a 10 subagent paralleli</td></tr>
                 <tr><td><strong>Context window</strong></td><td>8–12K token con 24 GB VRAM</td><td>128K–1M token</td></tr>
-                <tr><td><strong>Costo hardware</strong></td><td>RTX 4090 (~€2.000) + RAM 40 GB (~€200)</td><td>€0</td></tr>
-                <tr><td><strong>Costo energia/anno</strong></td><td>~€500–800 (GPU attiva)</td><td>Incluso nel token pricing</td></tr>
+                <tr><td><strong>Costo hardware</strong></td><td>RTX 5090 32 GB (~€2.100 MSRP, street €3.000–3.600) o RTX 4090 24 GB usata (~€2.500–3.500) + RAM 64 GB (~€200)</td><td>€0</td></tr>
+                <tr><td><strong>Costo energia/anno</strong></td><td>~€600–900 (GPU 450–575 W attiva)</td><td>Incluso nel token pricing</td></tr>
                 <tr><td><strong>Refactoring 30 file</strong></td><td>2–3 ore (guidato manualmente step by step)</td><td>5–10 minuti (autonomo)</td></tr>
                 <tr><td><strong>Output</strong></td><td>Richiede supervisione continua</td><td>Ready-to-merge</td></tr>
             </tbody>
@@ -1753,31 +1753,31 @@ for step in plan:
         </table>
 
         <h3>C.3 Hardware locale: i costi reali</h3>
-        <p>Il calcolo intuitivo "<strong>€3.000 hardware una volta vs €50/mese per sempre</strong>" trascura quattro fattori che cambiano completamente il risultato.</p>
+        <p>Il calcolo intuitivo "<strong>€3.500 hardware una volta vs €50/mese per sempre</strong>" trascura quattro fattori che cambiano completamente il risultato (<em>prezzi aprile 2026</em>).</p>
 
         <h4>1. Quantizzazione degrada la qualità</h4>
-        <p>Qwen 32B full precision richiede ~70 GB VRAM. Una RTX 4080 Super (Tier 2, 24 GB) non è sufficiente. La soluzione è la quantizzazione aggressiva (Q4_K_M, ~9 GB), che però comporta una perdita del 15–20% di qualità rispetto al modello cloud e un aumento del hallucination rate. Il SWE-bench scende da ~70% a ~55%.</p>
+        <p>Qwen 32B full precision richiede ~70 GB VRAM. Nemmeno una RTX 5090 (32 GB GDDR7) o una RTX 4090 (24 GB) bastano per caricarlo in fp16. La soluzione è la quantizzazione aggressiva (Q4_K_M, ~9 GB), che però comporta una perdita del 15–20% di qualità rispetto al modello cloud e un aumento del hallucination rate. Il SWE-bench scende da ~70% a ~55%. L'alternativa professionale — RTX PRO 6000 Blackwell (96 GB) — costa ~€8.500, fuori scala per un setup desktop.</p>
 
         <h4>2. Context window ridotto</h4>
-        <p>Con 24 GB VRAM il context window massimo è 8–12K token. Un progetto .NET con 30 file occupa ~50K token: non è caricabile in una singola sessione. Il risultato è la frammentazione del lavoro: lo sviluppatore deve caricare i file manualmente, spezzando la capacità agentica dello strumento.</p>
+        <p>Con 24–32 GB VRAM il context window massimo è 8–16K token. Un progetto .NET con 30 file occupa ~50K token: non è caricabile in una singola sessione. Il risultato è la frammentazione del lavoro: lo sviluppatore deve caricare i file manualmente, spezzando la capacità agentica dello strumento.</p>
 
         <h4>3. Parallelismo assente</h4>
         <p>Claude Code esegue fino a 10 subagent paralleli coordinati. Ollama con Qwen locale gestisce un processo alla volta. Un task da 5 minuti con Claude Code diventa 45 minuti con un setup locale.</p>
 
         <h4>4. Hardware che invecchia rapidamente</h4>
-        <p>Il rilascio di nuovi modelli (Claude 4.0, Qwen 4) avviene ogni 6–12 mesi. Il setup hardware Tier 2 diventa insufficiente senza un upgrade (~€1.500–2.000 ogni 18 mesi).</p>
+        <p>Il rilascio di nuovi modelli (Claude 4.x, Qwen 4, Llama 5) avviene ogni 6–12 mesi. Il setup hardware Tier 2 diventa insufficiente senza un upgrade (~€2.000–3.000 ogni 18 mesi sui prezzi consumer attuali, con RTX 5090 sopra MSRP per scarsità GDDR7).</p>
 
         <h3>C.4 Il confronto economico su 3 anni</h3>
 
         <table class="data-table">
             <thead><tr><th>Voce</th><th>Claude Cloud</th><th>Setup locale Tier 2</th></tr></thead>
             <tbody>
-                <tr><td>Hardware iniziale</td><td>€0</td><td>€2.500</td></tr>
-                <tr><td>Energia (300W × 24/7 × 3 anni)</td><td>Inclusa</td><td>~€1.200</td></tr>
+                <tr><td>Hardware iniziale (GPU 24–32 GB + RAM + build)</td><td>€0</td><td>€3.500–4.000</td></tr>
+                <tr><td>Energia (450 W × 24/7 × 3 anni, ~€0,25/kWh)</td><td>Inclusa</td><td>~€2.500</td></tr>
                 <tr><td>Manutenzione/cooling (3 anni)</td><td>€0</td><td>~€600</td></tr>
-                <tr><td>Upgrade hardware (anno 2–3)</td><td>€0</td><td>€1.500–2.000</td></tr>
+                <tr><td>Upgrade hardware (anno 2–3)</td><td>€0</td><td>€2.000–3.000</td></tr>
                 <tr><td>Abbonamento Claude (3 anni)</td><td>~€1.800</td><td>—</td></tr>
-                <tr><td><strong>TOTALE 3 ANNI</strong></td><td><strong>~€1.800</strong></td><td><strong>€6.000–7.000</strong></td></tr>
+                <tr><td><strong>TOTALE 3 ANNI</strong></td><td><strong>~€1.800</strong></td><td><strong>€8.500–10.000</strong></td></tr>
                 <tr><td>Qualità output (SWE-bench)</td><td>80,9%</td><td>~55–60% (quantizzato)</td></tr>
                 <tr><td>Context window</td><td>128K–1M token</td><td>8–12K token</td></tr>
                 <tr><td>Parallelismo (subagent)</td><td>10 paralleli</td><td>1 sequenziale</td></tr>
@@ -1786,7 +1786,7 @@ for step in plan:
 
         <h3>C.5 Quando il setup locale ha senso (scenari reali)</h3>
         <ul>
-            <li><strong>Privacy assoluta e offline garantito:</strong> governo, esercito, banking con vincolo esplicito "il codice non può lasciare la rete aziendale". Il costo di €6.000 è giustificato per la garanzia di no-exfil</li>
+            <li><strong>Privacy assoluta e offline garantito:</strong> governo, esercito, banking con vincolo esplicito "il codice non può lasciare la rete aziendale". Il costo di €8.500–10.000 è giustificato per la garanzia di no-exfil</li>
             <li><strong>Inferenza massiva:</strong> se si generano oltre 1 milione di token/giorno, il costo API cloud diventa proibitivo (~€500/giorno). Il setup locale si ammortizza in pochi giorni</li>
             <li><strong>Latenza critica sub-100ms:</strong> sistemi real-time, robotica, trading ad alta frequenza. L'API cloud introduce 200–500ms di round trip inaccettabili</li>
             <li><strong>Ricerca e ML con fine-tuning continuo:</strong> se si addestrano modelli, l'hardware GPU è già necessario. L'inferenza locale diventa un costo marginale</li>
@@ -1802,8 +1802,8 @@ for step in plan:
             <tbody>
                 <tr><td>Posso usare Qwen come backend di Claude Code?</td><td>No. Claude Code è il modello + l'orchestrazione + gli agenti. Non sono separabili</td></tr>
                 <tr><td>Qwen locale + Ollama al posto di Claude Code?</td><td>Tecnicamente sì. Costerà più tempo per output di qualità inferiore. Conveniente solo con vincoli di privacy/offline assoluti</td></tr>
-                <tr><td>Quanto costa un LLM locale decente?</td><td>Tier 2 (13–34B): ~€2.500 hardware + €600/anno manutenzione. Qualità 15–20% inferiore a Claude cloud</td></tr>
-                <tr><td>Conviene economicamente?</td><td>No, nel caso generale. Costo totale 3 anni: €6.000–7.000 locale vs €1.800 Claude. Qualità peggiore</td></tr>
+                <tr><td>Quanto costa un LLM locale decente?</td><td>Tier 2 (13–34B): ~€3.500–4.000 hardware (RTX 5090 o RTX 4090) + €800/anno energia e manutenzione. Qualità 15–20% inferiore a Claude cloud</td></tr>
+                <tr><td>Conviene economicamente?</td><td>No, nel caso generale. Costo totale 3 anni: €8.500–10.000 locale vs €1.800 Claude. Qualità peggiore</td></tr>
                 <tr><td>E se i modelli locali raggiungessero il livello di Claude?</td><td>Quando Qwen raggiunge l'80%+ su SWE-bench Verified (non benchmark contaminati), la valutazione va rifatta. Non è ancora successo</td></tr>
             </tbody>
         </table>
@@ -1831,7 +1831,7 @@ for step in plan:
                 <tr><td>1</td><td>Fine-tuni Qwen sulla codebase attuale</td><td>Scrivi CLAUDE.md con gli standard attuali</td></tr>
                 <tr><td>2</td><td>Refactori il modulo principale</td><td>Refactori il modulo principale</td></tr>
                 <tr><td>3</td><td>Il modello genera codice nel <strong>vecchio stile</strong> — l'addestramento è già obsoleto</td><td>Aggiorni CLAUDE.md in 5 minuti per riflettere il nuovo pattern</td></tr>
-                <tr><td>4</td><td>Re-training: altri 12–24 ore GPU + €50–100</td><td>Claude applica il nuovo stile automaticamente</td></tr>
+                <tr><td>4</td><td>Re-training: altre 12–24 ore GPU + €15–80 cloud (A100 80 GB ~$0,67–0,79/h su Vast.ai/RunPod)</td><td>Claude applica il nuovo stile automaticamente</td></tr>
             </tbody>
         </table>
 
@@ -1840,9 +1840,9 @@ for step in plan:
         <table class="data-table">
             <thead><tr><th>Aspetto</th><th>Fine-tuning locale</th><th>CLAUDE.md + context</th></tr></thead>
             <tbody>
-                <tr><td>Setup iniziale</td><td>4–8 ore + hardware GPU</td><td>2–3 ore + editor testo</td></tr>
-                <tr><td>Costo primo training</td><td>€50–100 compute</td><td>€0</td></tr>
-                <tr><td>Aggiornamento dopo refactor</td><td>12–24 ore + €50–100</td><td>10–30 minuti</td></tr>
+                <tr><td>Setup iniziale</td><td>4–8 ore + GPU locale (€3.500+) o cloud (A100/H100)</td><td>2–3 ore + editor testo</td></tr>
+                <tr><td>Costo primo training</td><td>€15–80 compute cloud (QLoRA 7–32B su A100 80 GB, 20–100 h) — full fine-tune 70B: €200–400</td><td>€0</td></tr>
+                <tr><td>Aggiornamento dopo refactor</td><td>12–24 h GPU + €15–80 cloud (o elettricità locale)</td><td>10–30 minuti</td></tr>
                 <tr><td>Frequenza aggiornamenti sostenibile</td><td>2–3 volte/mese (troppo costoso fare di più)</td><td>2–3 volte/settimana (zero attrito)</td></tr>
                 <tr><td>Qualità output di stile</td><td>75–85% (rischio overfitting)</td><td>95%+ (sempre aggiornato)</td></tr>
                 <tr><td>Generalizzazione</td><td>Scarsa: apprende anche gli errori nel dataset</td><td>Ottima: riceve regole esplicite, non pattern statistici</td></tr>
