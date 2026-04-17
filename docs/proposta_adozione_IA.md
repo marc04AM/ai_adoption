@@ -21,6 +21,7 @@
 
 - [Appendice A — Claude Code: architettura e funzionamento](#appendice-a--claude-code-architettura-e-funzionamento)
 - [Appendice B — Architettura di deployment enterprise](#appendice-b--architettura-di-deployment-enterprise)
+- [Appendice C — Note sul self-hosting di modelli linguistici](#appendice-c--note-sul-self-hosting-di-modelli-linguistici)
 
 ---
 
@@ -655,6 +656,36 @@ Un approccio in 4 step per garantire un'adozione sicura:
 3. **Partenza Guidata (Pair Coding)**: abbandonare la documentazione statica. Affiancare sviluppatori junior ad esperti per calibrare il contesto tramite l'osservazione
 
 4. **Abilitazione Sicura, Non Restrizione**: vietare l'IA genera Shadow AI. Costruire framework sicuri che favoriscano la produttivita responsabile. L'IA estende le capacita umane, non le sostituisce
+
+---
+
+## Appendice C — Note sul self-hosting di modelli linguistici
+
+*Questa appendice e rivolta a chi valuta soluzioni on-premise come alternativa ai servizi cloud.*
+
+Una domanda ricorrente nella fase di valutazione riguarda la possibilita di eseguire modelli linguistici direttamente su hardware aziendale esistente, eliminando la dipendenza da provider esterni.
+
+La risposta breve e che **la fattibilita dipende interamente dall'hardware disponibile**, e i requisiti minimi per ottenere output di qualita paragonabile ai modelli cloud sono significativamente piu alti di quanto si percepisca inizialmente.
+
+### C.1 Perche la qualita del modello conta
+
+I modelli open-weight di dimensioni ridotte (1–7 miliardi di parametri) sono gli unici eseguibili su hardware consumer. Il problema non e tecnico ma qualitativo: su benchmark di ingegneria del software come SWE-bench, questi modelli ottengono punteggi compresi tra il 5% e il 25%, contro il 50–70% dei modelli frontier. In termini pratici, significa che una quota rilevante degli output richiede correzione manuale — il che trasferisce il costo dal budget software al tempo sviluppatore.
+
+### C.2 Soglie hardware realistiche
+
+Per essere produttivo su task di sviluppo, un setup self-hosted richiede come minimo una GPU dedicata con almeno 24 GB di VRAM (es. RTX 3090/4090) per modelli da 14–32B parametri quantizzati. Al di sotto di questa soglia, i tempi di inferenza su sequenze lunghe (un contesto di progetto tipico) rendono il flusso di lavoro impraticabile.
+
+Hardware generalista — CPU multi-core senza GPU dedicata, o con GPU integrata — puo eseguire modelli piccoli a velocita accettabile per uso personale o sperimentazione, ma non scala a un utilizzo professionale continuativo.
+
+### C.3 Il vero confronto dei costi
+
+Prima di comparare "zero costi di licenza" con un abbonamento cloud, e utile contabilizzare:
+
+- **Costo hardware** per raggiungere la soglia minima di produttivita (€2.500–4.000 per workstation dedicata)
+- **Tempo di configurazione e manutenzione** (aggiornamenti modelli, gestione driver, disponibilita del servizio)
+- **Delta di qualita** convertito in ore di revisione mensili al costo orario dello sviluppatore
+
+In molti scenari aziendali, il punto di pareggio con un abbonamento enterprise si raggiunge solo se l'infrastruttura e gia disponibile e dimensionata correttamente — e se il volume di utilizzo e sufficientemente elevato da ammortizzare i costi fissi.
 
 ---
 

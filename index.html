@@ -1821,6 +1821,9 @@ for step in plan:
         <h4>4. Hardware che invecchia rapidamente</h4>
         <p>Il rilascio di nuovi modelli (Claude 4.x, Qwen 4, Llama 5) avviene ogni 6–12 mesi. Il setup hardware Tier 2 diventa insufficiente senza un upgrade (~€2.000–3.000 ogni 18 mesi sui prezzi consumer attuali, con RTX 5090 sopra MSRP per scarsità GDDR7).</p>
 
+        <h4>5. La GPU dedicata non è opzionale</h4>
+        <p>L'inferenza LLM dipende quasi interamente dalla <strong>banda di memoria GPU</strong>, non dalla potenza CPU. Una GPU integrata (Intel HD/Iris, AMD Radeon Graphics) condivide la stessa RAM di sistema, con banda tipicamente sotto i 50 GB/s — circa 35 volte inferiore a una RTX 4090 (1.008 GB/s). Il risultato pratico: un modello da 7B parametri quantizzato, che su GPU dedicata genera 30–40 token/secondo, scende a 1–3 token/secondo su iGPU. Una risposta da 500 token — equivalente a una funzione con documentazione — richiede 3–8 minuti di attesa. Su CPU pura i tempi sono analoghi. Hardware <strong>senza GPU dedicata non raggiunge la soglia di usabilità</strong> per un utilizzo professionale, indipendentemente dalla RAM installata o dalla generazione del processore.</p>
+
         <h3>C.4 Il confronto economico su 3 anni</h3>
 
         <table class="data-table">
