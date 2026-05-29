@@ -504,7 +504,7 @@
 
         <details class="collapsible">
         <summary><h3>6.1 Shadow AI</h3></summary>
-        <p>L'utilizzo non autorizzato di strumenti IA da parte dei dipendenti, al di fuori delle policy aziendali. La Shadow AI è già una realtà nella maggior parte delle organizzazioni. Quando l'azienda non fornisce strumenti IA ufficiali, i dipendenti utilizzano autonomamente account personali su ChatGPT, Claude, o altri servizi, estensioni browser non autorizzate, e strumenti IA integrati negli editor di codice.</p>
+        <p>L'utilizzo non autorizzato di strumenti IA da parte dei dipendenti, al di fuori delle policy aziendali. La Shadow AI è già una realtà nella maggior parte delle organizzazioni. Quando l'azienda non fornisce strumenti IA ufficiali, i dipendenti utilizzano autonomamente account personali su ChatGPT, Claude, o altri servizi, estensioni browser non autorizzate, e strumenti IA integrati negli editor di codice. Il fenomeno è ormai sistemico: il <strong>98% delle organizzazioni</strong> registra già uso non autorizzato di IA, ma il <strong>60%</strong> non ha ancora una strategia per gestirlo (Mimecast 2026). Le violazioni legate a Shadow AI costano in media <strong>$670.000 in più</strong> rispetto agli incidenti standard e richiedono <strong>247 giorni</strong> per essere rilevate (IBM 2025 Cost of Data Breach).</p>
         <div class="callout callout-warn">
             <strong>I rischi concreti:</strong>
             <ul class="list--flush">
@@ -567,6 +567,7 @@
                     <tr><td>Costo manutenzione anno 2 (debito non gestito)</td><td><strong>4× i livelli tradizionali</strong></td><td>Pixelmojo, 2026</td></tr>
                     <tr><td>Codice IA con vulnerabilità (revisione manuale)</td><td><strong>68-73%</strong> dei campioni</td><td>Veracode, 2026</td></tr>
                     <tr><td>Dipendenze inesistenti suggerite dall'IA ("slopsquatting")</td><td><strong>~20%</strong> dei pacchetti suggeriti</td><td>Dark Reading, 2026</td></tr>
+                    <tr><td>Commit prodotti con IA / tasso di alert di sicurezza generati</td><td><strong>3-4×</strong> più commit, ma <strong>10×</strong> più segnalazioni di sicurezza</td><td>Veracode, 2026</td></tr>
                 </tbody>
             </table>
         </details>
@@ -684,7 +685,7 @@
 
         <details class="collapsible" open>
             <summary><h3>8.1 Il panorama degli strumenti IA per lo sviluppo</h3></summary>
-        <p>Il mercato degli strumenti IA per lo sviluppo software vale <strong>$7.37 miliardi</strong> nel 2025 e cresce a un tasso annuo del 35-40%. Cinque strumenti dominano il panorama. Li abbiamo analizzati tutti — inclusi <strong>7 test comparativi su scenari reali</strong> — per identificare la soluzione più adatta alle nostre esigenze.</p>
+        <p>Il mercato degli strumenti IA per lo sviluppo software vale <strong>$7.37 miliardi</strong> nel 2025 e cresce a un tasso annuo del 35-40%. Il solo segmento degli <strong>agenti di coding enterprise</strong> vale circa <strong>$10 miliardi annualizzati</strong> (Gartner, aprile 2026), con oltre il 60% delle organizzazioni pronte ad adottarli entro due anni. Cinque strumenti dominano il panorama. Li abbiamo analizzati tutti — inclusi <strong>7 test comparativi su scenari reali</strong> — per identificare la soluzione più adatta alle nostre esigenze.</p>
 
         <h4>Confronto strutturale</h4>
         <table class="data-table data-table--wide">
@@ -781,6 +782,19 @@
         </p>
         <p class="note"><strong>Nota su SWE-bench Verified:</strong> OpenAI ha rilevato contaminazione dei dati di training in tutti i modelli frontier testati (GPT-5.2, Opus 4.5, Gemini 3 Flash) e ha smesso di riportare score Verified, raccomandando <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank" rel="noopener noreferrer">SWE-bench Pro</a> come benchmark più affidabile. I dati sopra restano indicativi delle capacità relative.</p>
 
+        <h4>Benchmark allo stato dell'arte (maggio 2026)</h4>
+        <table class="data-table data-table--wide">
+            <thead><tr><th>Benchmark</th><th>Claude</th><th>Miglior alternativa</th><th>Note</th></tr></thead>
+            <tbody>
+                <tr><td><strong>SWE-bench Verified</strong> (flagship)</td><td><strong>87.6%</strong> (Opus 4.7)</td><td>GPT-5.5: 88.7%</td><td>Stessa fascia flagship</td></tr>
+                <tr><td>SWE-bench Verified (uso comune)</td><td><strong>80.9%</strong> (Opus 4.5)</td><td>GPT-5: ~74.9%</td><td>+6 punti sui modelli di uso quotidiano</td></tr>
+                <tr><td><strong>Terminal-Bench 2.0</strong> (agentico)</td><td><strong>65.4%</strong> (Opus 4.6)</td><td>n.d.</td><td>Stato dell'arte sui task da terminale</td></tr>
+                <tr><td><strong>GDPval-AA</strong> (44 professioni reali)</td><td><strong>+144 Elo</strong> vs GPT-5.2</td><td>—</td><td>Leadership sul lavoro professionale reale</td></tr>
+                <tr><td>Qualità codice (test comparativo)</td><td><strong>69.2%</strong></td><td>ChatGPT 64.3% · Cursor 63.2% · Copilot 56%</td><td>#1 nel confronto diretto</td></tr>
+            </tbody>
+        </table>
+        <p class="note">I dati <em>flagship</em> riflettono i modelli di punta (Opus 4.7, GPT-5.5); i valori <em>"uso comune"</em> si riferiscono ai modelli più diffusi nel lavoro quotidiano. La tabella strutturale qui sopra usa i valori di uso comune (Opus 4.5, 80.9%).</p>
+
         <h4>Confronto pricing</h4>
         <table class="data-table data-table--wide">
             <thead>
@@ -812,7 +826,7 @@
                 </tr>
                 <tr>
                     <td><strong>Team</strong></td>
-                    <td>$25/ut/mese (Standard) · $150/ut/mese (Premium con Code)</td>
+                    <td>$20/ut/mese (Standard) · $100/ut/mese (Premium con Code)</td>
                     <td>$19/utente/mese (Business)</td>
                     <td>$30/utente/mese (Business)</td>
                     <td>$19/utente/mese (Standard)</td>
@@ -953,7 +967,7 @@
         </div>
 
         <div class="callout">
-            <strong>Nota di trasparenza:</strong> Claude Code è lo strumento più apprezzato dagli sviluppatori (46% "most loved", Pragmatic Engineer Survey 2026) e domina nel coding agentico (71% degli utenti agent). GitHub Copilot mantiene la base installata enterprise più ampia (20M+ utenti, Leader Gartner MQ AI Code Assistants 2025) e offre un tier gratuito competitivo. Cursor è il competitor in più rapida crescita ($2B ARR). La nostra raccomandazione per Claude si basa sulla combinazione di <strong>qualità del ragionamento, leadership nel coding agentico, sicurezza enterprise e copertura funzionale</strong>.
+            <strong>Nota di trasparenza:</strong> Claude Code è lo strumento più apprezzato dagli sviluppatori (46% "most loved", Pragmatic Engineer Survey 2026), detiene il <strong>54% del market share enterprise nel coding IA</strong> (Menlo Ventures 2026) e domina nel coding agentico (71% degli utenti agent), con un <strong>customer satisfaction del 91% (NPS 54)</strong>. GitHub Copilot mantiene la base installata enterprise più ampia (20M+ utenti, Leader Gartner MQ AI Code Assistants 2025) e offre un tier gratuito competitivo. Cursor è il competitor in più rapida crescita ($2B ARR). La nostra raccomandazione per Claude si basa sulla combinazione di <strong>qualità del ragionamento, leadership nel coding agentico, sicurezza enterprise e copertura funzionale</strong>.
         </div>
         </details>
 
@@ -982,7 +996,7 @@
         <table class="data-table">
             <thead><tr><th>Scenario</th><th>Costo mensile</th><th>Valore (3,6 ore risparmiate/sett.)</th><th>Rapporto costo/valore</th></tr></thead>
             <tbody>
-                <tr><td>Claude Code (Team Premium)</td><td>$150</td><td>~€700–1.200</td><td><strong>1:5–8</strong></td></tr>
+                <tr><td>Claude Code (Team Premium)</td><td>$100</td><td>~€700–1.200</td><td><strong>1:7–12</strong></td></tr>
                 <tr><td>GitHub Copilot (Individuale)</td><td>$10–20</td><td>~€700–1.200</td><td><strong>1:35–70</strong></td></tr>
                 <tr><td>GitHub Copilot (Business)</td><td>$19/utente</td><td>~€700–1.200</td><td><strong>1:37</strong></td></tr>
             </tbody>
@@ -1167,9 +1181,9 @@
         <table class="data-table">
             <thead><tr><th>Modello</th><th>Caratteristica</th><th>Costo (Input/Output per MTok)</th><th>Caso d'uso</th></tr></thead>
             <tbody>
-                <tr><td><strong>Haiku</strong></td><td>Veloce, economico</td><td>$0.25 / $1.25</td><td>Task semplici, classificazione, risposte rapide</td></tr>
-                <tr><td><strong>Sonnet</strong></td><td>Bilanciato</td><td>$3 / $15</td><td>Coding quotidiano, analisi, documentazione</td></tr>
-                <tr><td><strong>Opus</strong></td><td>Ragionamento profondo</td><td>$15 / $75</td><td>Architettura complessa, debugging critico, analisi strategiche</td></tr>
+                <tr><td><strong>Haiku 4.5</strong></td><td>Veloce, economico</td><td>$1 / $5</td><td>Task semplici, classificazione, risposte rapide</td></tr>
+                <tr><td><strong>Sonnet 4.6</strong></td><td>Bilanciato</td><td>$3 / $15</td><td>Coding quotidiano, analisi, documentazione</td></tr>
+                <tr><td><strong>Opus 4.7</strong></td><td>Ragionamento profondo</td><td>$5 / $25</td><td>Architettura complessa, debugging critico, analisi strategiche</td></tr>
             </tbody>
         </table>
         </details>
@@ -1476,12 +1490,12 @@
                 <thead><tr><th>Voce</th><th>Costo indicativo</th></tr></thead>
                 <tbody>
                     <tr><td>Costo orario sviluppatore (caricato)</td><td>40-80 EUR/ora</td></tr>
-                    <tr><td>Licenza Claude Team Standard (mensile, per utente)</td><td>$25/mese</td></tr>
-                    <tr><td>Licenza Claude Team Premium con Code (mensile, per utente)</td><td>$150/mese</td></tr>
+                    <tr><td>Licenza Claude Team Standard (mensile, per utente)</td><td>$20/mese</td></tr>
+                    <tr><td>Licenza Claude Team Premium con Code (mensile, per utente)</td><td>$100/mese</td></tr>
                     <tr><td>Licenza Claude Enterprise (mensile, per utente)</td><td>Personalizzato (trattativa)</td></tr>
                 </tbody>
             </table>
-            <p><strong>Il calcolo è semplice:</strong> anche la licenza Team Premium ($150/mese) costa meno di 2-4 ore di lavoro di uno sviluppatore. Se lo strumento fa risparmiare anche solo <strong>poche ore al mese</strong> per persona, l'investimento è già ripagato. I dati reali mostrano risparmi di <strong>3.6 ore/settimana</strong> (~187 ore/anno) per sviluppatore.</p>
+            <p><strong>Il calcolo è semplice:</strong> anche la licenza Team Premium ($100/mese) costa meno di 2-4 ore di lavoro di uno sviluppatore. Se lo strumento fa risparmiare anche solo <strong>poche ore al mese</strong> per persona, l'investimento è già ripagato. I dati reali mostrano risparmi di <strong>3.6 ore/settimana</strong> (~187 ore/anno) per sviluppatore.</p>
         </details>
 
         <details class="collapsible">
